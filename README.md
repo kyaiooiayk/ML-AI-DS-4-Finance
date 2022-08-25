@@ -1,9 +1,20 @@
 # ML-AI-DS-for-Finance
 Machine Learning, Artificial Intelligence, Data Science for Finance -  a repository
 
+# How is ML used in finance?
+- Data mining to identify patterns, extract features and generate insights
+- Supervised learning to generate risk factors or alphas and create trade ideas
+- Aggregation of individual signals into a strategy
+- Allocation of assets according to risk profiles learned by an algorithm
+- The testing and evaluation of strategies, including through the use of synthetic data
+- The interactive, automated refinement of a strategy using reinforcement learning
+[Ref](https://github.com/stefan-jansen/machine-learning-for-trading/tree/main/01_machine_learning_for_trading)
+
 # Books
 - [Machine Learning for Algorithmic Trading](https://www.amazon.com/Machine-Learning-Algorithmic-Trading-alternative/dp/1839217715?pf_rd_r=GZH2XZ35GB3BET09PCCA&pf_rd_p=c5b6893a-24f2-4a59-9d4b-aff5065c90ec&pd_rd_r=91a679c7-f069-4a6e-bdbb-a2b3f548f0c8&pd_rd_w=2B0Q0&pd_rd_wg=GMY5S&ref_=pd_gw_ci_mcx_mr_hp_d) | [GitHib codes](https://github.com/stefan-jansen/machine-learning-for-trading)
 
+# Scintific article
+- [2016 | Can We Predict the Financial Markets Based on Google's Search Queries?](https://onlinelibrary.wiley.com/doi/abs/10.1002/for.2446)
 
 # Most requested skills
 List of requirements as read from job posts on LinkedIn.

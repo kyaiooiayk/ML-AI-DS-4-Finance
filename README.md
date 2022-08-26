@@ -19,6 +19,9 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 # Python tutorial series
 - [Python for Finance: Risk and Return](https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn)
 
+# Python libraries
+- [FinQuant](https://github.com/fmilthaler/FinQuant)
+
 # Most requested skills
 List of requirements as read from job posts on LinkedIn.
 -	Proficiency at operating within a Big Data environment: Hadoop, Spark/PySpark, Hive

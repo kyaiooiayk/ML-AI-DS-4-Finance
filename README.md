@@ -30,3 +30,5 @@ List of requirements as read from job posts on LinkedIn.
 -	Understanding of probability & statistical models 
 -	Experience with SQL or related query language
 
+# Notes on ML$T
+- [Notes](https://drive.google.com/drive/u/2/folders/1r6RHJNe4_eqmTe50Ei88CIF--t0iQLNm)

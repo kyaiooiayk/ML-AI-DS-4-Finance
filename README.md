@@ -16,6 +16,9 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 # Scintific article
 - [2016 | Can We Predict the Financial Markets Based on Google's Search Queries?](https://onlinelibrary.wiley.com/doi/abs/10.1002/for.2446)
 
+# Python tutorial series
+- [Python for Finance: Risk and Return](https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn)
+
 # Most requested skills
 List of requirements as read from job posts on LinkedIn.
 -	Proficiency at operating within a Big Data environment: Hadoop, Spark/PySpark, Hive

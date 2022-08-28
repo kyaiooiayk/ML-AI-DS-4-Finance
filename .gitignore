@@ -1,3 +1,13 @@
+DATASETS
+*.ipynb_checkpoints
+**/.DS_Store
+**/*.pyc
+**/__pycache__
+**/*.h5
+**/model.png
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

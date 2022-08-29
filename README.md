@@ -29,6 +29,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 
 # Python libraries
 - [FinQuant](https://github.com/fmilthaler/FinQuant)
+- [TA-Lib](https://www.ta-lib.org/) TA-Lib is an open source library written in C++ with a Python interface that is widely used by trading software developers. It contains standardized implementations of over 200 popular indicators for technical analysis; that is, these indicators only use market data, namely price and volume information.
 ***
 
 # Most requested skills

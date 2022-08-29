@@ -25,7 +25,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661690104223" ID="ID_363285369" MODIFIED="1661690793244" POSITION="right" TEXT="Data">
+<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1661785576615" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1661711562162" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
@@ -86,6 +86,30 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
+</node>
+</node>
+<node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1661791105150" POSITION="right" TEXT="Feature Engineering">
+<icon BUILTIN="xmag"/>
+<node CREATED="1661785589614" ID="ID_1133674928" LINK="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html" MODIFIED="1661786040286" TEXT="5 Fama-French factors">
+<icon BUILTIN="xmag"/>
+<node CREATED="1661785604989" ID="ID_1143571577" MODIFIED="1661785631289" TEXT="Market size">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1661785610183" ID="ID_1423386700" MODIFIED="1661785631290" TEXT="Size">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1661785612387" ID="ID_45408961" MODIFIED="1661785631290" TEXT="Value">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1661785614865" ID="ID_645319833" MODIFIED="1661785631290" TEXT="Operating Profitability">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1661785622852" ID="ID_370973425" MODIFIED="1661785631291" TEXT="Investment">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1661785968631" ID="ID_1327763925" LINK="https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/bollinger-bands" MODIFIED="1661786048665" TEXT="Bollinger Bands">
+<icon BUILTIN="button_ok"/>
 </node>
 </node>
 </node>

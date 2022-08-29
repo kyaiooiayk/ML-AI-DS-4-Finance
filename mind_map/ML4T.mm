@@ -25,7 +25,11 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1661785576615" POSITION="right" TEXT="Data">
+<node CREATED="1661794041283" ID="ID_1330534061" MODIFIED="1661794043559" POSITION="left" TEXT="Alpha">
+<node CREATED="1661794043988" ID="ID_908016985" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794107638" TEXT="delay-0 alpha"/>
+<node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
+</node>
+<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1661794039318" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1661711562162" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
@@ -45,7 +49,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661689127295" ID="ID_1040980611" MODIFIED="1661690795994" TEXT="Alternative Data">
+<node CREATED="1661689127295" FOLDED="true" ID="ID_1040980611" MODIFIED="1661794038469" TEXT="Alternative Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689281944" ID="ID_1804773283" MODIFIED="1661690799140" TEXT="What?">
 <icon BUILTIN="xmag"/>
@@ -88,7 +92,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1661791105150" POSITION="right" TEXT="Feature Engineering">
+<node CREATED="1661785577623" ID="ID_675865048" MODIFIED="1661794028172" POSITION="right" TEXT="Feature Engineering">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661785589614" ID="ID_1133674928" LINK="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html" MODIFIED="1661786040286" TEXT="5 Fama-French factors">
 <icon BUILTIN="xmag"/>

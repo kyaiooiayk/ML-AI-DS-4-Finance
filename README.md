@@ -20,6 +20,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [2020 | Deep learning in finance and banking: A literature review and classification](https://fbr.springeropen.com/articles/10.1186/s11782-020-00082-6)
 - [2016 | Can We Predict the Financial Markets Based on Google's Search Queries?](https://onlinelibrary.wiley.com/doi/abs/10.1002/for.2446)
 - [2016 | 101 Formulaic Alpha](https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf)
+- [Performance v. Turnover: A Story by 4,000 Alphas](https://arxiv.org/ftp/arxiv/papers/1509/1509.08110.pdf)
 - [2005 | Fundamental Indexation](https://www.researchaffiliates.com/content/dam/ra/documents/FAJ_Mar_Apr_2005_Fundamental_Indexation.pdf)
 ***
 
@@ -27,7 +28,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [Python for Finance: Risk and Return](https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn)
 ***
 
-# Python libraries
+## Python libraries
 - [FinQuant](https://github.com/fmilthaler/FinQuant)
 - [TA-Lib](https://www.ta-lib.org/) TA-Lib is an open source library written in C++ with a Python interface that is widely used by trading software developers. It contains standardized implementations of over 200 popular indicators for technical analysis; that is, these indicators only use market data, namely price and volume information.
 ***

@@ -44,3 +44,6 @@ List of requirements as read from job posts on LinkedIn.
 
 ## Notes on ML4T
 - [Notes](https://drive.google.com/drive/u/2/folders/1r6RHJNe4_eqmTe50Ei88CIF--t0iQLNm)
+
+## Quotes
+-  In the short run, the market is a voting machine, but in the long run, it is a weighing machine *by Benjamin Graham*. [Ref](https://www.researchaffiliates.com/content/dam/ra/documents/FAJ_Mar_Apr_2005_Fundamental_Indexation.pdf)

@@ -31,19 +31,26 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 ## Python libraries
 - [FinQuant](https://github.com/fmilthaler/FinQuant)
 - [TA-Lib](https://www.ta-lib.org/) TA-Lib is an open source library written in C++ with a Python interface that is widely used by trading software developers. It contains standardized implementations of over 200 popular indicators for technical analysis; that is, these indicators only use market data, namely price and volume information.
+- [zipline](https://github.com/quantopian/zipline) is an open source event-driven backtesting system library. It generates market events to simulate the reactions of an algorithmic trading strategy and tracks its performance. A particularly important feature is that it provides the algorithm with historical point-in-time data that avoids look-ahead bias. 
 ***
 
 ## Most requested skills
 List of requirements as read from job posts on LinkedIn.
--	Proficiency at operating within a Big Data environment: Hadoop, Spark/PySpark, Hive
--	Exposure to advanced NLP techniques to parse vast volumes of communications data to identify risk
--	Increased knowledge of traded products and their mechanisms across Equities, Rates, FX and Commodities
--	Understanding of probability & statistical models 
--	Experience with SQL or related query language
+- Proficiency at operating within a Big Data environment: Hadoop, Spark/PySpark, Hive
+- Exposure to advanced NLP techniques to parse vast volumes of communications data to identify risk
+- Increased knowledge of traded products and their mechanisms across Equities, Rates, FX and Commodities
+- Understanding of probability & statistical models 
+- Experience with SQL or related query language
+- Snowflake (SQL based)
+- Python / JupyterLab. 
+- Kubernetes cluster
+- Azure/AWS
+- Unit-testing and pytest
 ***
 
 ## Notes on ML4T
 - [Notes](https://drive.google.com/drive/u/2/folders/1r6RHJNe4_eqmTe50Ei88CIF--t0iQLNm)
 
 ## Quotes
--  In the short run, the market is a voting machine, but in the long run, it is a weighing machine *by Benjamin Graham*. [Ref](https://www.researchaffiliates.com/content/dam/ra/documents/FAJ_Mar_Apr_2005_Fundamental_Indexation.pdf)
+-  In the short run, the market is a voting machine, but in the long run, it is a weighing machine *by Benjamin Graham* [Ref](https://www.researchaffiliates.com/content/dam/ra/documents/FAJ_Mar_Apr_2005_Fundamental_Indexation.pdf)
+- Diversification is protection against ignorance. It makes little sense if you know what you are doing *by Warren Buffet*

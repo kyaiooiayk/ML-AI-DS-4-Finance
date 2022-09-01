@@ -31,7 +31,8 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 ## Python libraries
 - [FinQuant](https://github.com/fmilthaler/FinQuant)
 - [TA-Lib](https://www.ta-lib.org/) TA-Lib is an open source library written in C++ with a Python interface that is widely used by trading software developers. It contains standardized implementations of over 200 popular indicators for technical analysis; that is, these indicators only use market data, namely price and volume information.
-- [zipline](https://github.com/quantopian/zipline) is an open source event-driven backtesting system library. It generates market events to simulate the reactions of an algorithmic trading strategy and tracks its performance. A particularly important feature is that it provides the algorithm with historical point-in-time data that avoids look-ahead bias. 
+- [zipline](https://github.com/quantopian/zipline) is an open source event-driven backtesting system library. It generates market events to simulate the reactions of an algorithmic trading strategy and tracks its performance. A particularly important feature is that it provides the algorithm with historical point-in-time data that avoids look-ahead bias.
+- [PyPortfolioOpt](https://github.com/robertmartin8/PyPortfolioOpt) PyPortfolioOpt is a library that implements portfolio optimization methods, including classical mean-variance optimization techniques and Black-Litterman allocation, as well as more recent developments in the field like shrinkage and Hierarchical Risk Parity.
 ***
 
 ## Most requested skills
@@ -41,11 +42,17 @@ List of requirements as read from job posts on LinkedIn.
 - Increased knowledge of traded products and their mechanisms across Equities, Rates, FX and Commodities
 - Understanding of probability & statistical models 
 - Experience with SQL or related query language
-- Snowflake (SQL based)
+- Database technologies: SQL, MongoDB, Snowflake
 - Python / JupyterLab. 
-- Kubernetes cluster
-- Azure/AWS
+- Container technologies: Kubernetes cluster
+- Cloud computing: Azure/AWS
 - Unit-testing and pytest
+- Optimisations: [CVXOPT](https://cvxopt.org/userguide/index.html) 
+- Data science stack: Pands, numpy, Scikit, Seaborn
+***
+
+## To be explored
+- How Graph machine learning is used in ML4T?
 ***
 
 ## Notes on ML4T

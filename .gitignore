@@ -4,6 +4,8 @@ DATASETS
 **/*.pyc
 **/__pycache__
 **/*.h5
+**/*.csv
+**/*.zip
 **/model.png
 
 

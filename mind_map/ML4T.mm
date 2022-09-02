@@ -25,10 +25,11 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661794041283" ID="ID_1330534061" MODIFIED="1661794043559" POSITION="left" TEXT="Alpha">
+<node CREATED="1661794041283" ID="ID_1330534061" MODIFIED="1662061289311" POSITION="left" TEXT="Alpha">
 <node CREATED="1661794043988" ID="ID_908016985" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794107638" TEXT="delay-0 alpha"/>
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
+<node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
 <node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1661794039318" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1661711562162" TEXT="Fundamental Data">
@@ -92,7 +93,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1661785577623" ID="ID_675865048" MODIFIED="1661794028172" POSITION="right" TEXT="Feature Engineering">
+<node CREATED="1661785577623" ID="ID_675865048" MODIFIED="1662062749351" POSITION="right" TEXT="Feature Engineering">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661785589614" ID="ID_1133674928" LINK="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html" MODIFIED="1661786040286" TEXT="5 Fama-French factors">
 <icon BUILTIN="xmag"/>
@@ -115,6 +116,10 @@
 <node CREATED="1661785968631" ID="ID_1327763925" LINK="https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/bollinger-bands" MODIFIED="1661786048665" TEXT="Bollinger Bands">
 <icon BUILTIN="button_ok"/>
 </node>
+</node>
+<node CREATED="1662062750617" ID="ID_809887904" MODIFIED="1662062778945" POSITION="right" TEXT="Strategies">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662062761458" ID="ID_1742342764" LINK="https://www.investopedia.com/terms/m/meanvariance-analysis.asp" MODIFIED="1662062838811" TEXT="Mean-variance optimisation"/>
 </node>
 </node>
 </map>

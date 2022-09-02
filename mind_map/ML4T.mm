@@ -119,7 +119,21 @@
 </node>
 <node CREATED="1662062750617" ID="ID_809887904" MODIFIED="1662062778945" POSITION="right" TEXT="Strategies">
 <icon BUILTIN="xmag"/>
-<node CREATED="1662062761458" ID="ID_1742342764" LINK="https://www.investopedia.com/terms/m/meanvariance-analysis.asp" MODIFIED="1662062838811" TEXT="Mean-variance optimisation"/>
+<node CREATED="1662062761458" ID="ID_1742342764" LINK="https://www.investopedia.com/terms/m/meanvariance-analysis.asp" MODIFIED="1662148658896" TEXT="Mean-variance optimisation">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662148143985" ID="ID_258049554" LINK="https://www.jasoncollins.blog/the-1-n-portfolio-versus-the-optimal-strategy-does-a-simple-heuristic-outperform/" MODIFIED="1662148658897" TEXT="1/N portfolio">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662148378784" ID="ID_1631230598" LINK="http://showcase2.imw.tuwien.ac.at/BWOpt/PF1_minvar.html" MODIFIED="1662148658898" TEXT="global minimum-variance (GMV)">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662148544829" ID="ID_1760261148" LINK="https://www.investopedia.com/terms/b/black-litterman_model.asp" MODIFIED="1662148658899" TEXT="Global Portfolio Optimization &#x2013; the Black-Litterman approach">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662148613327" ID="ID_1562984323" LINK="https://www.investopedia.com/articles/trading/04/091504.asp" MODIFIED="1662148658899" TEXT="Kelly criterion">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 </node>
 </map>

@@ -27,6 +27,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 
 ## Python tutorial series
 - [Python for Finance: Risk and Return](https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn)
+- [Python for Financial Analysis](https://github.com/LearnPythonWithRune/PythonForFinancialAnalysis)
 ***
 
 ## Python libraries

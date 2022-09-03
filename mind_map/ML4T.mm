@@ -30,6 +30,16 @@
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
 <node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
+<node CREATED="1662208164307" ID="ID_960226577" MODIFIED="1662208170897" POSITION="left" TEXT="Model">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662208173157" ID="ID_93447926" LINK="https://www.investopedia.com/terms/c/capm.asp" MODIFIED="1662208183797" TEXT="CAPM">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1662208974670" ID="ID_213767358" MODIFIED="1662208981907" POSITION="left" TEXT="Fundamentals">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
+</node>
 <node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1661794039318" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1661711562162" TEXT="Fundamental Data">

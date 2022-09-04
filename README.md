@@ -22,6 +22,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [2016 | Can We Predict the Financial Markets Based on Google's Search Queries?](https://onlinelibrary.wiley.com/doi/abs/10.1002/for.2446)
 - [2016 | 101 Formulaic Alpha](https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf)
 - [2015 | Performance v. Turnover: A Story by 4,000 Alphas](https://arxiv.org/ftp/arxiv/papers/1509/1509.08110.pdf)
+- [2014 | CORRECTING FOR SELECTION BIAS, BACKTEST OVERFITTING AND NON-NORMALITY](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf)
 - [2005 | Fundamental Indexation](https://www.researchaffiliates.com/content/dam/ra/documents/FAJ_Mar_Apr_2005_Fundamental_Indexation.pdf)
 ***
 
@@ -63,6 +64,10 @@ List of requirements as read from job posts on LinkedIn.
 ## Quotes
 -  In the short run, the market is a voting machine, but in the long run, it is a weighing machine *by Benjamin Graham* [Ref](https://www.researchaffiliates.com/content/dam/ra/documents/FAJ_Mar_Apr_2005_Fundamental_Indexation.pdf)
 - Diversification is protection against ignorance. It makes little sense if you know what you are doing *by Warren Buffet*
-
+- When the facts cha What do you do, sir? *by John Maynard Keynes*
+ 
 ## Resources
 - [Investopedia](https://www.investopedia.co/)
+
+## Online-tool
+- [Backtest Overfitting: An Interactive Example](http://datagrid.lbl.gov/backtest/)

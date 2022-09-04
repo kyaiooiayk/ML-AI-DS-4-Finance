@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1661690678674">
+<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1662288036909">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -10,10 +10,9 @@
       ML4T
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="13"/>
-<node CREATED="1661689913287" FOLDED="true" ID="ID_364931973" MODIFIED="1661690648429" POSITION="left" TEXT="Quantitative strategies history">
+<node CREATED="1661689913287" FOLDED="true" ID="ID_364931973" MODIFIED="1662288036242" POSITION="left" TEXT="Quantitative strategies history">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689926919" ID="ID_1098598077" MODIFIED="1661689996879" TEXT="1. Academic reasearch - 1980s-1990s">
 <icon BUILTIN="button_ok"/>
@@ -25,24 +24,39 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661794041283" ID="ID_1330534061" MODIFIED="1662061289311" POSITION="left" TEXT="Alpha">
+<node CREATED="1661794041283" FOLDED="true" ID="ID_1330534061" MODIFIED="1662288036243" POSITION="left" TEXT="Alpha">
 <node CREATED="1661794043988" ID="ID_908016985" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794107638" TEXT="delay-0 alpha"/>
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
 <node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
-<node CREATED="1662208164307" ID="ID_960226577" MODIFIED="1662208170897" POSITION="left" TEXT="Model">
+<node CREATED="1662208164307" FOLDED="true" ID="ID_960226577" MODIFIED="1662288036243" POSITION="left" TEXT="Model">
 <icon BUILTIN="xmag"/>
-<node CREATED="1662208173157" ID="ID_93447926" LINK="https://www.investopedia.com/terms/c/capm.asp" MODIFIED="1662208183797" TEXT="CAPM">
+<node CREATED="1662208173157" ID="ID_93447926" LINK="https://www.investopedia.com/terms/c/capm.asp" MODIFIED="1662278802257" TEXT="Capital Asset Pricing Model = CAPM">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662278734320" ID="ID_945336320" LINK="https://www.investopedia.com/articles/active-trading/082415/arbitrage-pricing-theory-its-not-just-fancy-math.asp" MODIFIED="1662278784314" TEXT="Arbitrage Pricing Theory = APT">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662208974670" ID="ID_213767358" MODIFIED="1662208981907" POSITION="left" TEXT="Fundamentals">
+<node CREATED="1662208974670" ID="ID_213767358" MODIFIED="1662295161527" POSITION="left" TEXT="Fundamentals">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
+<node CREATED="1662295202247" ID="ID_992590304" MODIFIED="1662295222591" TEXT="Sharpe Ratio">
+<icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1661794039318" POSITION="right" TEXT="Data">
+<node CREATED="1662295206632" ID="ID_1238908509" LINK="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" MODIFIED="1662295239524" TEXT="Deflated Sharpe Ratio">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1662278842836" ID="ID_1575445950" MODIFIED="1662295164246" POSITION="left" TEXT="Numerical modelling">
 <icon BUILTIN="xmag"/>
-<node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1661711562162" TEXT="Fundamental Data">
+<node CREATED="1662278865077" ID="ID_1779329758" LINK="https://www.simtrade.fr/blog_simtrade/fama-macbeth-two-step-regression-method/" MODIFIED="1662278923188" TEXT="Fama&#x2013;Macbeth regression">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1661690104223" ID="ID_363285369" MODIFIED="1662295175099" POSITION="right" TEXT="Data">
+<icon BUILTIN="xmag"/>
+<node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1662295176834" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690143840" ID="ID_1322763128" MODIFIED="1661711648393" TEXT="Groeth">
 <icon BUILTIN="button_ok"/>
@@ -60,9 +74,9 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661689127295" FOLDED="true" ID="ID_1040980611" MODIFIED="1661794038469" TEXT="Alternative Data">
+<node CREATED="1661689127295" ID="ID_1040980611" MODIFIED="1662295179035" TEXT="Alternative Data">
 <icon BUILTIN="xmag"/>
-<node CREATED="1661689281944" ID="ID_1804773283" MODIFIED="1661690799140" TEXT="What?">
+<node CREATED="1661689281944" FOLDED="true" ID="ID_1804773283" MODIFIED="1662288035950" TEXT="What?">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689140219" ID="ID_1827614433" MODIFIED="1661689308924" TEXT="Online price data">
 <icon BUILTIN="button_ok"/>
@@ -74,7 +88,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661689419601" ID="ID_1869643221" MODIFIED="1661690799142" TEXT="Sources">
+<node CREATED="1661689419601" FOLDED="true" ID="ID_1869643221" MODIFIED="1662288035950" TEXT="Sources">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689423732" ID="ID_1685551765" MODIFIED="1661689438117" TEXT="Individuals">
 <icon BUILTIN="button_ok"/>
@@ -86,7 +100,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661689288063" ID="ID_623851310" MODIFIED="1661689417966" TEXT="Metrics">
+<node CREATED="1661689288063" ID="ID_623851310" MODIFIED="1662295181850" TEXT="Metrics">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689312830" ID="ID_1631340761" MODIFIED="1661689329747" TEXT="Momentum">
 <icon BUILTIN="button_ok"/>
@@ -103,9 +117,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1661785577623" ID="ID_675865048" MODIFIED="1662062749351" POSITION="right" TEXT="Feature Engineering">
+<node CREATED="1661785577623" ID="ID_675865048" MODIFIED="1662295167159" POSITION="right" TEXT="Feature Engineering">
 <icon BUILTIN="xmag"/>
-<node CREATED="1661785589614" ID="ID_1133674928" LINK="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html" MODIFIED="1661786040286" TEXT="5 Fama-French factors">
+<node CREATED="1661785589614" ID="ID_1133674928" LINK="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html" MODIFIED="1662295197474" TEXT="5 Fama-French factors">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661785604989" ID="ID_1143571577" MODIFIED="1661785631289" TEXT="Market size">
 <icon BUILTIN="button_ok"/>
@@ -127,7 +141,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662062750617" ID="ID_809887904" MODIFIED="1662062778945" POSITION="right" TEXT="Strategies">
+<node CREATED="1662062750617" FOLDED="true" ID="ID_809887904" MODIFIED="1662288036245" POSITION="right" TEXT="Strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662062761458" ID="ID_1742342764" LINK="https://www.investopedia.com/terms/m/meanvariance-analysis.asp" MODIFIED="1662148658896" TEXT="Mean-variance optimisation">
 <icon BUILTIN="button_ok"/>
@@ -142,6 +156,15 @@
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1662148613327" ID="ID_1562984323" LINK="https://www.investopedia.com/articles/trading/04/091504.asp" MODIFIED="1662148658899" TEXT="Kelly criterion">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1662288038631" ID="ID_174620185" MODIFIED="1662288043360" POSITION="right" TEXT="Backtesting">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662288045467" ID="ID_1525319379" MODIFIED="1662288071242" TEXT="Vectorized">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662288048489" ID="ID_611456128" MODIFIED="1662288071242" TEXT="Event-driven backtesting">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>

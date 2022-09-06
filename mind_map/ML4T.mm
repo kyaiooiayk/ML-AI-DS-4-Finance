@@ -38,7 +38,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662208974670" ID="ID_213767358" MODIFIED="1662295161527" POSITION="left" TEXT="Fundamentals">
+<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1662402522174" POSITION="left" TEXT="Fundamentals">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
 <node CREATED="1662295202247" ID="ID_992590304" MODIFIED="1662295222591" TEXT="Sharpe Ratio">
@@ -48,13 +48,25 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662278842836" ID="ID_1575445950" MODIFIED="1662295164246" POSITION="left" TEXT="Numerical modelling">
+<node CREATED="1662278842836" FOLDED="true" ID="ID_1575445950" MODIFIED="1662402534108" POSITION="left" TEXT="Numerical modelling">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662278865077" ID="ID_1779329758" LINK="https://www.simtrade.fr/blog_simtrade/fama-macbeth-two-step-regression-method/" MODIFIED="1662278923188" TEXT="Fama&#x2013;Macbeth regression">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661690104223" ID="ID_363285369" MODIFIED="1662295175099" POSITION="right" TEXT="Data">
+<node CREATED="1662402536758" ID="ID_474631677" MODIFIED="1662402562324" POSITION="left" TEXT="Portofolio strategies">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662148544829" ID="ID_1760261148" LINK="https://www.investopedia.com/terms/b/black-litterman_model.asp" MODIFIED="1662402650858" TEXT="Global Portfolio Optimization &#x2013; the Black-Litterman approach">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662402565547" ID="ID_770206861" LINK="https://en.wikipedia.org/wiki/Permanent_Portfolio_Family_of_Funds" MODIFIED="1662402650859" TEXT="The Permanent Portfolio Fund">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662404270950" ID="ID_855728957" LINK="https://en.wikipedia.org/wiki/Mark_Spitznagel" MODIFIED="1662404320170" TEXT="tail-hedging or black swan investing ">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1662402518825" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1662295176834" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
@@ -117,7 +129,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1661785577623" ID="ID_675865048" MODIFIED="1662295167159" POSITION="right" TEXT="Feature Engineering">
+<node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1662402516675" POSITION="right" TEXT="Feature Engineering">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661785589614" ID="ID_1133674928" LINK="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html" MODIFIED="1662295197474" TEXT="5 Fama-French factors">
 <icon BUILTIN="xmag"/>
@@ -141,7 +153,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662062750617" FOLDED="true" ID="ID_809887904" MODIFIED="1662288036245" POSITION="right" TEXT="Strategies">
+<node CREATED="1662062750617" ID="ID_809887904" MODIFIED="1662402964283" POSITION="right" TEXT="Optimisation">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662062761458" ID="ID_1742342764" LINK="https://www.investopedia.com/terms/m/meanvariance-analysis.asp" MODIFIED="1662148658896" TEXT="Mean-variance optimisation">
 <icon BUILTIN="button_ok"/>
@@ -152,14 +164,14 @@
 <node CREATED="1662148378784" ID="ID_1631230598" LINK="http://showcase2.imw.tuwien.ac.at/BWOpt/PF1_minvar.html" MODIFIED="1662148658898" TEXT="global minimum-variance (GMV)">
 <icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1662148544829" ID="ID_1760261148" LINK="https://www.investopedia.com/terms/b/black-litterman_model.asp" MODIFIED="1662148658899" TEXT="Global Portfolio Optimization &#x2013; the Black-Litterman approach">
-<icon BUILTIN="button_ok"/>
-</node>
 <node CREATED="1662148613327" ID="ID_1562984323" LINK="https://www.investopedia.com/articles/trading/04/091504.asp" MODIFIED="1662148658899" TEXT="Kelly criterion">
 <icon BUILTIN="button_ok"/>
 </node>
+<node CREATED="1662402982531" ID="ID_1228923272" LINK="https://www.investopedia.com/terms/m/markowitzefficientset.asp" MODIFIED="1662403055664" TEXT="Markowitz style optimization">
+<icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1662288038631" ID="ID_174620185" MODIFIED="1662288043360" POSITION="right" TEXT="Backtesting">
+</node>
+<node CREATED="1662288038631" FOLDED="true" ID="ID_174620185" MODIFIED="1662402515391" POSITION="right" TEXT="Backtesting">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662288045467" ID="ID_1525319379" MODIFIED="1662288071242" TEXT="Vectorized">
 <icon BUILTIN="button_ok"/>

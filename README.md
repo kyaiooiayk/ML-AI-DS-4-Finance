@@ -17,13 +17,17 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [Advances in Financial Machine Learning](https://www.amazon.co.uk/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)
 ***
 
-## Scintific article
+## Scintific articles
 - [2020 | Deep learning in finance and banking: A literature review and classification](https://fbr.springeropen.com/articles/10.1186/s11782-020-00082-6)
 - [2016 | Can We Predict the Financial Markets Based on Google's Search Queries?](https://onlinelibrary.wiley.com/doi/abs/10.1002/for.2446)
 - [2016 | 101 Formulaic Alpha](https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf)
 - [2015 | Performance v. Turnover: A Story by 4,000 Alphas](https://arxiv.org/ftp/arxiv/papers/1509/1509.08110.pdf)
 - [2014 | CORRECTING FOR SELECTION BIAS, BACKTEST OVERFITTING AND NON-NORMALITY](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf)
 - [2005 | Fundamental Indexation](https://www.researchaffiliates.com/content/dam/ra/documents/FAJ_Mar_Apr_2005_Fundamental_Indexation.pdf)
+***
+
+### Blog articles
+- [How My Machine Learning Trading Algorithm Outperformed the SP500 For 10 Years](https://towardsdatascience.com/the-austrian-quant-my-machine-learning-trading-algorithm-outperformed-the-sp500-for-10-years-bf7ee1d6a235)
 ***
 
 ## Python tutorial series

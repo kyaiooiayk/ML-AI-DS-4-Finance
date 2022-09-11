@@ -54,7 +54,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662402536758" ID="ID_474631677" MODIFIED="1662402562324" POSITION="left" TEXT="Portofolio strategies">
+<node CREATED="1662402536758" FOLDED="true" ID="ID_474631677" MODIFIED="1662793278564" POSITION="left" TEXT="Portofolio strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662148544829" ID="ID_1760261148" LINK="https://www.investopedia.com/terms/b/black-litterman_model.asp" MODIFIED="1662402650858" TEXT="Global Portfolio Optimization &#x2013; the Black-Litterman approach">
 <icon BUILTIN="button_ok"/>
@@ -66,7 +66,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1662402518825" POSITION="right" TEXT="Data">
+<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1662793372166" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1662295176834" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
@@ -128,6 +128,27 @@
 </node>
 </node>
 </node>
+<node CREATED="1662793287964" ID="ID_1554645669" MODIFIED="1662793369614" TEXT="Share">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662793300039" ID="ID_1968876680" MODIFIED="1662793364930" TEXT="Open">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662793352401" ID="ID_1938625919" MODIFIED="1662793364931" TEXT="High">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662793355031" ID="ID_528769234" MODIFIED="1662793364932" TEXT="Low">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662793302920" ID="ID_1101892822" MODIFIED="1662793364932" TEXT="Close">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662793357439" ID="ID_791772108" MODIFIED="1662793364932" TEXT="Volume">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662793359852" ID="ID_335769291" MODIFIED="1662793364933" TEXT="Adj Close">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
 </node>
 <node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1662402516675" POSITION="right" TEXT="Feature Engineering">
 <icon BUILTIN="xmag"/>
@@ -153,7 +174,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662062750617" ID="ID_809887904" MODIFIED="1662402964283" POSITION="right" TEXT="Optimisation">
+<node CREATED="1662062750617" FOLDED="true" ID="ID_809887904" MODIFIED="1662793279963" POSITION="right" TEXT="Optimisation">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662062761458" ID="ID_1742342764" LINK="https://www.investopedia.com/terms/m/meanvariance-analysis.asp" MODIFIED="1662148658896" TEXT="Mean-variance optimisation">
 <icon BUILTIN="button_ok"/>
@@ -178,6 +199,57 @@
 </node>
 <node CREATED="1662288048489" ID="ID_611456128" MODIFIED="1662288071242" TEXT="Event-driven backtesting">
 <icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1662806650081" FOLDED="true" ID="ID_1055013045" MODIFIED="1662838543433" POSITION="right" TEXT="Risk management">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662815568701" ID="ID_809719647" MODIFIED="1662815632131" TEXT="Management">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662806659611" ID="ID_51153184" MODIFIED="1662806696652" TEXT="Ignore">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662806666861" ID="ID_501088306" MODIFIED="1662806696653" TEXT="Transfer">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662806669004" ID="ID_1280043348" MODIFIED="1662806696653" TEXT="Mitigate">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662806672172" ID="ID_1977566273" MODIFIED="1662806696654" TEXT="Accept">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1662815575351" ID="ID_226561256" MODIFIED="1662815632127" TEXT="Type">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662815595969" ID="ID_841082004" MODIFIED="1662815621026" TEXT="Market">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662815604267" ID="ID_1634150576" MODIFIED="1662815621027" TEXT="Credit">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662815614257" ID="ID_1621007303" MODIFIED="1662815621027" TEXT="Liquidity">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662815616774" ID="ID_1854459212" MODIFIED="1662815621028" TEXT="Operational">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node CREATED="1662838545811" FOLDED="true" ID="ID_1185796292" MODIFIED="1662876206356" POSITION="right" TEXT="Volatility">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662838964869" ID="ID_392786101" MODIFIED="1662838982830" TEXT="Classical models">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662838558136" ID="ID_1802147829" MODIFIED="1662838763047" TEXT="ARCH">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662838739462" ID="ID_631401132" MODIFIED="1662838763047" TEXT="GARCH">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662838743737" ID="ID_297776096" MODIFIED="1662838763046" TEXT="GJR-GARCH">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662838748562" ID="ID_384696211" MODIFIED="1662838763046" TEXT="EGARCH">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 </node>
 </node>

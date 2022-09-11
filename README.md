@@ -12,9 +12,15 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 [Ref](https://github.com/stefan-jansen/machine-learning-for-trading/tree/main/01_machine_learning_for_trading)
 ***
 
-## Books
-- [Machine Learning for Algorithmic Trading](https://www.amazon.com/Machine-Learning-Algorithmic-Trading-alternative/dp/1839217715?pf_rd_r=GZH2XZ35GB3BET09PCCA&pf_rd_p=c5b6893a-24f2-4a59-9d4b-aff5065c90ec&pd_rd_r=91a679c7-f069-4a6e-bdbb-a2b3f548f0c8&pd_rd_w=2B0Q0&pd_rd_wg=GMY5S&ref_=pd_gw_ci_mcx_mr_hp_d) | [GitHib codes](https://github.com/stefan-jansen/machine-learning-for-trading)
+## Books | Theory
 - [Advances in Financial Machine Learning](https://www.amazon.co.uk/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)
+***
+
+## Books | Python
+- [Machine Learning for Algorithmic Trading](https://www.amazon.com/Machine-Learning-Algorithmic-Trading-alternative/dp/1839217715?pf_rd_r=GZH2XZ35GB3BET09PCCA&pf_rd_p=c5b6893a-24f2-4a59-9d4b-aff5065c90ec&pd_rd_r=91a679c7-f069-4a6e-bdbb-a2b3f548f0c8&pd_rd_w=2B0Q0&pd_rd_wg=GMY5S&ref_=pd_gw_ci_mcx_mr_hp_d) | [GitHib codes](https://github.com/stefan-jansen/machine-learning-for-trading)
+- [Hands-On Machine Learning for Algorithmic Trading Design and Implement Investment Strategies Based on Smart Algorithms that Learn from Data Using Python](https://www.amazon.co.uk/Hands-Machine-Learning-Algorithmic-Trading-ebook/dp/B07JLFH7C5) | [GitHub](https://github.com/PacktPublishing/Hands-On-Machine-Learning-for-Algorithmic-Trading)
+- [Machine Learning for Finance: Principles and practice for financial insiders](https://www.amazon.co.uk/Machine-Learning-Finance-algorithms-financial/dp/1789136369) | [GitHub](https://github.com/PacktPublishing/Machine-Learning-for-Finance)
+- [Machine Learning for Financial Risk Management with Python: Algorithms for Modeling Risk](https://www.amazon.co.uk/Machine-Learning-Financial-Management-Python/dp/1492085251/ref=asc_df_1492085251/?tag=googshopuk-21&linkCode=df0&hvadid=375385640104&hvpos=&hvnetw=g&hvrand=7971487973211243686&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045312&hvtargid=pla-1331790969021&psc=1&th=1&psc=1&tag=&ref=&adgrpid=76471991906&hvpone=&hvptwo=&hvadid=375385640104&hvpos=&hvnetw=g&hvrand=7971487973211243686&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9045312&hvtargid=pla-1331790969021) | [GitHub](https://github.com/abdullahkarasan/mlfrm)
 ***
 
 ## Scintific articles
@@ -30,7 +36,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [How My Machine Learning Trading Algorithm Outperformed the SP500 For 10 Years](https://towardsdatascience.com/the-austrian-quant-my-machine-learning-trading-algorithm-outperformed-the-sp500-for-10-years-bf7ee1d6a235)
 ***
 
-## Python tutorial series
+## Python online tutorial series
 - [Python for Finance: Risk and Return](https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn)
 - [Python for Financial Analysis](https://github.com/LearnPythonWithRune/PythonForFinancialAnalysis)
 ***
@@ -52,10 +58,12 @@ List of requirements as read from job posts on LinkedIn.
 - Database technologies: SQL, MongoDB, Snowflake
 - Python / JupyterLab. 
 - Container technologies: Kubernetes cluster
-- Cloud computing: Azure/AWS
+- Cloud computing: Azure, AWS, GCP
+- Big data systems and services (map/reduce): Spark and Hadoop
 - Unit-testing and pytest
 - Optimisations: [CVXOPT](https://cvxopt.org/userguide/index.html) 
 - Data science stack: Pands, numpy, Scikit, Seaborn
+- NLP libraries: nltk, SpaCy, Stanza, Flair, Polyglot and gensim
 ***
 
 ## To be explored
@@ -76,3 +84,10 @@ List of requirements as read from job posts on LinkedIn.
 
 ## Online-tool
 - [Backtest Overfitting: An Interactive Example](http://datagrid.lbl.gov/backtest/)
+
+## Online corse
+- [Machine Learning for Trading | Udacy](https://www.udacity.com/course/machine-learning-for-trading--ud501)
+- [Algorithmic Trading A-Z with Python, Machine Learning & AWS | Udemy](https://www.udemy.com/course/algorithmic-trading-with-python-and-machine-learning/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Python_v.PROF_la.EN_cc.UK_ti.7380&utm_content=deal4584&utm_term=_._ag_73899892513_._ad_532713166711_._kw__._de_c_._dm__._pl__._ti_dsa-774930046209_._li_9045312_._pd__._&matchtype=&gclid=Cj0KCQjw6_CYBhDjARIsABnuSzpIr2wUYv3Q3O947CHUGGbET3vuV8xFS59lX5pE9ipqbaTV8GziuWQaAqiCEALw_wcB)
+
+## University in UK
+- [The Top 5 UK Universities For Becoming A Quant](https://www.quantstart.com/articles/The-Top-5-UK-Universities-For-Becoming-A-Quant/)

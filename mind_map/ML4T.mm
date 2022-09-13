@@ -54,7 +54,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662402536758" FOLDED="true" ID="ID_474631677" MODIFIED="1662793278564" POSITION="left" TEXT="Portofolio strategies">
+<node CREATED="1662402536758" FOLDED="true" ID="ID_474631677" MODIFIED="1662918999758" POSITION="left" TEXT="Portofolio strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662148544829" ID="ID_1760261148" LINK="https://www.investopedia.com/terms/b/black-litterman_model.asp" MODIFIED="1662402650858" TEXT="Global Portfolio Optimization &#x2013; the Black-Litterman approach">
 <icon BUILTIN="button_ok"/>
@@ -65,6 +65,10 @@
 <node CREATED="1662404270950" ID="ID_855728957" LINK="https://en.wikipedia.org/wiki/Mark_Spitznagel" MODIFIED="1662404320170" TEXT="tail-hedging or black swan investing ">
 <icon BUILTIN="button_ok"/>
 </node>
+</node>
+<node CREATED="1662919001347" ID="ID_923691290" MODIFIED="1662919018504" POSITION="left" TEXT="Donts&apos;">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662919021548" ID="ID_100908768" MODIFIED="1662919075605" TEXT="Do not forget about risk management"/>
 </node>
 <node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1662793372166" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
@@ -192,7 +196,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662288038631" FOLDED="true" ID="ID_174620185" MODIFIED="1662402515391" POSITION="right" TEXT="Backtesting">
+<node CREATED="1662288038631" ID="ID_174620185" MODIFIED="1663015457752" POSITION="right" TEXT="Backtesting">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662288045467" ID="ID_1525319379" MODIFIED="1662288071242" TEXT="Vectorized">
 <icon BUILTIN="button_ok"/>
@@ -200,8 +204,53 @@
 <node CREATED="1662288048489" ID="ID_611456128" MODIFIED="1662288071242" TEXT="Event-driven backtesting">
 <icon BUILTIN="button_ok"/>
 </node>
+<node CREATED="1663015460945" ID="ID_1708815872" MODIFIED="1663015599120" TEXT="Why backtesting">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663015469326" ID="ID_269821110" MODIFIED="1663015497683" TEXT="Filtration">
+<icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1662806650081" FOLDED="true" ID="ID_1055013045" MODIFIED="1662838543433" POSITION="right" TEXT="Risk management">
+<node CREATED="1663015481726" ID="ID_606752214" MODIFIED="1663015497684" TEXT="Modelling">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663015483633" ID="ID_1628073543" MODIFIED="1663015497684" TEXT="Optimisation">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663015485701" ID="ID_1641012314" MODIFIED="1663015497684" TEXT="Verification">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663015593037" ID="ID_273339638" MODIFIED="1663015602884" TEXT="Backtesting biases">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663015606525" ID="ID_599195391" MODIFIED="1663015669651" TEXT="Optimisation bias">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663015614022" ID="ID_1874950587" MODIFIED="1663015666002" TEXT="Look-ahead bias">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663015639193" ID="ID_1281658037" MODIFIED="1663015660368" TEXT="Technical bugs">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663015644405" ID="ID_28607481" MODIFIED="1663015660369" TEXT="Parameter calculation">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663015649425" ID="ID_1789190939" MODIFIED="1663015660369" TEXT="maxima/minima">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663015620327" ID="ID_1321311058" MODIFIED="1663015736991" TEXT="Survivorship bias">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663015691927" ID="ID_182681701" MODIFIED="1663015707018" TEXT="survicorship bias free datasets">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663015700146" ID="ID_750194919" MODIFIED="1663015707019" TEXT="use more recent data">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663015722910" ID="ID_226355038" MODIFIED="1663015821087" TEXT="Cognitive bias">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node CREATED="1662806650081" FOLDED="true" ID="ID_1055013045" MODIFIED="1663015455451" POSITION="right" TEXT="Risk management">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662815568701" ID="ID_809719647" MODIFIED="1662815632131" TEXT="Management">
 <icon BUILTIN="xmag"/>
@@ -233,6 +282,21 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
+<node CREATED="1662960840802" ID="ID_1023996226" MODIFIED="1662960843915" TEXT="Model ">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662960846359" ID="ID_141239265" MODIFIED="1662961052768" TEXT="VaR = Value at Risk">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662961055694" ID="ID_675914245" MODIFIED="1662961116519" TEXT="Variance-covariance VaR">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662961067429" ID="ID_1716797478" MODIFIED="1662961116520" TEXT="Historical simulation VaR">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662961061404" ID="ID_1297489" MODIFIED="1662961116520" TEXT="Monte Carlo VaR">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
 </node>
 <node CREATED="1662838545811" FOLDED="true" ID="ID_1185796292" MODIFIED="1662876206356" POSITION="right" TEXT="Volatility">
 <icon BUILTIN="xmag"/>
@@ -250,6 +314,27 @@
 <node CREATED="1662838748562" ID="ID_384696211" MODIFIED="1662838763046" TEXT="EGARCH">
 <icon BUILTIN="button_ok"/>
 </node>
+</node>
+</node>
+<node CREATED="1662914558619" FOLDED="true" ID="ID_1788682767" MODIFIED="1662915766474" POSITION="right" TEXT="Stochastic math">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662914579129" ID="ID_1727551805" LINK="https://www.quantstart.com/articles/The-Markov-and-Martingale-Properties/" MODIFIED="1662914626172" TEXT="Markov property">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662914583502" ID="ID_498457976" LINK="https://www.quantstart.com/articles/The-Markov-and-Martingale-Properties/" MODIFIED="1662914630897" TEXT="Martingale property">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1662915767166" FOLDED="true" ID="ID_92688155" MODIFIED="1662918997523" POSITION="right" TEXT="Trading platforms">
+<icon BUILTIN="xmag"/>
+<node CREATED="1662915776966" ID="ID_1276781794" MODIFIED="1662915805373" TEXT="Quantopian">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662915786473" ID="ID_1359979835" MODIFIED="1662915805374" TEXT="QuantConnect">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1662915791550" ID="ID_1102614559" MODIFIED="1662915805374" TEXT="TradeStation">
+<icon BUILTIN="button_ok"/>
 </node>
 </node>
 </node>

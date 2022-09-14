@@ -44,6 +44,11 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 
 ### Website /Blogs
 - [Quantstart blogs](https://www.quantstart.com/articles/)
+- [MATLAB Trading](http://matlab-trading.blogspot.co.uk/)
+- [Quantitative Trading (Ernest Chan)](http://epchan.blogspot.com)
+- [Quantivity](http://quantivity.wordpress.com)
+- [Quantopian](http://blog.quantopian.com)
+- [Quantpedia](http://quantpedia.com)
 ***
 
 ## Python online tutorial series

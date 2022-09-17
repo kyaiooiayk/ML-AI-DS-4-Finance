@@ -29,7 +29,7 @@
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
 <node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
-<node CREATED="1662208164307" FOLDED="true" ID="ID_960226577" MODIFIED="1662288036243" POSITION="left" TEXT="Model">
+<node CREATED="1662208164307" ID="ID_960226577" MODIFIED="1663410906964" POSITION="left" TEXT="Model">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208173157" ID="ID_93447926" LINK="https://www.investopedia.com/terms/c/capm.asp" MODIFIED="1662278802257" TEXT="Capital Asset Pricing Model = CAPM">
 <icon BUILTIN="button_ok"/>
@@ -38,10 +38,10 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1662402522174" POSITION="left" TEXT="Fundamentals">
+<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1663402405160" POSITION="left" TEXT="Fundamentals">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
-<node CREATED="1662295202247" ID="ID_992590304" MODIFIED="1662295222591" TEXT="Sharpe Ratio">
+<node CREATED="1662295202247" ID="ID_992590304" LINK="https://www.quantstart.com/articles/Sharpe-Ratio-for-Algorithmic-Trading-Performance-Measurement/" MODIFIED="1663400544028" TEXT="Sharpe Ratio">
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1662295206632" ID="ID_1238908509" LINK="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" MODIFIED="1662295239524" TEXT="Deflated Sharpe Ratio">
@@ -54,7 +54,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662402536758" FOLDED="true" ID="ID_474631677" MODIFIED="1662918999758" POSITION="left" TEXT="Portofolio strategies">
+<node CREATED="1662402536758" ID="ID_474631677" MODIFIED="1663410910398" POSITION="left" TEXT="Portofolio strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662148544829" ID="ID_1760261148" LINK="https://www.investopedia.com/terms/b/black-litterman_model.asp" MODIFIED="1662402650858" TEXT="Global Portfolio Optimization &#x2013; the Black-Litterman approach">
 <icon BUILTIN="button_ok"/>
@@ -65,12 +65,15 @@
 <node CREATED="1662404270950" ID="ID_855728957" LINK="https://en.wikipedia.org/wiki/Mark_Spitznagel" MODIFIED="1662404320170" TEXT="tail-hedging or black swan investing ">
 <icon BUILTIN="button_ok"/>
 </node>
+<node CREATED="1663410860352" ID="ID_752826892" LINK="https://www.quantstart.com/articles/Money-Management-via-the-Kelly-Criterion/" MODIFIED="1663410938284" TEXT="Kelly&apos;s criterion">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node CREATED="1662919001347" FOLDED="true" ID="ID_923691290" MODIFIED="1663079761034" POSITION="left" TEXT="Donts&apos;">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662919021548" ID="ID_100908768" MODIFIED="1662919075605" TEXT="Do not forget about risk management"/>
 </node>
-<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" MODIFIED="1663094487003" POSITION="left" TEXT="How to judge a potential new strategy">
+<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1663395509762" POSITION="left" TEXT="How to judge a potential new strategy">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663094114357" ID="ID_1967472534" MODIFIED="1663094445751" TEXT="Methodology">
 <icon BUILTIN="button_ok"/>
@@ -103,9 +106,9 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1663095449012" POSITION="right" TEXT="Data">
+<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1663400493063" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
-<node CREATED="1661690110549" FOLDED="true" ID="ID_1717789771" MODIFIED="1663095361312" TEXT="Fundamental Data">
+<node CREATED="1661690110549" FOLDED="true" ID="ID_1717789771" MODIFIED="1663400315960" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690143840" ID="ID_1322763128" MODIFIED="1663094483793" TEXT="Growth">
 <icon BUILTIN="button_ok"/>
@@ -120,6 +123,12 @@
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1661711639307" ID="ID_988849418" MODIFIED="1661711648395" TEXT="Demographic risk">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663395520595" ID="ID_993907822" MODIFIED="1663395547009" TEXT="price-earning ratio">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663395540918" ID="ID_938168680" MODIFIED="1663395547010" TEXT="book value">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
@@ -216,6 +225,30 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
+<node CREATED="1663223206844" FOLDED="true" ID="ID_1997825181" MODIFIED="1663225018644" TEXT="effects">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663223245909" ID="ID_1398632606" LINK="https://en.wikipedia.org/wiki/Contango" MODIFIED="1663223588633" TEXT="Contago effect">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663223248758" ID="ID_1909604874" LINK="https://en.wikipedia.org/wiki/Normal_backwardation" MODIFIED="1663223652849" TEXT="Backwardation effect">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663223251460" ID="ID_355603419" MODIFIED="1663223657276" TEXT="Remedy">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663223659534" ID="ID_897445305" MODIFIED="1663223701794" TEXT="Back/Forward (&quot;Panama&quot;) Adjustment ">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663223681236" ID="ID_1361105284" MODIFIED="1663223701795" TEXT="Proportionality Adjustment">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663223688198" ID="ID_739635845" MODIFIED="1663223701796" TEXT="Rollover/Perpetual Series">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node CREATED="1663400319590" ID="ID_1394271879" LINK="https://www.quantstart.com/articles/Securities-Master-Databases-for-Algorithmic-Trading/" MODIFIED="1663400334940" TEXT="Security Master">
+<icon BUILTIN="xmag"/>
+</node>
 </node>
 <node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1662402516675" POSITION="right" TEXT="Feature Engineering">
 <icon BUILTIN="xmag"/>
@@ -259,7 +292,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662288038631" FOLDED="true" ID="ID_174620185" MODIFIED="1663094092215" POSITION="right" TEXT="Backtesting">
+<node CREATED="1662288038631" FOLDED="true" ID="ID_174620185" MODIFIED="1663395500877" POSITION="right" TEXT="Backtesting">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662288045467" ID="ID_1525319379" MODIFIED="1662288071242" TEXT="Vectorized">
 <icon BUILTIN="button_ok"/>
@@ -282,7 +315,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663015593037" ID="ID_273339638" MODIFIED="1663015602884" TEXT="Backtesting biases">
+<node CREATED="1663015593037" ID="ID_273339638" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1663354822534" TEXT="Backtesting biases">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663015606525" ID="ID_599195391" MODIFIED="1663015669651" TEXT="Optimisation bias">
 <icon BUILTIN="button_ok"/>
@@ -313,7 +346,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1662806650081" ID="ID_1055013045" MODIFIED="1663133672663" POSITION="right" TEXT="Risk management">
+<node CREATED="1662806650081" FOLDED="true" ID="ID_1055013045" MODIFIED="1663330291925" POSITION="right" TEXT="Risk management">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662815568701" ID="ID_809719647" MODIFIED="1662815632131" TEXT="Management">
 <icon BUILTIN="xmag"/>
@@ -330,7 +363,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662815575351" ID="ID_226561256" MODIFIED="1662815632127" TEXT="Type">
+<node CREATED="1662815575351" FOLDED="true" ID="ID_226561256" MODIFIED="1663330290396" TEXT="Type">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662815595969" ID="ID_841082004" MODIFIED="1662815621026" TEXT="Market">
 <icon BUILTIN="button_ok"/>
@@ -347,14 +380,91 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662815614257" ID="ID_1621007303" MODIFIED="1662815621027" TEXT="Liquidity">
+<node CREATED="1662815614257" ID="ID_1621007303" MODIFIED="1663225202431" TEXT="Liquidity">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663225569276" ID="ID_1711300765" MODIFIED="1663225585349" TEXT="Characteristics">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663225168772" ID="ID_1232619696" MODIFIED="1663225197364" TEXT="Tightness">
 <icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663225169726" ID="ID_243123202" MODIFIED="1663225197365" TEXT="Immediacy">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663225173291" ID="ID_1945434684" MODIFIED="1663225197365" TEXT="Depth">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663225188908" ID="ID_937209701" MODIFIED="1663225197365" TEXT="Resiliency">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663225618666" ID="ID_1254721830" MODIFIED="1663225649905" TEXT="Measures">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663225632046" ID="ID_797789030" MODIFIED="1663225687402">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <div title="Page 213" class="page">
+      <div class="layoutArea">
+        <div class="column">
+          <p>
+            <font size="11.000000pt" face="MinionPro"><span style="font-size: 11.000000pt; font-family: MinionPro">Volume </span></font>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663225632637" ID="ID_645806578" MODIFIED="1663225687402" TEXT="Transaction cost">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663225671105" ID="ID_1277515989" MODIFIED="1663225687403" TEXT="Price impact">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663225664745" ID="ID_1408416092" MODIFIED="1663225687403" TEXT="Market impact">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663251139835" ID="ID_1733855903" MODIFIED="1663251172241" TEXT="Modelling">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663252910371" ID="ID_514156691" MODIFIED="1663252976381" TEXT="Transaction cost-based">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663251146083" ID="ID_724355119" MODIFIED="1663252403578" TEXT="Bid-Ask spread">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663252135477" ID="ID_1663620482" MODIFIED="1663252403579" TEXT="Roll&#x2019;s spread estimate">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663252389948" ID="ID_1608946845" MODIFIED="1663252403580" TEXT="Corwin-Schultz spread">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663252920904" ID="ID_1766358828" MODIFIED="1663253316889" TEXT="Price Impact&#x2013;based">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663253235031" ID="ID_1918677644" MODIFIED="1663253311338" TEXT="Amihud illiquidity measure">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663253251834" ID="ID_1501234235" MODIFIED="1663253311339" TEXT="Florackis, Andros, and Alexandros price impact ratio">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663253305249" ID="ID_1296458136" MODIFIED="1663253311339" TEXT="Coefficient of elasticity of trading (CET)">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663258150071" ID="ID_500313049" MODIFIED="1663258161132" TEXT="Market impact-based">
+<icon BUILTIN="xmag"/>
+</node>
+</node>
 </node>
 <node CREATED="1662815616774" ID="ID_1854459212" MODIFIED="1662815621028" TEXT="Operational">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662960840802" ID="ID_1023996226" MODIFIED="1663134402867" TEXT="Model ">
+<node CREATED="1662960840802" FOLDED="true" ID="ID_1023996226" MODIFIED="1663220318932" TEXT="Model ">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662960846359" ID="ID_141239265" MODIFIED="1663073995402" TEXT="VaR = Value at Risk">
 <icon BUILTIN="xmag"/>
@@ -412,6 +522,81 @@
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1662915791550" ID="ID_1102614559" MODIFIED="1662915805374" TEXT="TradeStation">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663330294090" FOLDED="true" ID="ID_1037348962" LINK="https://www.quantstart.com/articles/What-are-the-Different-Types-of-Quantitative-Analysts/" MODIFIED="1663354802815" POSITION="right" TEXT="Quantitative roles/jobs">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663330305400" ID="ID_993278232" MODIFIED="1663330362726" TEXT="Quantitative trader">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663330337322" ID="ID_443729549" MODIFIED="1663330362727" TEXT="Quantitative Researcher">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663330338479" ID="ID_448064506" MODIFIED="1663330362727" TEXT="Financial Engineer">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663330354296" ID="ID_199905593" MODIFIED="1663330362727" TEXT="Quantitative developer">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663331299579" FOLDED="true" ID="ID_1728724627" MODIFIED="1663410847695" POSITION="right" TEXT="Mathematical Finance">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663331308918" ID="ID_269121609" MODIFIED="1663331414509" TEXT="Derivative Securities Pricing/Hedging">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663331342126" ID="ID_308253420" MODIFIED="1663331414510" TEXT="Stochastic Calculus/Analysis">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663331377014" ID="ID_1932327801" MODIFIED="1663331414510" TEXT="Fixed Income Modeling">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663331391886" ID="ID_1224484838" MODIFIED="1663331414511" TEXT="Numerical methods">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663331396534" ID="ID_1280848153" MODIFIED="1663331414511" TEXT="Market Microstructure/High-Frequency Modeling">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663331403773" ID="ID_1686635931" MODIFIED="1663331414511" TEXT="Credit Risk">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663331514936" FOLDED="true" ID="ID_972668874" LINK="https://www.quantstart.com/articles/My-Experiences-as-a-Quantitative-Developer-in-a-Hedge-Fund/" MODIFIED="1663410771126" POSITION="right" TEXT="Trading pipeline">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663331534504" ID="ID_699058389" MODIFIED="1663331839564" TEXT="Pricing/Feeds">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663331811536" ID="ID_1198362945" MODIFIED="1663331839565" TEXT="Signals/Algorithm(s)">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1663332052425" ID="ID_582082371" MODIFIED="1663332098485" TEXT="trend-following,">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663332054523" ID="ID_1467736625" LINK="https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing/" MODIFIED="1663402433838" TEXT="mean-reversion">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663332058308" ID="ID_986360908" MODIFIED="1663332098485" TEXT="statistical aribitrage">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663332063480" ID="ID_1231718356" MODIFIED="1663332098484" TEXT="high-frequency">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663331834585" ID="ID_948213171" MODIFIED="1663331839565" TEXT="Execution/Orders">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663354111553" FOLDED="true" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1663354800231" POSITION="right" TEXT="Quantitative trading">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663354137319" ID="ID_357475166" MODIFIED="1663354187310" TEXT="Strategy Identification">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663354158351" ID="ID_298330556" MODIFIED="1663354187310" TEXT="Strategy Backtesting">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663354178584" ID="ID_180204544" MODIFIED="1663354187311" TEXT="Execution System">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663354179643" ID="ID_186157881" MODIFIED="1663354187311" TEXT="Risk Management">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>

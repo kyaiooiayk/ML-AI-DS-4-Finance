@@ -16,6 +16,13 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [Advances in Financial Machine Learning](https://www.amazon.co.uk/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)
 ***
 
+## Books | Interview preparation
+- [Heard on The Street: Quantitative Questions from Wall Street Job Interviews](https://www.amazon.com/gp/product/0970055285/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0970055285&linkCode=as2&tag=quant0f-20)
+- [Frequently Asked Questions in Quantitative Finance](https://www.amazon.com/gp/product/0470748753/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0470748753&linkCode=as2&tag=quant0f-20)
+- [Quant Job Interview Questions And Answers - Mark S. Joshi, Nick Denson, Andrew Downes](https://www.amazon.com/gp/product/143821703X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=143821703X&linkCode=as2&tag=quant0f-20)
+- [A Practical Guide To Quantitative Finance Interviews - Xinfeng Zhou](https://www.amazon.com/gp/product/1438236662/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1438236662&linkCode=as2&tag=quant0f-20)
+- [Starting Your Career as a Wall Street Quant: A Practical, No-BS Guide to Getting a Job in Quantitative Finance - Brett Jiu](https://www.amazon.com/gp/product/1453823859/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1453823859&linkCode=as2&tag=quant0f-20)
+
 ## Books | Python
 - [Machine Learning for Algorithmic Trading](https://www.amazon.com/Machine-Learning-Algorithmic-Trading-alternative/dp/1839217715?pf_rd_r=GZH2XZ35GB3BET09PCCA&pf_rd_p=c5b6893a-24f2-4a59-9d4b-aff5065c90ec&pd_rd_r=91a679c7-f069-4a6e-bdbb-a2b3f548f0c8&pd_rd_w=2B0Q0&pd_rd_wg=GMY5S&ref_=pd_gw_ci_mcx_mr_hp_d) | [GitHib codes](https://github.com/stefan-jansen/machine-learning-for-trading)
 - [Hands-On Machine Learning for Algorithmic Trading Design and Implement Investment Strategies Based on Smart Algorithms that Learn from Data Using Python](https://www.amazon.co.uk/Hands-Machine-Learning-Algorithmic-Trading-ebook/dp/B07JLFH7C5) | [GitHub](https://github.com/PacktPublishing/Hands-On-Machine-Learning-for-Algorithmic-Trading)
@@ -64,6 +71,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 ***
 
 ## Most requested skills
+- [Junior Quant Jobs Beginning a career in Financial Engineering after a PhD](https://www.quantstart.com/articles/Junior-Quant-Jobs-Beginning-a-career-in-Financial-Engineering-after-a-PhD/)
 List of requirements as read from job posts on LinkedIn.
 - Proficiency at operating within a Big Data environment: Hadoop, Spark/PySpark, Hive
 - Exposure to advanced NLP techniques to parse vast volumes of communications data to identify risk

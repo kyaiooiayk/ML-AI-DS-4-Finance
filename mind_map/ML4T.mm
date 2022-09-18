@@ -54,7 +54,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662402536758" ID="ID_474631677" MODIFIED="1663410910398" POSITION="left" TEXT="Portofolio strategies">
+<node CREATED="1662402536758" FOLDED="true" ID="ID_474631677" MODIFIED="1663491617826" POSITION="left" TEXT="Portofolio strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662148544829" ID="ID_1760261148" LINK="https://www.investopedia.com/terms/b/black-litterman_model.asp" MODIFIED="1662402650858" TEXT="Global Portfolio Optimization &#x2013; the Black-Litterman approach">
 <icon BUILTIN="button_ok"/>
@@ -561,18 +561,27 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663331514936" FOLDED="true" ID="ID_972668874" LINK="https://www.quantstart.com/articles/My-Experiences-as-a-Quantitative-Developer-in-a-Hedge-Fund/" MODIFIED="1663410771126" POSITION="right" TEXT="Trading pipeline">
+<node CREATED="1663331514936" FOLDED="true" ID="ID_972668874" LINK="https://www.quantstart.com/articles/My-Experiences-as-a-Quantitative-Developer-in-a-Hedge-Fund/" MODIFIED="1663491743057" POSITION="right" TEXT="Trading pipeline">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663331534504" ID="ID_699058389" MODIFIED="1663331839564" TEXT="Pricing/Feeds">
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1663331811536" ID="ID_1198362945" MODIFIED="1663331839565" TEXT="Signals/Algorithm(s)">
 <icon BUILTIN="button_ok"/>
-<node CREATED="1663332052425" ID="ID_582082371" MODIFIED="1663332098485" TEXT="trend-following,">
+<node CREATED="1663332052425" ID="ID_582082371" MODIFIED="1663491645557" TEXT="trend-following">
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1663332054523" ID="ID_1467736625" LINK="https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing/" MODIFIED="1663402433838" TEXT="mean-reversion">
 <icon BUILTIN="button_ok"/>
+<node CREATED="1663491668332" ID="ID_648660739" LINK="https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing/" MODIFIED="1663491739256" TEXT="Augmented Dickey-Fuller (ADF) Test">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663491670364" ID="ID_587415700" LINK="https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing/" MODIFIED="1663491739256" TEXT="Stationary - Hurst exponent">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663491696104" ID="ID_1056903081" LINK="https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing-Part-II/" MODIFIED="1663491739255" TEXT="Cointegrated Augmented Dickey-Fuller (CADF) ">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node CREATED="1663332058308" ID="ID_986360908" MODIFIED="1663332098485" TEXT="statistical aribitrage">
 <icon BUILTIN="button_ok"/>
@@ -585,7 +594,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663354111553" FOLDED="true" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1663354800231" POSITION="right" TEXT="Quantitative trading">
+<node CREATED="1663354111553" FOLDED="true" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1663491632871" POSITION="right" TEXT="Quantitative trading">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663354137319" ID="ID_357475166" MODIFIED="1663354187310" TEXT="Strategy Identification">
 <icon BUILTIN="button_ok"/>

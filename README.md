@@ -22,6 +22,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [Quant Job Interview Questions And Answers - Mark S. Joshi, Nick Denson, Andrew Downes](https://www.amazon.com/gp/product/143821703X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=143821703X&linkCode=as2&tag=quant0f-20)
 - [A Practical Guide To Quantitative Finance Interviews - Xinfeng Zhou](https://www.amazon.com/gp/product/1438236662/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1438236662&linkCode=as2&tag=quant0f-20)
 - [Starting Your Career as a Wall Street Quant: A Practical, No-BS Guide to Getting a Job in Quantitative Finance - Brett Jiu](https://www.amazon.com/gp/product/1453823859/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1453823859&linkCode=as2&tag=quant0f-20)
+***
 
 ## Books | Python
 - [Machine Learning for Algorithmic Trading](https://www.amazon.com/Machine-Learning-Algorithmic-Trading-alternative/dp/1839217715?pf_rd_r=GZH2XZ35GB3BET09PCCA&pf_rd_p=c5b6893a-24f2-4a59-9d4b-aff5065c90ec&pd_rd_r=91a679c7-f069-4a6e-bdbb-a2b3f548f0c8&pd_rd_w=2B0Q0&pd_rd_wg=GMY5S&ref_=pd_gw_ci_mcx_mr_hp_d) | [GitHib codes](https://github.com/stefan-jansen/machine-learning-for-trading)
@@ -34,6 +35,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 
 ## Scintific articles
 - [2020 | Deep learning in finance and banking: A literature review and classification](https://fbr.springeropen.com/articles/10.1186/s11782-020-00082-6)
+- [2019 | Machine Learning for Quantitative Finance Applications: A Survey](https://www.mdpi.com/2076-3417/9/24/5574/htm)
 - [2016 | Can We Predict the Financial Markets Based on Google's Search Queries?](https://onlinelibrary.wiley.com/doi/abs/10.1002/for.2446)
 - [2016 | 101 Formulaic Alpha](https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf)
 - [2015 | Performance v. Turnover: A Story by 4,000 Alphas](https://arxiv.org/ftp/arxiv/papers/1509/1509.08110.pdf)

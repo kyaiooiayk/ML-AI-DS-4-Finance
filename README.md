@@ -16,7 +16,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [Advances in Financial Machine Learning](https://www.amazon.co.uk/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)
 ***
 
-## Books | Interview preparation
+## Books | Interview Preparation
 - [Heard on The Street: Quantitative Questions from Wall Street Job Interviews](https://www.amazon.com/gp/product/0970055285/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0970055285&linkCode=as2&tag=quant0f-20)
 - [Frequently Asked Questions in Quantitative Finance](https://www.amazon.com/gp/product/0470748753/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0470748753&linkCode=as2&tag=quant0f-20)
 - [Quant Job Interview Questions And Answers - Mark S. Joshi, Nick Denson, Andrew Downes](https://www.amazon.com/gp/product/143821703X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=143821703X&linkCode=as2&tag=quant0f-20)
@@ -51,15 +51,19 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 
 ### Blog articles
 - [How My Machine Learning Trading Algorithm Outperformed the SP500 For 10 Years](https://towardsdatascience.com/the-austrian-quant-my-machine-learning-trading-algorithm-outperformed-the-sp500-for-10-years-bf7ee1d6a235)
+- [Why Are There Timeless Lessons That Do Not Get Arbitraged Away?](https://www.euclidean.com/timeless-lessons-that-do-not-get-arbitraged-away)
 ***
 
-### Website /Blogs
+### Website/Blogs
 - [Quantstart blogs](https://www.quantstart.com/articles/)
 - [MATLAB Trading](http://matlab-trading.blogspot.co.uk/)
 - [Quantitative Trading (Ernest Chan)](http://epchan.blogspot.com)
 - [Quantivity](http://quantivity.wordpress.com)
 - [Quantopian](http://blog.quantopian.com)
 - [Quantpedia](http://quantpedia.com)
+- [Investopedia](https://www.investopedia.com/)
+- [Euclidean-Technologies](https://www.euclidean.com/using-history-and-data-in-systematic-investing)
+- [The Capital Spectator](https://www.capitalspectator.com/)
 ***
 
 ## Python online tutorial series

@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1662288036909">
+<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1663656595248">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -29,7 +29,7 @@
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
 <node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
-<node CREATED="1662208164307" ID="ID_960226577" MODIFIED="1663410906964" POSITION="left" TEXT="Model">
+<node CREATED="1662208164307" FOLDED="true" ID="ID_960226577" MODIFIED="1663672825881" POSITION="left" TEXT="Model">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208173157" ID="ID_93447926" LINK="https://www.investopedia.com/terms/c/capm.asp" MODIFIED="1662278802257" TEXT="Capital Asset Pricing Model = CAPM">
 <icon BUILTIN="button_ok"/>
@@ -38,11 +38,20 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1663402405160" POSITION="left" TEXT="Fundamentals">
+<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1663672937366" POSITION="left" TEXT="Fundamentals">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
-<node CREATED="1662295202247" ID="ID_992590304" LINK="https://www.quantstart.com/articles/Sharpe-Ratio-for-Algorithmic-Trading-Performance-Measurement/" MODIFIED="1663400544028" TEXT="Sharpe Ratio">
+<node CREATED="1662295202247" ID="ID_992590304" LINK="https://www.quantstart.com/articles/Sharpe-Ratio-for-Algorithmic-Trading-Performance-Measurement/" MODIFIED="1663672864730" TEXT="Sharpe Ratio">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663672866656" ID="ID_1017039411" MODIFIED="1663672896997" TEXT="Annualised Sharpe Ratio">
 <icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663672875297" ID="ID_1201823566" MODIFIED="1663672896997" TEXT="Equity Sharpe Ratio">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663672883690" ID="ID_1331336813" MODIFIED="1663672896998" TEXT="Market Nautral Sharpe Ratio">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node CREATED="1662295206632" ID="ID_1238908509" LINK="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" MODIFIED="1662295239524" TEXT="Deflated Sharpe Ratio">
 <icon BUILTIN="button_ok"/>
@@ -292,7 +301,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662288038631" FOLDED="true" ID="ID_174620185" MODIFIED="1663395500877" POSITION="right" TEXT="Backtesting">
+<node CREATED="1662288038631" FOLDED="true" ID="ID_174620185" MODIFIED="1663672823365" POSITION="right" TEXT="Backtesting">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662288045467" ID="ID_1525319379" MODIFIED="1662288071242" TEXT="Vectorized">
 <icon BUILTIN="button_ok"/>
@@ -315,7 +324,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663015593037" ID="ID_273339638" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1663354822534" TEXT="Backtesting biases">
+<node CREATED="1663015593037" FOLDED="true" ID="ID_273339638" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1663672821764" TEXT="Backtesting biases">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663015606525" ID="ID_599195391" MODIFIED="1663015669651" TEXT="Optimisation bias">
 <icon BUILTIN="button_ok"/>

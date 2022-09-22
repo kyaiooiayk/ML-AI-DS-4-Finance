@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1663656595248">
+<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1663827401444">
 <richcontent TYPE="NODE"><html>
   <head>
     
@@ -82,7 +82,7 @@
 <icon BUILTIN="xmag"/>
 <node CREATED="1662919021548" ID="ID_100908768" MODIFIED="1662919075605" TEXT="Do not forget about risk management"/>
 </node>
-<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1663395509762" POSITION="left" TEXT="How to judge a potential new strategy">
+<node CREATED="1663094095500" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1663827795931" POSITION="left" TEXT="How to judge a potential new strategy">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663094114357" ID="ID_1967472534" MODIFIED="1663094445751" TEXT="Methodology">
 <icon BUILTIN="button_ok"/>
@@ -105,8 +105,41 @@
 <node CREATED="1663094419507" ID="ID_1434723552" MODIFIED="1663094445754" TEXT="Maximum Drawdown">
 <icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1663094425718" ID="ID_108275677" MODIFIED="1663094445754" TEXT="Capacity/Liquidity ">
+<node CREATED="1663094425718" ID="ID_108275677" MODIFIED="1663827418445" TEXT="Capacity">
 <icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663827418886" ID="ID_471618488" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663827437780" TEXT="Liquidity">
+<icon BUILTIN="button_ok"/>
+<node CREATED="1663827802016" ID="ID_1413323528" MODIFIED="1663828036647" TEXT="Types">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663827878268" ID="ID_1727411481" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663828027412">
+<richcontent TYPE="NODE"><html>
+  <head>
+    
+  </head>
+  <body>
+    Market liquidity
+  </body>
+</html>
+</richcontent>
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663827909701" ID="ID_594557836" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663828031347" TEXT="Accounting liquidity">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1663827949606" ID="ID_964751835" MODIFIED="1663828039314" TEXT="How to measure it">
+<icon BUILTIN="xmag"/>
+<node CREATED="1663827958466" ID="ID_720142483" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663828002805" TEXT="Current ratio">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663827965538" ID="ID_305174659" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663828009202" TEXT="Quick Ratio (Acid-test ratio) ">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663827984474" ID="ID_1684028794" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663828013715" TEXT="Cash ratio">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
 </node>
 <node CREATED="1663094434095" ID="ID_1535442935" MODIFIED="1663094445755" TEXT="Parameters">
 <icon BUILTIN="button_ok"/>
@@ -355,9 +388,9 @@
 </node>
 </node>
 </node>
-<node CREATED="1662806650081" FOLDED="true" ID="ID_1055013045" MODIFIED="1663330291925" POSITION="right" TEXT="Risk management">
+<node CREATED="1662806650081" ID="ID_1055013045" MODIFIED="1663827758763" POSITION="right" TEXT="Risk management">
 <icon BUILTIN="xmag"/>
-<node CREATED="1662815568701" ID="ID_809719647" MODIFIED="1662815632131" TEXT="Management">
+<node CREATED="1662815568701" FOLDED="true" ID="ID_809719647" MODIFIED="1663827788941" TEXT="Management">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662806659611" ID="ID_51153184" MODIFIED="1662806696652" TEXT="Ignore">
 <icon BUILTIN="button_ok"/>
@@ -372,12 +405,12 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662815575351" FOLDED="true" ID="ID_226561256" MODIFIED="1663330290396" TEXT="Type">
+<node CREATED="1662815575351" ID="ID_226561256" MODIFIED="1663742651429" TEXT="Type">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662815595969" ID="ID_841082004" MODIFIED="1662815621026" TEXT="Market">
 <icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1662815604267" ID="ID_1634150576" MODIFIED="1663133681546" TEXT="Credit">
+<node CREATED="1662815604267" FOLDED="true" ID="ID_1634150576" MODIFIED="1663742672781" TEXT="Credit">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663133685291" ID="ID_771762125" MODIFIED="1663133702147" TEXT="Exposure">
 <icon BUILTIN="button_ok"/>
@@ -389,7 +422,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662815614257" ID="ID_1621007303" MODIFIED="1663225202431" TEXT="Liquidity">
+<node CREATED="1662815614257" ID="ID_1621007303" MODIFIED="1663827762906" TEXT="Liquidity risk">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663225569276" ID="ID_1711300765" MODIFIED="1663225585349" TEXT="Characteristics">
 <icon BUILTIN="xmag"/>
@@ -470,6 +503,24 @@
 </node>
 </node>
 <node CREATED="1662815616774" ID="ID_1854459212" MODIFIED="1662815621028" TEXT="Operational">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663742689294" ID="ID_1816733546" MODIFIED="1663742758915" TEXT="Price risk">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663742698217" ID="ID_217506502" MODIFIED="1663742758916" TEXT="Volatility risk">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663742718254" ID="ID_1263330303" MODIFIED="1663742758917" TEXT="jump/crash risk">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663742729376" ID="ID_699829355" MODIFIED="1663742758917" TEXT="interest rate risk">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663742736192" ID="ID_735523619" MODIFIED="1663742758917" TEXT="correlation risk">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1663742741386" ID="ID_1852974084" MODIFIED="1663742758918" TEXT="default risk">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>

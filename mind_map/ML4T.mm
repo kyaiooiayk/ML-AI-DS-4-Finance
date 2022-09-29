@@ -29,12 +29,23 @@
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
 <node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
-<node CREATED="1662208164307" FOLDED="true" ID="ID_960226577" MODIFIED="1663672825881" POSITION="left" TEXT="Model">
+<node CREATED="1662208164307" ID="ID_960226577" MODIFIED="1664361008881" POSITION="left" TEXT="Models">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208173157" ID="ID_93447926" LINK="https://www.investopedia.com/terms/c/capm.asp" MODIFIED="1662278802257" TEXT="Capital Asset Pricing Model = CAPM">
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1662278734320" ID="ID_945336320" LINK="https://www.investopedia.com/articles/active-trading/082415/arbitrage-pricing-theory-its-not-just-fancy-math.asp" MODIFIED="1662278784314" TEXT="Arbitrage Pricing Theory = APT">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1664360927549" ID="ID_856263962" LINK="https://www.investopedia.com/terms/b/binomialoptionpricing.asp" MODIFIED="1664360946954" TEXT="Binomial Option Pricing">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1664361009845" ID="ID_288880257" MODIFIED="1664361015151" POSITION="left" TEXT="Theories">
+<node CREATED="1664361019315" ID="ID_1351228482" LINK="https://www.investopedia.com/terms/b/bird-in-hand.asp" MODIFIED="1664361050056" TEXT="Bird in Hand">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1664361301371" ID="ID_197795322" LINK="https://www.investopedia.com/terms/b/bird-in-hand.asp" MODIFIED="1664361319757" TEXT="Modigliani-Miller dividend irrelevance theory">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
@@ -57,7 +68,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662278842836" FOLDED="true" ID="ID_1575445950" MODIFIED="1662402534108" POSITION="left" TEXT="Numerical modelling">
+<node CREATED="1662278842836" ID="ID_1575445950" MODIFIED="1664360908624" POSITION="left" TEXT="Numerical modelling">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662278865077" ID="ID_1779329758" LINK="https://www.simtrade.fr/blog_simtrade/fama-macbeth-two-step-regression-method/" MODIFIED="1662278923188" TEXT="Fama&#x2013;Macbeth regression">
 <icon BUILTIN="button_ok"/>
@@ -82,7 +93,7 @@
 <icon BUILTIN="xmag"/>
 <node CREATED="1662919021548" ID="ID_100908768" MODIFIED="1662919075605" TEXT="Do not forget about risk management"/>
 </node>
-<node CREATED="1663094095500" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1663827795931" POSITION="left" TEXT="How to judge a potential new strategy">
+<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1664360900823" POSITION="left" TEXT="How to judge a potential new strategy">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663094114357" ID="ID_1967472534" MODIFIED="1663094445751" TEXT="Methodology">
 <icon BUILTIN="button_ok"/>
@@ -108,7 +119,7 @@
 <node CREATED="1663094425718" ID="ID_108275677" MODIFIED="1663827418445" TEXT="Capacity">
 <icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1663827418886" ID="ID_471618488" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663827437780" TEXT="Liquidity">
+<node CREATED="1663827418886" FOLDED="true" ID="ID_471618488" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1664360892530" TEXT="Liquidity">
 <icon BUILTIN="button_ok"/>
 <node CREATED="1663827802016" ID="ID_1413323528" MODIFIED="1663828036647" TEXT="Types">
 <icon BUILTIN="xmag"/>
@@ -120,8 +131,7 @@
   <body>
     Market liquidity
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1663827909701" ID="ID_594557836" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663828031347" TEXT="Accounting liquidity">
@@ -388,7 +398,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1662806650081" ID="ID_1055013045" MODIFIED="1663827758763" POSITION="right" TEXT="Risk management">
+<node CREATED="1662806650081" FOLDED="true" ID="ID_1055013045" MODIFIED="1664360903141" POSITION="right" TEXT="Risk management">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662815568701" FOLDED="true" ID="ID_809719647" MODIFIED="1663827788941" TEXT="Management">
 <icon BUILTIN="xmag"/>
@@ -457,8 +467,7 @@
       </div>
     </div>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="button_ok"/>
 </node>
 <node CREATED="1663225632637" ID="ID_645806578" MODIFIED="1663225687402" TEXT="Transaction cost">

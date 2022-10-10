@@ -121,6 +121,10 @@ List of requirements as read from job posts on LinkedIn.
 - [Quantstart](https://www.quantstart.com/about/)
 ***
 
+## Podcasts
+- [Excess Returns](https://www.stitcher.com/show/excess-returns)
+***
+
 ## Online tools
 - [Backtest Overfitting: An Interactive Example](http://datagrid.lbl.gov/backtest/)
 ***

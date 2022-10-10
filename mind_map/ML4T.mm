@@ -29,7 +29,7 @@
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
 <node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
-<node CREATED="1662208164307" ID="ID_960226577" MODIFIED="1664361008881" POSITION="left" TEXT="Models">
+<node CREATED="1662208164307" FOLDED="true" ID="ID_960226577" MODIFIED="1664946211234" POSITION="left" TEXT="Models">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208173157" ID="ID_93447926" LINK="https://www.investopedia.com/terms/c/capm.asp" MODIFIED="1662278802257" TEXT="Capital Asset Pricing Model = CAPM">
 <icon BUILTIN="button_ok"/>
@@ -41,7 +41,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1664361009845" ID="ID_288880257" MODIFIED="1664361015151" POSITION="left" TEXT="Theories">
+<node CREATED="1664361009845" FOLDED="true" ID="ID_288880257" MODIFIED="1664946209433" POSITION="left" TEXT="Theories">
 <node CREATED="1664361019315" ID="ID_1351228482" LINK="https://www.investopedia.com/terms/b/bird-in-hand.asp" MODIFIED="1664361050056" TEXT="Bird in Hand">
 <icon BUILTIN="button_ok"/>
 </node>

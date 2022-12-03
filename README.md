@@ -55,7 +55,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 ## Blog articles
 - [How My Machine Learning Trading Algorithm Outperformed the SP500 For 10 Years](https://towardsdatascience.com/the-austrian-quant-my-machine-learning-trading-algorithm-outperformed-the-sp500-for-10-years-bf7ee1d6a235)
 - [Why Are There Timeless Lessons That Do Not Get Arbitraged Away?](https://www.euclidean.com/timeless-lessons-that-do-not-get-arbitraged-away)
-- [https://principiamundi.com/posts/didact-anatomy/?utm_source=substack&utm_medium=email](https://principiamundi.com/posts/didact-anatomy/?utm_source=substack&utm_medium=email)
+- [Didact AI: The anatomy of an ML-powered stock picking engine](https://principiamundi.com/posts/didact-anatomy/?utm_source=substack&utm_medium=email)
 ***
 
 ## Website/Blogs
@@ -119,6 +119,10 @@ List of requirements as read from job posts on LinkedIn.
 ## Resources
 - [Investopedia](https://www.investopedia.co/)
 - [Quantstart](https://www.quantstart.com/about/)
+***
+
+## Podcasts
+- [Excess Returns](https://www.stitcher.com/show/excess-returns)
 ***
 
 ## Online tools

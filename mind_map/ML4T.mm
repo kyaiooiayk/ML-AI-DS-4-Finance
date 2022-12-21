@@ -49,7 +49,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1663672937366" POSITION="left" TEXT="Fundamentals">
+<node CREATED="1662208974670" ID="ID_213767358" MODIFIED="1670773238665" POSITION="left" TEXT="Fundamentals">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
 <node CREATED="1662295202247" ID="ID_992590304" LINK="https://www.quantstart.com/articles/Sharpe-Ratio-for-Algorithmic-Trading-Performance-Measurement/" MODIFIED="1663672864730" TEXT="Sharpe Ratio">
@@ -67,8 +67,11 @@
 <node CREATED="1662295206632" ID="ID_1238908509" LINK="https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf" MODIFIED="1662295239524" TEXT="Deflated Sharpe Ratio">
 <icon BUILTIN="button_ok"/>
 </node>
+<node CREATED="1670774095488" ID="ID_1426866138" LINK="https://www.investopedia.com/terms/s/sortinoratio.asp" MODIFIED="1670774132471" TEXT="Sortino Ratio">
+<icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1662278842836" ID="ID_1575445950" MODIFIED="1664360908624" POSITION="left" TEXT="Numerical modelling">
+</node>
+<node CREATED="1662278842836" FOLDED="true" ID="ID_1575445950" MODIFIED="1670773210985" POSITION="left" TEXT="Numerical modelling">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662278865077" ID="ID_1779329758" LINK="https://www.simtrade.fr/blog_simtrade/fama-macbeth-two-step-regression-method/" MODIFIED="1662278923188" TEXT="Fama&#x2013;Macbeth regression">
 <icon BUILTIN="button_ok"/>
@@ -302,7 +305,7 @@
 <icon BUILTIN="xmag"/>
 </node>
 </node>
-<node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1662402516675" POSITION="right" TEXT="Feature Engineering">
+<node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1670773220377" POSITION="right" TEXT="Feature Engineering">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661785589614" ID="ID_1133674928" LINK="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html" MODIFIED="1662295197474" TEXT="5 Fama-French factors">
 <icon BUILTIN="xmag"/>
@@ -582,7 +585,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662915767166" FOLDED="true" ID="ID_92688155" MODIFIED="1662918997523" POSITION="right" TEXT="Trading platforms">
+<node CREATED="1662915767166" ID="ID_92688155" MODIFIED="1670773226330" POSITION="right" TEXT="Trading platforms">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662915776966" ID="ID_1276781794" MODIFIED="1662915805373" TEXT="Quantopian">
 <icon BUILTIN="button_ok"/>
@@ -609,7 +612,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663331299579" FOLDED="true" ID="ID_1728724627" MODIFIED="1663410847695" POSITION="right" TEXT="Mathematical Finance">
+<node CREATED="1663331299579" FOLDED="true" ID="ID_1728724627" MODIFIED="1670773234944" POSITION="right" TEXT="Mathematical Finance">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663331308918" ID="ID_269121609" MODIFIED="1663331414509" TEXT="Derivative Securities Pricing/Hedging">
 <icon BUILTIN="button_ok"/>

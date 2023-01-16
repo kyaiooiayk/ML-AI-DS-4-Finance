@@ -83,8 +83,9 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 ***
 
 ## Most requested skills
-- [Junior Quant Jobs Beginning a career in Financial Engineering after a PhD](https://www.quantstart.com/articles/Junior-Quant-Jobs-Beginning-a-career-in-Financial-Engineering-after-a-PhD/)
 List of requirements as read from job posts on LinkedIn.
+
+- [Junior Quant Jobs Beginning a career in Financial Engineering after a PhD](https://www.quantstart.com/articles/Junior-Quant-Jobs-Beginning-a-career-in-Financial-Engineering-after-a-PhD/)
 - Proficiency at operating within a Big Data environment: Hadoop, Spark/PySpark, Hive
 - Exposure to advanced NLP techniques to parse vast volumes of communications data to identify risk
 - Increased knowledge of traded products and their mechanisms across Equities, Rates, FX and Commodities
@@ -99,6 +100,12 @@ List of requirements as read from job posts on LinkedIn.
 - Optimisations: [CVXOPT](https://cvxopt.org/userguide/index.html) 
 - Data science stack: Pands, numpy, Scikit, Seaborn
 - NLP libraries: nltk, SpaCy, Stanza, Flair, Polyglot and gensim
+- Excellent experience Time Series analysis
+- Excellent exposure to signal processing
+- Financial econometrics
+- Stochastic Calculus
+- Experience working with at a Hedge Fund, Asset Manager or Prop Trading firm.
+- Quantitative background
 ***
 
 ## To be explored
@@ -140,3 +147,4 @@ List of requirements as read from job posts on LinkedIn.
 
 ## GitHub repositories
 - [Yves Hilpisch ](https://github.com/yhilpisch?tab=repositories)
+***

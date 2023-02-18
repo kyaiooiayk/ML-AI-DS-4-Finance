@@ -6,7 +6,7 @@ The topic of ML for finance is quite broad and necessarely touches many topics, 
 ***
 
 ## NLP
-- Topics analysis of company earning calls | [coloured NB](https://github.com/kyaiooiayk/NLP-Natural-Language-Processing-Notes/blob/main/tutorials/Topics%20analysis%20of%20company%20earning%20calls.ipynb) | [B&W NB](https://github.com/kyaiooiayk/NLP-Natural-Language-Processing-Notes/blob/main/tutorials/GitHub_MD_rendering/Topics%20analysis%20of%20company%20earning%20calls.ipynb)
+- Topics analysis of company earning calls | [Coloured NB](https://github.com/kyaiooiayk/NLP-Natural-Language-Processing-Notes/blob/main/tutorials/Topics%20analysis%20of%20company%20earning%20calls.ipynb) | [B&W NB](https://github.com/kyaiooiayk/NLP-Natural-Language-Processing-Notes/blob/main/tutorials/GitHub_MD_rendering/Topics%20analysis%20of%20company%20earning%20calls.ipynb)
 ***
 
 ## Time series analysis

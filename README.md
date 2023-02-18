@@ -22,7 +22,9 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [Quant Job Interview Questions And Answers - Mark S. Joshi, Nick Denson, Andrew Downes](https://www.amazon.com/gp/product/143821703X/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=143821703X&linkCode=as2&tag=quant0f-20)
 - [A Practical Guide To Quantitative Finance Interviews - Xinfeng Zhou](https://www.amazon.com/gp/product/1438236662/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1438236662&linkCode=as2&tag=quant0f-20)
 - [Starting Your Career as a Wall Street Quant: A Practical, No-BS Guide to Getting a Job in Quantitative Finance - Brett Jiu](https://www.amazon.com/gp/product/1453823859/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1453823859&linkCode=as2&tag=quant0f-20)
+- [Take-home assignment collections]()
 ***
+
 
 ## Books | Python
 - [Advanced algorithm trading](https://www.quantstart.com/advanced-algorithmic-trading-ebook/) | [GitHub](https://github.com/zslucky/algorithmic_trading_book)

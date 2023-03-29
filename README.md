@@ -70,6 +70,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [Investopedia](https://www.investopedia.com/)
 - [Euclidean-Technologies](https://www.euclidean.com/using-history-and-data-in-systematic-investing)
 - [The Capital Spectator](https://www.capitalspectator.com/)
+- [Sentiment trader | Analysis over emotion](https://sentimentrader.com/blog)
 ***
 
 ## Python online tutorial series

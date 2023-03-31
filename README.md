@@ -39,6 +39,7 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 ***
 
 ## Scintific articles
+- [2023 | BloombergGPT: A Large Language Model for Finance](https://arxiv.org/abs/2303.17564)
 - [2020 | Deep learning in finance and banking: A literature review and classification](https://fbr.springeropen.com/articles/10.1186/s11782-020-00082-6)
 - [2019 | Quantum Finance Forecast System with Quantum Anharmonic Oscillator Model for Quantum Price Level Modeling](http://www.iajer.com/wp-content/uploads/2021/02/A420121.pdf)
 - [2019 | Machine Learning for Quantitative Finance Applications: A Survey](https://www.mdpi.com/2076-3417/9/24/5574/htm)
@@ -141,7 +142,7 @@ List of requirements as read from job posts on `LinkedIn`.
 - [Backtest Overfitting: An Interactive Example](http://datagrid.lbl.gov/backtest/)
 ***
 
-## Online corse
+## Online course
 - [Machine Learning for Trading | Udacy](https://www.udacity.com/course/machine-learning-for-trading--ud501)
 - [Algorithmic Trading A-Z with Python, Machine Learning & AWS | Udemy](https://www.udemy.com/course/algorithmic-trading-with-python-and-machine-learning/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Python_v.PROF_la.EN_cc.UK_ti.7380&utm_content=deal4584&utm_term=_._ag_73899892513_._ad_532713166711_._kw__._de_c_._dm__._pl__._ti_dsa-774930046209_._li_9045312_._pd__._&matchtype=&gclid=Cj0KCQjw6_CYBhDjARIsABnuSzpIr2wUYv3Q3O947CHUGGbET3vuV8xFS59lX5pE9ipqbaTV8GziuWQaAqiCEALw_wcB)
 ***

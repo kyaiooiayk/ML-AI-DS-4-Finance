@@ -25,7 +25,6 @@ Machine Learning, Artificial Intelligence, Data Science for Finance -  a reposit
 - [Take-home assignment collections](https://github.com/kyaiooiayk/ML-AI-DS-for-Finance/tree/main/take_home_assignment)
 ***
 
-
 ## Books | Python
 - [Advanced algorithm trading](https://www.quantstart.com/advanced-algorithmic-trading-ebook/) | [GitHub](https://github.com/zslucky/algorithmic_trading_book)
 - [Derivatives Analytics with Python](https://www.amazon.co.uk/Derivatives-Analytics-Python-Simulation-Calibration/dp/1119037999/ref=asc_df_1119037999/?tag=googshopuk-21&linkCode=df0&hvadid=310762413837&hvpos=&hvnetw=g&hvrand=13472180059267899973&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9046665&hvtargid=pla-450555227683&psc=1&th=1&psc=1) | [GitHub](https://github.com/yhilpisch/dawp)
@@ -97,7 +96,7 @@ List of requirements as read from job posts on `LinkedIn`.
 - Understanding of probability & statistical models 
 - Experience with SQL or related query language
 - Database technologies: SQL, MongoDB, Snowflake
-- Python / JupyterLab. 
+- Programming: Python, C++, C#
 - Container technologies: Kubernetes cluster
 - Cloud computing: Azure, AWS, GCP
 - Big data systems and services (map/reduce): Spark and Hadoop

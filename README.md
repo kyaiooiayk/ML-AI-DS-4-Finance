@@ -1,4 +1,4 @@
-# ML-AI-DS-for-Finance
+# ML-AI-DS-4-Finance
 *Machine Learning, Artificial Intelligence, Data Science 4 Finance*
 ***
 

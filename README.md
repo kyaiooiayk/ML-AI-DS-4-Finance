@@ -1,5 +1,5 @@
 # ML-AI-DS-for-Finance
-Machine Learning, Artificial Intelligence, Data Science for Finance -  a repository
+*Machine Learning, Artificial Intelligence, Data Science 4 Finance*
 ***
 
 ## How is ML used in finance?

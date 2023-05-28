@@ -73,6 +73,7 @@
 - [Sentiment trader | Analysis over emotion](https://sentimentrader.com/blog)
 - [G-research blog](https://www.gresearch.co.uk/news/)
 - [Financial carrers](https://www.efinancialcareers.co.uk/)
+- [WallStreetMojo](https://www.wallstreetmojo.com/)
 ***
 
 ## Tutorial series in Python

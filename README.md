@@ -23,6 +23,7 @@
 - [A Practical Guide To Quantitative Finance Interviews - Xinfeng Zhou](https://www.amazon.com/gp/product/1438236662/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1438236662&linkCode=as2&tag=quant0f-20)
 - [Starting Your Career as a Wall Street Quant: A Practical, No-BS Guide to Getting a Job in Quantitative Finance - Brett Jiu](https://www.amazon.com/gp/product/1453823859/ref=as_li_tf_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1453823859&linkCode=as2&tag=quant0f-20)
 - [Take-home assignment collections](https://github.com/kyaiooiayk/ML-AI-DS-for-Finance/tree/main/take_home_assignment)
+- [Inside the black box: A simple guide to quantitative and high frequency trading](https://www.amazon.co.uk/Inside-Black-Box-Quantitative-Frequency/dp/1118362411)
 ***
 
 ## Books | Python
@@ -74,6 +75,7 @@
 - [G-research blog](https://www.gresearch.co.uk/news/)
 - [Financial carrers](https://www.efinancialcareers.co.uk/)
 - [WallStreetMojo](https://www.wallstreetmojo.com/)
+- [What are the quantitative finance books that we should all have in our shelves?](https://quant.stackexchange.com/questions/38862/what-are-the-quantitative-finance-books-that-we-should-all-have-in-our-shelves)
 ***
 
 ## Tutorial series in Python

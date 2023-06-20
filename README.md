@@ -95,11 +95,12 @@
 - [ffn](https://pmorissette.github.io/ffn/) has plenty to offer to those who belong to the field of quantitative finance. It provides a vast array of utilities, from performance measurement and evaluation to graphing and common data transformations.
 ***
 
-## Most requested skills
+## Most requested skills/tools stack
 List of requirements as read from job posts on `LinkedIn`.
 
 - [Junior Quant Jobs Beginning a career in Financial Engineering after a PhD](https://www.quantstart.com/articles/Junior-Quant-Jobs-Beginning-a-career-in-Financial-Engineering-after-a-PhD/)
 - Proficiency at operating within a Big Data environment: Hadoop, Spark/PySpark, Hive
+- Pipelines orchestration: Apache Airflow
 - Exposure to advanced NLP techniques to parse vast volumes of communications data to identify risk
 - Increased knowledge of traded products and their mechanisms across Equities, Rates, FX and Commodities
 - Understanding of probability & statistical models 

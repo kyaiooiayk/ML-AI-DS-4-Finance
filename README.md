@@ -116,6 +116,7 @@ List of requirements as read from job posts on `LinkedIn`.
 - NLP libraries: nltk, SpaCy, Stanza, Flair, Polyglot and gensim
 - Excellent experience Time Series analysis
 - Excellent exposure to signal processing
+- Experience building low latency, multi-threaded software
 - Financial econometrics
 - Stochastic Calculus
 - Experience working with at a Hedge Fund, Asset Manager or Prop Trading firm.

@@ -76,6 +76,7 @@
 - [Financial carrers](https://www.efinancialcareers.co.uk/)
 - [WallStreetMojo](https://www.wallstreetmojo.com/)
 - [What are the quantitative finance books that we should all have in our shelves?](https://quant.stackexchange.com/questions/38862/what-are-the-quantitative-finance-books-that-we-should-all-have-in-our-shelves)
+- [Wilmott, Serving the quantitative finance community](https://forum.wilmott.com/index.php)
 ***
 
 ## Tutorial series in Python

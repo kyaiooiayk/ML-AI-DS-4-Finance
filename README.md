@@ -73,7 +73,7 @@
 - [The Capital Spectator](https://www.capitalspectator.com/)
 - [Sentiment trader | Analysis over emotion](https://sentimentrader.com/blog)
 - [G-research blog](https://www.gresearch.co.uk/news/)
-- [Financial carrers](https://www.efinancialcareers.co.uk/)
+- [Financial careers](https://www.efinancialcareers.co.uk/)
 - [WallStreetMojo](https://www.wallstreetmojo.com/)
 - [What are the quantitative finance books that we should all have in our shelves?](https://quant.stackexchange.com/questions/38862/what-are-the-quantitative-finance-books-that-we-should-all-have-in-our-shelves)
 - [Wilmott, Serving the quantitative finance community](https://forum.wilmott.com/index.php)

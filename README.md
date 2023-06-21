@@ -107,7 +107,7 @@ List of requirements as read from job posts on `LinkedIn`.
 - Understanding of probability & statistical models 
 - Experience with SQL or related query language
 - Database technologies: SQL, MongoDB, Snowflake
-- Programming: Python, C++, C#, Q (and kdb+, the database system that goes with it)
+- Programming: Python, Java, C++, C#, Q (and kdb+, the database system that goes with it)
 - Container technologies: Kubernetes cluster
 - Cloud computing: Azure, AWS, GCP
 - Big data systems and services (map/reduce): Spark and Hadoop
@@ -124,6 +124,7 @@ List of requirements as read from job posts on `LinkedIn`.
 - Quantitative background
 - Experience developing Plotly Dash dashboards and other data visualization tools
 - Experience with factor analysis, PCA, decomposition models for P&L and risk, machine learning
+- Exposure to derivative pricing models and Monte Carlo simulations
 ***
 
 ## To be explored

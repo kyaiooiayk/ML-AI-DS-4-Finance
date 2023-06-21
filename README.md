@@ -167,4 +167,5 @@ List of requirements as read from job posts on `LinkedIn`.
 
 ## GitHub repositories
 - [Yves Hilpisch ](https://github.com/yhilpisch?tab=repositories)
+- [ QuantEcon Open source code for quantitative economic modeling](https://github.com/QuantEcon)
 ***

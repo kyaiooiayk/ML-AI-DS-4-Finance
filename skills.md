@@ -1,4 +1,4 @@
-Most requested skills/tools stack
+# Most requested skills/tools stack
 ***
 
 ## 4 areas of expertise
@@ -12,7 +12,8 @@ Most requested skills/tools stack
 - [Junior Quant Jobs Beginning a career in Financial Engineering after a PhD](https://www.quantstart.com/articles/Junior-Quant-Jobs-Beginning-a-career-in-Financial-Engineering-after-a-PhD/)
 ***
 
-## List of requirements as read from job posts on `LinkedIn`.
+## Most requested skills
+List of requirements as read from job posts on `LinkedIn`.
 - Proficiency at operating within a Big Data environment: Hadoop, Spark/PySpark, Hive
 - Pipelines orchestration: Apache Airflow
 - Exposure to advanced NLP techniques to parse vast volumes of communications data to identify risk

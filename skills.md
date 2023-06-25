@@ -10,6 +10,7 @@
 
 ## Guide
 - [Junior Quant Jobs Beginning a career in Financial Engineering after a PhD](https://www.quantstart.com/articles/Junior-Quant-Jobs-Beginning-a-career-in-Financial-Engineering-after-a-PhD/)
+- [Vivek Viswanathan's guide on what to learn if you want ot become a quant](https://www.linkedin.com/feed/update/urn:li:activity:7067564654025142272/)
 ***
 
 ## Most requested skills

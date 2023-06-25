@@ -27,7 +27,7 @@ List of requirements as read from job posts on `LinkedIn`.
 - Cloud computing: Azure, AWS, GCP
 - Big data systems and services (map/reduce): Spark and Hadoop
 - Unit-testing and pytest
-- Optimisations: [CVXOPT](https://cvxopt.org/userguide/index.html) 
+- Optimisations: [CVXOPT](https://cvxopt.org/userguide/index.html) and convex optimisation | [Notes](https://drive.google.com/drive/u/1/folders/1tipTva-bmZQhiu2jvub4BQq0W46RUII-) | [Tutorials](https://github.com/kyaiooiayk/Awesome-Optimisation-Notes)
 - Data science stack: Pands, numpy, Scikit, Seaborn
 - NLP libraries: nltk, SpaCy, Stanza, Flair, Polyglot and gensim
 - Excellent experience Time Series analysis

@@ -73,8 +73,7 @@
 ## [Most requested skills/tools stack](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/skills.md)
 ***
 
-## To be explored
-- How Graph machine learning is used in ML4T?
+## [Study materials](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/study_materials.md)
 ***
 
 ## Notes on ML4T

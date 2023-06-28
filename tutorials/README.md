@@ -2,7 +2,7 @@
 ***
 
 ## How to use this repository
-The topic of ML for finance is quite broad and necessarely touches many topics, especially when it come to the usage of alternative data. For those tutorials that are strickly related to finance and banking the files will be stored in this repository; for the others a link to the relevant one will be provided in the sections below.
+The topic of ML for finance is quite a broad topic, especially when it come to the usage of alternative data. For those tutorials that are strickly related to finance and banking the files will be stored in this repository; for the others a link to the relevant one will be provided in the sections below.
 ***
 
 ## NLP

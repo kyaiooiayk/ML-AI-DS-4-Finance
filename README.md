@@ -18,17 +18,7 @@
 ## [Interview Preparation](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/Interview_prep.md)
 ***
 
-## Scintific articles
-- [2023 | BloombergGPT: A Large Language Model for Finance](https://arxiv.org/abs/2303.17564)
-- [2020 | Deep learning in finance and banking: A literature review and classification](https://fbr.springeropen.com/articles/10.1186/s11782-020-00082-6)
-- [2019 | Quantum Finance Forecast System with Quantum Anharmonic Oscillator Model for Quantum Price Level Modeling](http://www.iajer.com/wp-content/uploads/2021/02/A420121.pdf)
-- [2019 | Machine Learning for Quantitative Finance Applications: A Survey](https://www.mdpi.com/2076-3417/9/24/5574/htm)
-- [2016 | Can We Predict the Financial Markets Based on Google's Search Queries?](https://onlinelibrary.wiley.com/doi/abs/10.1002/for.2446)
-- [2016 | 101 Formulaic Alpha](https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf)
-- [2015 | Performance v. Turnover: A Story by 4,000 Alphas](https://arxiv.org/ftp/arxiv/papers/1509/1509.08110.pdf)
-- [2014 | CORRECTING FOR SELECTION BIAS, BACKTEST OVERFITTING AND NON-NORMALITY](https://www.davidhbailey.com/dhbpapers/deflated-sharpe.pdf)
-- [2014 | Pricing of range accrual swap in the quantum finance Libor Market Model](https://www.sciencedirect.com/science/article/abs/pii/S0378437114000545?via%3Dihub)
-- [2005 | Fundamental Indexation](https://www.researchaffiliates.com/content/dam/ra/documents/FAJ_Mar_Apr_2005_Fundamental_Indexation.pdf)
+## [Scintific articles](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/articles.md)
 ***
 
 ## Research group
@@ -100,10 +90,7 @@
 - [Backtest Overfitting: An Interactive Example](http://datagrid.lbl.gov/backtest/)
 ***
 
-## Online course (with Python)
-- [Machine Learning for Trading | Udacy](https://www.udacity.com/course/machine-learning-for-trading--ud501)
-- [Algorithmic Trading A-Z with Python, Machine Learning & AWS | Udemy](https://www.udemy.com/course/algorithmic-trading-with-python-and-machine-learning/?utm_source=adwords&utm_medium=udemyads&utm_campaign=Python_v.PROF_la.EN_cc.UK_ti.7380&utm_content=deal4584&utm_term=_._ag_73899892513_._ad_532713166711_._kw__._de_c_._dm__._pl__._ti_dsa-774930046209_._li_9045312_._pd__._&matchtype=&gclid=Cj0KCQjw6_CYBhDjARIsABnuSzpIr2wUYv3Q3O947CHUGGbET3vuV8xFS59lX5pE9ipqbaTV8GziuWQaAqiCEALw_wcB)
-- [Introduction to financial python](https://www.quantconnect.com/learning/articles/)
+## [Online courses (with Python)](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/courses.md))
 ***
 
 ## University degree focused on quantitative finance - UK

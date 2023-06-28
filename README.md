@@ -90,7 +90,7 @@
 - [Backtest Overfitting: An Interactive Example](http://datagrid.lbl.gov/backtest/)
 ***
 
-## [Online courses (with Python)](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/courses.md))
+## [Online courses](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/courses.md)
 ***
 
 ## University degree focused on quantitative finance - UK

@@ -19,7 +19,7 @@ List of requirements as read from job posts on `LinkedIn`.
 - Pipelines orchestration: Apache Airflow
 - Exposure to advanced NLP techniques to parse vast volumes of communications data to identify risk
 - Increased knowledge of traded products and their mechanisms across Equities, Rates, FX and Commodities
-- Understanding of probability & statistical models 
+- Understanding of probability & statistical models
 - Experience with SQL or related query language
 - Database technologies: SQL, MongoDB, Snowflake
 - Programming: Python, Java, C++, C#, Q (and kdb+, the database system that goes with it)

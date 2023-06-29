@@ -3,7 +3,7 @@
 <node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1663827401444">
 <richcontent TYPE="NODE"><html>
   <head>
-    
+
   </head>
   <body>
     <p>
@@ -129,7 +129,7 @@
 <node CREATED="1663827878268" ID="ID_1727411481" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1663828027412">
 <richcontent TYPE="NODE"><html>
   <head>
-    
+
   </head>
   <body>
     Market liquidity
@@ -457,7 +457,7 @@
 <node CREATED="1663225632046" ID="ID_797789030" MODIFIED="1663225687402">
 <richcontent TYPE="NODE"><html>
   <head>
-    
+
   </head>
   <body>
     <div title="Page 213" class="page">

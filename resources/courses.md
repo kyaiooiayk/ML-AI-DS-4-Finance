@@ -13,4 +13,7 @@
 
 ## Finance theory
 - [Finance and capital markets](https://www.khanacademy.org/economics-finance-domain/core-finance)
+- [Economics](https://www.khanacademy.org/economics-finance-domain)
+- [Macroeconomics](https://www.khanacademy.org/economics-finance-domain/macroeconomics)
+- [Unit: Options, swaps, futures, MBSs, CDOs, and other derivatives](https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities)
 ***

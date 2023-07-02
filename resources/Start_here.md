@@ -1,4 +1,5 @@
 # Start here
+***
 
 ## Macro areas
 - Research
@@ -6,4 +7,5 @@
 - Signal generation
 - Portfolio construction & optimisation
 - Risk management
-- Trade execution.
+- Trade execution
+***

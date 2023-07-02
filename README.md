@@ -13,6 +13,7 @@
 ***
 
 ## Available resources
+- [Start here](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/Start_here.md)
 - [Books](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/books.md)
 - [Interview Preparation](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/Interview_prep.md)
 - [Scintific articles](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/articles.md)

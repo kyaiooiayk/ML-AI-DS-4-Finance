@@ -1,4 +1,5 @@
 # Interview Preparation
+- Links and suggestions/opinion on how to get a quant job.
 ***
 
 ## Books

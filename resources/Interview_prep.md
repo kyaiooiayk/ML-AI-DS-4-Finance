@@ -13,4 +13,5 @@
 
 ## Forums
 - [Quant interview from QuantNet](https://quantnet.com/forum/quant-interviews.41/)
+- [How to Get a Quant Job, Advice from Wall Street Executives](https://quantnet.com/threads/how-to-get-a-quant-job-advice-from-wall-street-executives.4537/)
 ***

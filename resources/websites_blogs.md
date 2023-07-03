@@ -8,6 +8,7 @@
 - [Quantivity](http://quantivity.wordpress.com)
 - [Quantopian](http://blog.quantopian.com)
 - [Quantpedia](http://quantpedia.com)
+- [Quantnet](https://quantnet.com/)
 - [Investopedia](https://www.investopedia.co/)
 - [Quantstart](https://www.quantstart.com/about/)
 - [Investopedia](https://www.investopedia.com/)

@@ -96,7 +96,7 @@
 <icon BUILTIN="xmag"/>
 <node CREATED="1662919021548" ID="ID_100908768" MODIFIED="1662919075605" TEXT="Do not forget about risk management"/>
 </node>
-<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1688404659766" POSITION="left" TEXT="How to judge a potential new strategy">
+<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1688471906597" POSITION="left" TEXT="How to judge a potential new strategy">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663094114357" ID="ID_1967472534" MODIFIED="1663094445751" TEXT="Methodology">
 <icon BUILTIN="button_ok"/>
@@ -161,9 +161,15 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
+<node CREATED="1688471846025" FOLDED="true" ID="ID_94261109" MODIFIED="1688472283385" POSITION="left" TEXT="Stock exchange">
+<icon BUILTIN="xmag"/>
+<node CREATED="1688471857849" ID="ID_550266373" LINK="https://en.wikipedia.org/wiki/Nasdaq" MODIFIED="1688471930991" TEXT="NASDAQ - National Association of Securities Dealers Automated Quotations Stock Market">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
 <node CREATED="1661690104223" ID="ID_363285369" MODIFIED="1688404671922" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
-<node CREATED="1661690110549" FOLDED="true" ID="ID_1717789771" MODIFIED="1663400315960" TEXT="Fundamental Data">
+<node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1688476045552" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690143840" ID="ID_1322763128" MODIFIED="1663094483793" TEXT="Growth">
 <icon BUILTIN="button_ok"/>
@@ -187,7 +193,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661689127295" FOLDED="true" ID="ID_1040980611" MODIFIED="1663095360030" TEXT="Alternative Data">
+<node CREATED="1661689127295" ID="ID_1040980611" MODIFIED="1688476828759" TEXT="Alternative Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689281944" ID="ID_1804773283" MODIFIED="1663094506387" TEXT="What?">
 <icon BUILTIN="xmag"/>
@@ -229,7 +235,19 @@
 </node>
 </node>
 </node>
-<node CREATED="1662793287964" FOLDED="true" ID="ID_1554645669" MODIFIED="1663095363345" TEXT="Share">
+<node CREATED="1688473226904" ID="ID_1170492009" MODIFIED="1688476059497" TEXT="Asset types">
+<icon BUILTIN="xmag"/>
+<node CREATED="1688473235560" ID="ID_1782305841" MODIFIED="1688473250845" TEXT="Equities">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688473239637" ID="ID_1361552257" MODIFIED="1688473250846" TEXT="Bonds">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688473245376" ID="ID_1770146968" MODIFIED="1688473250846" TEXT="Commodities">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1662793287964" FOLDED="true" ID="ID_1554645669" MODIFIED="1688473114868" TEXT="Share">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662793300039" ID="ID_1968876680" MODIFIED="1662793364930" TEXT="Open">
 <icon BUILTIN="button_ok"/>
@@ -250,7 +268,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663095364061" FOLDED="true" ID="ID_1014387010" MODIFIED="1663095446761" TEXT="Securities Master Databases">
+<node CREATED="1663095364061" FOLDED="true" ID="ID_1014387010" MODIFIED="1688473116150" TEXT="Securities Master Databases">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663095378053" ID="ID_506049514" MODIFIED="1663095443645" TEXT="Equities">
 <icon BUILTIN="button_ok"/>
@@ -280,7 +298,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663223206844" ID="ID_1997825181" MODIFIED="1688404688593" TEXT="Effects">
+<node CREATED="1663223206844" FOLDED="true" ID="ID_1997825181" MODIFIED="1688473117366" TEXT="Effects">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663223245909" ID="ID_1398632606" LINK="https://en.wikipedia.org/wiki/Contango" MODIFIED="1663223588633" TEXT="Contago effect">
 <icon BUILTIN="button_ok"/>
@@ -303,6 +321,24 @@
 </node>
 <node CREATED="1663400319590" ID="ID_1394271879" LINK="https://www.quantstart.com/articles/Securities-Master-Databases-for-Algorithmic-Trading/" MODIFIED="1663400334940" TEXT="Security Master">
 <icon BUILTIN="xmag"/>
+</node>
+<node CREATED="1688472558397" ID="ID_1714232310" MODIFIED="1688475865879" TEXT="Protocol">
+<icon BUILTIN="xmag"/>
+<node CREATED="1688472582826" ID="ID_1996367237" LINK="https://www.fixtrading.org/standards/" MODIFIED="1688472653380" TEXT="Financial Information eXchange (FIX)">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688472588705" ID="ID_836950465" LINK="http://www.nasdaqtrader.com/content/technicalsupport/specifications/dataproducts/NQTVITCHspecification.pdf" MODIFIED="1688472889393" TEXT="TotalView ITCH ">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1688476837376" ID="ID_793639456" MODIFIED="1688476858857" TEXT="Filing formats">
+<icon BUILTIN="xmag"/>
+<node CREATED="1688476861540" ID="ID_747999622" MODIFIED="1688476886931" TEXT="Electronic Data Gathering, Analysis, and Retrieval (EDGAR) ">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688476870336" ID="ID_666739822" MODIFIED="1688476886932" TEXT="XBRL">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 </node>
 <node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1688404605832" POSITION="right" TEXT="Feature Engineering">

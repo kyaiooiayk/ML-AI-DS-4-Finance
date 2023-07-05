@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1688592975316">
+<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1688593277460">
 <richcontent TYPE="NODE"><html>
   <head>
 
@@ -24,7 +24,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661794041283" FOLDED="true" ID="ID_1330534061" MODIFIED="1662288036243" POSITION="left" TEXT="Alpha">
+<node CREATED="1661794041283" FOLDED="true" ID="ID_1330534061" MODIFIED="1688593288799" POSITION="left" TEXT="Alpha">
 <node CREATED="1661794043988" ID="ID_908016985" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794107638" TEXT="delay-0 alpha"/>
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
@@ -49,7 +49,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1688404665166" POSITION="left" TEXT="Fundamentals">
+<node CREATED="1662208974670" ID="ID_213767358" MODIFIED="1688593291045" POSITION="left" TEXT="Fundamentals">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
 <node CREATED="1662295202247" FOLDED="true" ID="ID_992590304" LINK="https://www.quantstart.com/articles/Sharpe-Ratio-for-Algorithmic-Trading-Performance-Measurement/" MODIFIED="1688404640578" TEXT="Sharpe Ratio">
@@ -96,7 +96,7 @@
 <icon BUILTIN="xmag"/>
 <node CREATED="1662919021548" ID="ID_100908768" MODIFIED="1662919075605" TEXT="Do not forget about risk management"/>
 </node>
-<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1688471906597" POSITION="left" TEXT="How to judge a potential new strategy">
+<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1688593305913" POSITION="left" TEXT="How to judge a potential new strategy">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663094114357" ID="ID_1967472534" MODIFIED="1663094445751" TEXT="Methodology">
 <icon BUILTIN="button_ok"/>
@@ -167,7 +167,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1688592989008" ID="ID_1635861564" MODIFIED="1688593041556" POSITION="left" TEXT="Edge funds&apos; strategies">
+<node CREATED="1688592989008" FOLDED="true" ID="ID_1635861564" MODIFIED="1688593298205" POSITION="left" TEXT="Edge funds&apos; strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1688593047222" ID="ID_610955464" MODIFIED="1688593156477" TEXT="Long/short">
 <icon BUILTIN="button_ok"/>
@@ -212,7 +212,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1688592967114" POSITION="right" TEXT="Data">
+<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1688593286468" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1688476045552" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
@@ -386,7 +386,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1688404605832" POSITION="right" TEXT="Feature Engineering">
+<node CREATED="1661785577623" FOLDED="true" ID="ID_675865048" MODIFIED="1688593283542" POSITION="right" TEXT="Feature Engineering">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661785589614" ID="ID_1133674928" LINK="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/f-f_5_factors_2x3.html" MODIFIED="1662295197474" TEXT="5 Fama-French factors">
 <icon BUILTIN="xmag"/>
@@ -657,7 +657,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1662914558619" FOLDED="true" ID="ID_1788682767" MODIFIED="1688404637271" POSITION="right" TEXT="Stochastic math">
+<node CREATED="1662914558619" ID="ID_1788682767" MODIFIED="1688593292851" POSITION="right" TEXT="Stochastic math">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662914579129" ID="ID_1727551805" LINK="https://www.quantstart.com/articles/The-Markov-and-Martingale-Properties/" MODIFIED="1662914626172" TEXT="Markov property">
 <icon BUILTIN="button_ok"/>
@@ -747,7 +747,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663354111553" FOLDED="true" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1663491632871" POSITION="right" TEXT="Quantitative trading">
+<node CREATED="1663354111553" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1688593295440" POSITION="right" TEXT="Quantitative trading">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663354137319" ID="ID_357475166" MODIFIED="1663354187310" TEXT="Strategy Identification">
 <icon BUILTIN="button_ok"/>

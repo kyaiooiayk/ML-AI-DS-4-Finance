@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1663827401444">
+<node CREATED="1661689069042" ID="ID_1500069584" MODIFIED="1688592975316">
 <richcontent TYPE="NODE"><html>
   <head>
 
@@ -12,7 +12,7 @@
   </body>
 </html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="13"/>
-<node CREATED="1661689913287" FOLDED="true" ID="ID_364931973" MODIFIED="1662288036242" POSITION="left" TEXT="Quantitative strategies history">
+<node CREATED="1661689913287" FOLDED="true" ID="ID_364931973" MODIFIED="1688593012614" POSITION="left" TEXT="Quantitative strategies history">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689926919" ID="ID_1098598077" MODIFIED="1661689996879" TEXT="1. Academic reasearch - 1980s-1990s">
 <icon BUILTIN="button_ok"/>
@@ -29,7 +29,7 @@
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
 </node>
 <node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
-<node CREATED="1662208164307" FOLDED="true" ID="ID_960226577" MODIFIED="1664946211234" POSITION="left" TEXT="Models">
+<node CREATED="1662208164307" FOLDED="true" ID="ID_960226577" MODIFIED="1688593007777" POSITION="left" TEXT="Models">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208173157" ID="ID_93447926" LINK="https://www.investopedia.com/terms/c/capm.asp" MODIFIED="1662278802257" TEXT="Capital Asset Pricing Model = CAPM">
 <icon BUILTIN="button_ok"/>
@@ -77,7 +77,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662402536758" FOLDED="true" ID="ID_474631677" MODIFIED="1688404663193" POSITION="left" TEXT="Portofolio strategies">
+<node CREATED="1662402536758" FOLDED="true" ID="ID_474631677" MODIFIED="1688593002799" POSITION="left" TEXT="Portofolio strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662148544829" ID="ID_1760261148" LINK="https://www.investopedia.com/terms/b/black-litterman_model.asp" MODIFIED="1662402650858" TEXT="Global Portfolio Optimization &#x2013; the Black-Litterman approach">
 <icon BUILTIN="button_ok"/>
@@ -161,13 +161,58 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1688471846025" FOLDED="true" ID="ID_94261109" MODIFIED="1688472283385" POSITION="left" TEXT="Stock exchange">
+<node CREATED="1688471846025" FOLDED="true" ID="ID_94261109" MODIFIED="1688592986335" POSITION="left" TEXT="Stock exchange">
 <icon BUILTIN="xmag"/>
 <node CREATED="1688471857849" ID="ID_550266373" LINK="https://en.wikipedia.org/wiki/Nasdaq" MODIFIED="1688471930991" TEXT="NASDAQ - National Association of Securities Dealers Automated Quotations Stock Market">
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661690104223" ID="ID_363285369" MODIFIED="1688404671922" POSITION="right" TEXT="Data">
+<node CREATED="1688592989008" ID="ID_1635861564" MODIFIED="1688593041556" POSITION="left" TEXT="Edge funds&apos; strategies">
+<icon BUILTIN="xmag"/>
+<node CREATED="1688593047222" ID="ID_610955464" MODIFIED="1688593156477" TEXT="Long/short">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593131008" ID="ID_786061717" MODIFIED="1688593156478" TEXT="Short-only">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593056556" ID="ID_1710645195" MODIFIED="1688593156478" TEXT="Global macro">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593066496" ID="ID_709519824" MODIFIED="1688593156479" TEXT="Event-driven">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593070729" ID="ID_508720381" MODIFIED="1688593156479" TEXT="Distressed debt">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593077436" ID="ID_1064619953" MODIFIED="1688593156480" TEXT="Relative value">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593089833" ID="ID_1628556975" MODIFIED="1688593156480" TEXT="Quantitative/algorithm">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593100252" ID="ID_474559030" MODIFIED="1688593156480" TEXT="Merge arbitrage">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593107182" ID="ID_1366760793" MODIFIED="1688593156481" TEXT="Fixed income">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593110417" ID="ID_796549372" MODIFIED="1688593156481" TEXT="Multi">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593116271" ID="ID_1785328501" MODIFIED="1688593156482" TEXT="Emerging market">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593138360" ID="ID_1324329893" MODIFIED="1688593156482" TEXT="Credit">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593139920" ID="ID_1973322785" MODIFIED="1688593156482" TEXT="Convertible arbitrage">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688593147457" ID="ID_1736110281" MODIFIED="1688593156483" TEXT="Market neutral">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1688592967114" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" ID="ID_1717789771" MODIFIED="1688476045552" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>

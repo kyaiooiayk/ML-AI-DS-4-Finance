@@ -18,5 +18,5 @@
 ***
 
 ## Guides
-- [AN INTERVIEW PRIMER FOR QUANTITATIVE FINANCE *BY DIRK BESTER*](https://www.linkedin.com/in/dwbester/overlay/1537424893391/single-media-viewer/?profileId=ACoAABA0dAsBhbr6Ppy9cYt-oBD7YXr-hhQ8xaI)
+- [AN INTERVIEW PRIMER FOR QUANTITATIVE FINANCE *BY DIRK BESTER*](https://www.linkedin.com/in/dwbester/overlay/1537424893391/single-media-viewer/?profileId=ACoAABA0dAsBhbr6Ppy9cYt-oBD7YXr-hhQ8xaI) | [Also available here](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/tree/main/resources)
 ***

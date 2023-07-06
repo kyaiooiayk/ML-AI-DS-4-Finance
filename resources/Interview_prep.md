@@ -16,3 +16,7 @@
 - [Quant interview from QuantNet](https://quantnet.com/forum/quant-interviews.41/)
 - [How to Get a Quant Job, Advice from Wall Street Executives](https://quantnet.com/threads/how-to-get-a-quant-job-advice-from-wall-street-executives.4537/)
 ***
+
+## Guides
+- [AN INTERVIEW PRIMER FOR QUANTITATIVE FINANCE *BY DIRK BESTER*](https://www.linkedin.com/in/dwbester/overlay/1537424893391/single-media-viewer/?profileId=ACoAABA0dAsBhbr6Ppy9cYt-oBD7YXr-hhQ8xaI)
+***

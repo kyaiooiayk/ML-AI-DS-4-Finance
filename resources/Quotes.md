@@ -6,4 +6,5 @@
 - When the facts change, I change my mind. What do you do, sir? *by John Maynard Keynes*
 - An investment in knowledge pays the best interest *by Benjamin Franklin*
 - It's not whether you're right or wrong, but how much money you make when you're right and how much you lose when you're wrong". *by George Soros*
+- In finance, the opposite of being right is being random *by Paul Mende*
 ***

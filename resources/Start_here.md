@@ -18,7 +18,3 @@
 - The testing and evaluation of strategies, including through the use of synthetic data
 - The interactive, automated refinement of a strategy using reinforcement learning
 ***
-
-## References
-- [01_machine_learning_for_trading/](## Use case of ML4T)
-***

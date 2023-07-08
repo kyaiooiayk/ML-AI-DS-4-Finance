@@ -269,11 +269,13 @@ print(arch.summary())
 bic_arch = []
 
 for p in range(1, 5):
-    arch = arch_model(ret, mean='zero', vol='ARCH', p=p)        .fit(disp='off')
+    arch = arch_model(ret, mean='zero', vol='ARCH', p=p)\
+        .fit(disp='off')
     bic_arch.append(arch.bic)
     if arch.bic == np.min(bic_arch):
         best_param = p
-arch = arch_model(ret, mean='zero', vol='ARCH', p=best_param)    .fit(disp='off')
+arch = arch_model(ret, mean='zero', vol='ARCH', p=best_param)\
+    .fit(disp='off')
 print(arch.summary())
 forecast = arch.forecast(start=split_date[0])
 forecast_arch = forecast
@@ -376,7 +378,8 @@ def opt_paramsG(initial_parameters, retv):
                               method='Nelder-Mead',
                               options={'maxiter': 5000})
     params = opt_result.x
-    print('\nResults of Nelder-Mead minimization\n{}\n{}'          .format('-' * 35, opt_result))
+    print('\nResults of Nelder-Mead minimization\n{}\n{}'\
+          .format('-' * 35, opt_result))
     print('-' * 35)
     print('\nResulting parameters = {}'.format(params))
     return params
@@ -399,14 +402,16 @@ def garch_apply(ret):
         sigma2 = np.zeros(T + 1)
         sigma2[0] = np.var(ret)
         for t in range(1, T):
-            sigma2[t] = omega + alpha * ret[t - 1] ** 2 +                        beta * sigma2[t-1]
+            sigma2[t] = omega + alpha * ret[t - 1] ** 2 +\
+                        beta * sigma2[t-1]
         return sigma2
 
 
 # In[30]:
 
 
-garch = arch_model(ret, mean='zero', vol='GARCH', p=1, o=0, q=1)        .fit(disp='off')
+garch = arch_model(ret, mean='zero', vol='GARCH', p=1, o=0, q=1)\
+        .fit(disp='off')
 print(garch.summary())
 
 
@@ -417,7 +422,8 @@ bic_garch = []
 
 for p in range(1, 5):
     for q in range(1, 5):
-        garch = arch_model(ret, mean='zero',vol='GARCH', p=p, o=0, q=q)                .fit(disp='off')
+        garch = arch_model(ret, mean='zero',vol='GARCH', p=p, o=0, q=q)\
+                .fit(disp='off')
         bic_garch.append(garch.bic)
         if garch.bic == np.min(bic_garch):
             best_param = p, q
@@ -460,7 +466,8 @@ bic_gjr_garch = []
 
 for p in range(1, 5):
     for q in range(1, 5):
-        gjrgarch = arch_model(ret, mean='zero', p=p, o=1, q=q)                   .fit(disp='off')
+        gjrgarch = arch_model(ret, mean='zero', p=p, o=1, q=q)\
+                   .fit(disp='off')
         bic_gjr_garch.append(gjrgarch.bic)
         if gjrgarch.bic == np.min(bic_gjr_garch):
             best_param = p, q
@@ -503,7 +510,8 @@ bic_egarch = []
 
 for p in range(1, 5):
     for q in range(1, 5):
-        egarch = arch_model(ret, mean='zero', vol='EGARCH', p=p, q=q)                 .fit(disp='off')
+        egarch = arch_model(ret, mean='zero', vol='EGARCH', p=p, q=q)\
+                 .fit(disp='off')
         bic_egarch.append(egarch.bic)
         if egarch.bic == np.min(bic_egarch):
             best_param = p, q
@@ -708,7 +716,8 @@ predict_svr_poly.index = ret.iloc[-n:].index
 
 rmse_svr_poly = np.sqrt(mse(realized_vol.iloc[-n:] / 100,
                             predict_svr_poly / 100))
-print('The RMSE value of SVR with Polynomial Kernel is {:.6f}'      .format(rmse_svr_poly))
+print('The RMSE value of SVR with Polynomial Kernel is {:.6f}'\
+      .format(rmse_svr_poly))
 
 
 # In[ ]:

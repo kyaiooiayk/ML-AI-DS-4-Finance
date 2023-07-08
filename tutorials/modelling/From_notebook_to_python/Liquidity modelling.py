@@ -241,7 +241,8 @@ liq_vol_all[['mid_price', 'percent_quoted_ba', 'percent_effective_ba']]
 # In[14]:
 
 
-liq_vol_all['price_diff'] = liq_vol_all.groupby('TICKER')['PRC']                            .apply(lambda x:x.diff())
+liq_vol_all['price_diff'] = liq_vol_all.groupby('TICKER')['PRC']\
+                            .apply(lambda x:x.diff())
 liq_vol_all.dropna(inplace=True)
 roll = []
 
@@ -373,8 +374,10 @@ liq_vol_all['florackis'] = pd.DataFrame(florackis)
 # In[22]:
 
 
-liq_vol_all['vol_diff_pct'] = liq_vol_all.groupby('TICKER')['VOL']                              .apply(lambda x: x.diff()).pct_change()
-liq_vol_all['price_diff_pct'] = liq_vol_all.groupby('TICKER')['PRC']                              .apply(lambda x: x.diff()).pct_change()
+liq_vol_all['vol_diff_pct'] = liq_vol_all.groupby('TICKER')['VOL']\
+                              .apply(lambda x: x.diff()).pct_change()
+liq_vol_all['price_diff_pct'] = liq_vol_all.groupby('TICKER')['PRC']\
+                              .apply(lambda x: x.diff()).pct_change()
 
 
 # In[23]:
@@ -402,7 +405,8 @@ liq_vol_all[['amihud', "florackis", "cet"]]
 # In[26]:
 
 
-liq_vol_all['VOL_pct_change'] = liq_vol_all.groupby('TICKER')['VOL']                                .apply(lambda x: x.pct_change())
+liq_vol_all['VOL_pct_change'] = liq_vol_all.groupby('TICKER')['VOL']\
+                                .apply(lambda x: x.pct_change())
 liq_vol_all.dropna(subset=['VOL_pct_change'], inplace=True)
 liq_vol_all = liq_vol_all.reset_index()
 
@@ -446,7 +450,8 @@ liq_vol_all['market_impact'] = append1.append(market_impact[2])
 
 cols = ['vol_diff_pct', 'price_diff_pct', 'price_diff',
         'VOL_pct_change', 'dvol', 'mid_price']
-liq_measures_all = liq_vol_all.drop(liq_vol_all[cols], axis=1)                   .iloc[:, -11:]
+liq_measures_all = liq_vol_all.drop(liq_vol_all[cols], axis=1)\
+                   .iloc[:, -11:]
 liq_measures_all.dropna(inplace=True)
 liq_measures_all.describe().T
 

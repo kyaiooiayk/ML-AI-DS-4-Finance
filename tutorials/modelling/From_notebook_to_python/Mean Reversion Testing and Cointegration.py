@@ -184,7 +184,6 @@ plt.show()
 # In[9]:
 
 
-
 # Create OLS model
 Y = df['USO']
 x = df['XOM']

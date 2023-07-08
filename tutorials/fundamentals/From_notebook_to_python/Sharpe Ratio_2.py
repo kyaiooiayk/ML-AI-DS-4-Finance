@@ -63,6 +63,7 @@ def get_historic_data(ticker,
     return pdf
 
 
+
 # # Annualised Sharpe ratio
 # <hr style = "border:2px solid black" ></hr>
 

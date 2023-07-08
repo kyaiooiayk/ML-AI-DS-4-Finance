@@ -70,7 +70,8 @@ def split_sequence(sequence, n_steps):
 ticker = ['AAPL', 'MSFT']
 start = datetime.datetime(2019, 1, 1)
 end = datetime.datetime(2020, 1 ,1)
-stock_prices = yf.download(ticker,start=start, end = end, interval='1d')               .Close
+stock_prices = yf.download(ticker,start=start, end = end, interval='1d')\
+               .Close
 
 
 # In[4]:

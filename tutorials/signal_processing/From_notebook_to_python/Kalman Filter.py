@@ -21,8 +21,8 @@
 # In[6]:
 
 
-get_ipython().run_line_magic('matplotlib', 'inline')
-
+import pandas_datareader as pdr
+import datetime as dt
 from datetime import datetime
 import itertools
 
@@ -40,9 +40,6 @@ warnings.filterwarnings('ignore')
 warnings.filterwarnings('ignore')
 sns.set_style('whitegrid')
 idx = pd.IndexSlice
-
-import datetime as dt
-import pandas_datareader as pdr
 
 
 # # Import dataset

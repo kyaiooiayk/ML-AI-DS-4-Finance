@@ -253,7 +253,8 @@ n_components = np.arange(1, 10)
 clusters = [hmm.GaussianHMM(n_components=n, 
                             covariance_type="full").fit(sp_ret)
            for n in n_components]
-plt.plot(n_components, [m.score(np.array(SP['return'].dropna())                                .reshape(-1,1)) for m in clusters])
+plt.plot(n_components, [m.score(np.array(SP['return'].dropna())\
+                                .reshape(-1,1)) for m in clusters])
 plt.title('Optimum Number of States')
 plt.xlabel('n_components')
 plt.ylabel('Log Likelihood')

@@ -12,3 +12,9 @@
 - [alphatools](https://github.com/marketneutral/alphatools) Quantitative finance research tools in Python
 - [pandas-TA](https://twopirllc.github.io/pandas-ta/) | [GitHub](https://github.com/twopirllc/pandas-ta) Pandas Technical Analysis (Pandas TA) is an easy to use library that leverages the Pandas package with more than 130 Indicators and Utility functions and more than 60 TA Lib Candlestick Patterns. 
 ***
+
+## Backtesting
+- [VectorBT](https://vectorbt.dev/) is especially useful for performing thousands of iterations incredibly fast.
+- [Backtesting.Py](https://kernc.github.io/backtesting.py/) is a very intuitive and mature library. Both projects are being actively maintained and have a thriving community of users providing constant feedback and creating content and tutorials.
+- [Full list available here](https://www.qmr.ai/best-backtesting-library-for-python/)
+***

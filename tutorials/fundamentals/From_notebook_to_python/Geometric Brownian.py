@@ -317,6 +317,7 @@ for i in range(num_assets):
 
 
 
+
 # In[5]:
 
 
@@ -344,7 +345,7 @@ plt.show()
 get_ipython().system('rm ./DSERQ.csv')
 get_ipython().system('rm ./JFEXP.csv')
 get_ipython().system('rm ./ROJTO.csv')
-get_ipython().system('rm ./BUAWV.csv ')
+get_ipython().system('rm ./BUAWV.csv')
 get_ipython().system('rm ./URVLE.csv')
 
 

@@ -72,7 +72,7 @@ data['EWMA'] = data[sym]
 # In[6]:
 
 
-get_ipython().run_cell_magic('time', '', "for t in zip(data.index, data.index[1:]):\n    data.loc[t[1], 'EWMA'] = (alpha * data.loc[t[1], sym] +\n                              (1 - alpha) * data.loc[t[0], 'EWMA'])  ")
+get_ipython().run_cell_magic('time', '', "for t in zip(data.index, data.index[1:]):\n    data.loc[t[1], 'EWMA'] = (alpha * data.loc[t[1], sym] +\n                              (1 - alpha) * data.loc[t[0], 'EWMA'])  \n")
 
 
 # In[7]:
@@ -149,7 +149,7 @@ get_ipython().run_line_magic('load_ext', 'Cython')
 # In[25]:
 
 
-get_ipython().run_cell_magic('cython', '', 'import numpy as np\ncimport cython\n@cython.boundscheck(False)\n@cython.wraparound(False)\ndef ewma_cy(double[:] x, float alpha):\n    cdef int i\n    cdef double[:] y = np.empty_like(x)\n    y[0] = x[0]\n    for i in range(1, len(x)):\n        y[i] = alpha * x[i] + (1 - alpha) * y[i - 1]\n    return y')
+get_ipython().run_cell_magic('cython', '', 'import numpy as np\ncimport cython\n@cython.boundscheck(False)\n@cython.wraparound(False)\ndef ewma_cy(double[:] x, float alpha):\n    cdef int i\n    cdef double[:] y = np.empty_like(x)\n    y[0] = x[0]\n    for i in range(1, len(x)):\n        y[i] = alpha * x[i] + (1 - alpha) * y[i - 1]\n    return y\n')
 
 
 # In[26]:

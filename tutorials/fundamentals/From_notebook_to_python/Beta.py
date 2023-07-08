@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Imports" data-toc-modified-id="Imports-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Imports</a></span></li><li><span><a href="#Read-in-data" data-toc-modified-id="Read-in-data-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Read-in data</a></span></li><li><span><a href="#Quick-checks" data-toc-modified-id="Quick-checks-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Quick checks</a></span></li><li><span><a href="#Summary-Statistics" data-toc-modified-id="Summary-Statistics-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Summary Statistics</a></span></li><li><span><a href="#Clean-data" data-toc-modified-id="Clean-data-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Clean data</a></span></li><li><span><a href="#Calculating-Beta" data-toc-modified-id="Calculating-Beta-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Calculating Beta</a></span></li><li><span><a href="#via-OLS" data-toc-modified-id="via-OLS-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>via OLS</a></span></li><li><span><a href="#via-variance" data-toc-modified-id="via-variance-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>via variance</a></span></li><li><span><a href="#References" data-toc-modified-id="References-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>References</a></span></li><li><span><a href="#Requirements" data-toc-modified-id="Requirements-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>Requirements</a></span></li></ul></div>
+# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Imports" data-toc-modified-id="Imports-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Imports</a></span></li><li><span><a href="#Read-in-data" data-toc-modified-id="Read-in-data-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Read-in data</a></span></li><li><span><a href="#Quick-checks" data-toc-modified-id="Quick-checks-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Quick checks</a></span></li><li><span><a href="#Summary-Statistics" data-toc-modified-id="Summary-Statistics-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Summary Statistics</a></span></li><li><span><a href="#Clean-data" data-toc-modified-id="Clean-data-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Clean data</a></span></li><li><span><a href="#Calculating-Beta" data-toc-modified-id="Calculating-Beta-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Calculating Beta</a></span><ul class="toc-item"><li><span><a href="#via-OLS" data-toc-modified-id="via-OLS-7.1"><span class="toc-item-num">7.1&nbsp;&nbsp;</span>via OLS</a></span></li><li><span><a href="#via-variance" data-toc-modified-id="via-variance-7.2"><span class="toc-item-num">7.2&nbsp;&nbsp;</span>via variance</a></span></li></ul></li><li><span><a href="#References" data-toc-modified-id="References-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>References</a></span></li><li><span><a href="#Requirements" data-toc-modified-id="Requirements-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Requirements</a></span></li></ul></div>
 
 # # Introduction
 # <hr style = "border:2px solid black" ></hr>
@@ -10,7 +10,7 @@
 # <div class="alert alert-warning">
 # <font color=black>
 # 
-# **What?** Summary statistics
+# **What?** Beta
 # 
 # </font>
 # </div>
@@ -176,7 +176,7 @@ data[['AMZN.O', 'SPY']].plot(
 # </font>
 # </div>
 
-# # via OLS
+# ## via OLS
 
 # In[35]:
 
@@ -205,7 +205,7 @@ results.params
 print(f"Beta for Amazon {results.params[0]}")
 
 
-# # via variance
+# ## via variance
 
 # In[42]:
 

@@ -346,7 +346,8 @@ df_scaled[df_scaled.Clusters == 1]['Risk'].value_counts()
 # In[29]:
 
 
-df_scaled[df_scaled.Clusters == 0]['Risk'].value_counts()                                    .plot(kind='bar',
+df_scaled[df_scaled.Clusters == 0]['Risk'].value_counts()\
+                                    .plot(kind='bar',
                                     figsize=(10, 6),
                                     title="Frequency of Risk Level")
 plt.show()
@@ -355,7 +356,8 @@ plt.show()
 # In[30]:
 
 
-df_scaled[df_scaled.Clusters == 1]['Risk'].value_counts()                                    .plot(kind='bar',
+df_scaled[df_scaled.Clusters == 1]['Risk'].value_counts()\
+                                    .plot(kind='bar',
                                     figsize=(10, 6),
                                     title="Frequency of Risk Level")
 plt.show()

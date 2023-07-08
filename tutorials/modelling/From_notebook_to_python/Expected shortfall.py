@@ -129,7 +129,9 @@ def ES_parametric(initial_investment, conf_level):
     alpha = - norm.ppf(1 - conf_level, stocks_returns_mean, port_std) 
     for i, j in zip(stocks.columns, range(len(stocks.columns))):
         VaR_param = (initial_investment * alpha)[j]
-        ES_param = (1 / (1 - conf_level))             * initial_investment             * norm.expect(lambda x: x,
+        ES_param = (1 / (1 - conf_level)) \
+            * initial_investment \
+            * norm.expect(lambda x: x,
                           lb=norm.ppf(conf_level,
                                       stocks_returns_mean[j],
                                       port_std),

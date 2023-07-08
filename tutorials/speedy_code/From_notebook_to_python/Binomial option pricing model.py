@@ -195,7 +195,7 @@ get_ipython().run_line_magic('load_ext', 'Cython')
 # In[22]:
 
 
-get_ipython().run_cell_magic('cython', '-a', 'import numpy as np\ncimport cython\nfrom libc.math cimport exp, sqrt\ncdef float S0 = 36.\ncdef float T = 1.0\ncdef float r = 0.06\ncdef float sigma = 0.2\ndef simulate_tree_cy(int M):\n    cdef int z, t, i\n    cdef float dt, u, d\n    cdef float[:, :] S = np.zeros((M + 1, M + 1),\n                                  dtype=np.float32)  \n    dt = T / M\n    u = exp(sigma * sqrt(dt))\n    d = 1 / u\n    S[0, 0] = S0\n    z = 1\n    for t in range(1, M + 1):\n        for i in range(z):\n            S[i, t] = S[i, t-1] * u\n            S[i+1, t] = S[i, t-1] * d\n        z += 1\n    return np.array(S)')
+get_ipython().run_cell_magic('cython', '-a', 'import numpy as np\ncimport cython\nfrom libc.math cimport exp, sqrt\ncdef float S0 = 36.\ncdef float T = 1.0\ncdef float r = 0.06\ncdef float sigma = 0.2\ndef simulate_tree_cy(int M):\n    cdef int z, t, i\n    cdef float dt, u, d\n    cdef float[:, :] S = np.zeros((M + 1, M + 1),\n                                  dtype=np.float32)  \n    dt = T / M\n    u = exp(sigma * sqrt(dt))\n    d = 1 / u\n    S[0, 0] = S0\n    z = 1\n    for t in range(1, M + 1):\n        for i in range(z):\n            S[i, t] = S[i, t-1] * u\n            S[i+1, t] = S[i, t-1] * d\n        z += 1\n    return np.array(S)\n')
 
 
 # In[23]:

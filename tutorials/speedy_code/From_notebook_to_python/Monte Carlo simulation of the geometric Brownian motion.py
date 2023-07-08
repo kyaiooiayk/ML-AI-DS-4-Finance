@@ -221,7 +221,7 @@ get_ipython().run_line_magic('load_ext', 'Cython')
 # In[24]:
 
 
-get_ipython().run_cell_magic('cython', '', 'import numpy as np\ncimport numpy as np\ncimport cython\nfrom libc.math cimport exp, sqrt\ncdef float S0 = 36.\ncdef float T = 1.0\ncdef float r = 0.06\ncdef float sigma = 0.2\n@cython.boundscheck(False)\n@cython.wraparound(False)\ndef mcs_simulation_cy(p):\n    cdef int M, I\n    M, I = p\n    cdef int t, i\n    cdef float dt = T / M\n    cdef double[:, :] S = np.zeros((M + 1, I))\n    cdef double[:, :] rn = np.random.standard_normal((M + 1, I))\n    S[0] = S0\n    for t in range(1, M + 1):\n        for i in range(I):\n            S[t, i] = S[t-1, i] * exp((r - sigma ** 2 / 2) * dt +\n                                         sigma * sqrt(dt) * rn[t, i])\n    return np.array(S) ')
+get_ipython().run_cell_magic('cython', '', 'import numpy as np\ncimport numpy as np\ncimport cython\nfrom libc.math cimport exp, sqrt\ncdef float S0 = 36.\ncdef float T = 1.0\ncdef float r = 0.06\ncdef float sigma = 0.2\n@cython.boundscheck(False)\n@cython.wraparound(False)\ndef mcs_simulation_cy(p):\n    cdef int M, I\n    M, I = p\n    cdef int t, i\n    cdef float dt = T / M\n    cdef double[:, :] S = np.zeros((M + 1, I))\n    cdef double[:, :] rn = np.random.standard_normal((M + 1, I))\n    S[0] = S0\n    for t in range(1, M + 1):\n        for i in range(I):\n            S[t, i] = S[t-1, i] * exp((r - sigma ** 2 / 2) * dt +\n                                         sigma * sqrt(dt) * rn[t, i])\n    return np.array(S) \n')
 
 
 # In[25]:

@@ -35,7 +35,7 @@ get_ipython().run_line_magic('matplotlib', 'notebook')
 # In[2]:
 
 
-get_ipython().run_cell_magic('time', '', "# data from FXCM Forex Capital Markets Ltd.\ntick = pd.read_csv('../data/fxcm_eur_usd_tick_data.csv',\n                     index_col=0, parse_dates=True)")
+get_ipython().run_cell_magic('time', '', "# data from FXCM Forex Capital Markets Ltd.\ntick = pd.read_csv('../data/fxcm_eur_usd_tick_data.csv',\n                     index_col=0, parse_dates=True)\n")
 
 
 # In[3]:

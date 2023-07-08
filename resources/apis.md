@@ -1,2 +1,0 @@
-- [Alpaca](https://alpaca.markets/) offers a free brokerage account. This commission-free brokerage firm specializes in offering an excellent API for us to the interface, fetch live market data, and even place our orders. | [How to create a cryptocurrency bot in Python and Alpaca](https://www.qmr.ai/cryptocurrency-trading-bot-with-alpaca-in-python/)
-- [Binance](https://www.binance.com/en) | [Multi-asset trading bot in Binance](https://www.qmr.ai/build-a-momentum-cryptocurrency-bot-with-python-and-binance/)

@@ -30,5 +30,5 @@
 - [Online tools](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/Online_tools.md)
 - [Online courses](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/courses.md)
 - [University degree focused on quantitative finance - UK](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/University.md)
-- [python APIs](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/apis.md)
+- [Data source for finance](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/data_source.md)
 ***

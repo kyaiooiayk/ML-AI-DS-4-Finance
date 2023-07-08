@@ -49,7 +49,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662208974670" ID="ID_213767358" MODIFIED="1688593291045" POSITION="left" TEXT="Fundamentals">
+<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1688828625819" POSITION="left" TEXT="Fundamentals">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
 <node CREATED="1662295202247" FOLDED="true" ID="ID_992590304" LINK="https://www.quantstart.com/articles/Sharpe-Ratio-for-Algorithmic-Trading-Performance-Measurement/" MODIFIED="1688404640578" TEXT="Sharpe Ratio">
@@ -251,9 +251,15 @@
 <node CREATED="1661689236829" ID="ID_1195845649" MODIFIED="1661689308923" TEXT="Satellite images">
 <icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1688828547815" ID="ID_1336503943" MODIFIED="1688828550661" TEXT="Flights data"/>
-<node CREATED="1688828552554" ID="ID_890960287" MODIFIED="1688828557671" TEXT="GitHub data"/>
-<node CREATED="1688828560009" ID="ID_165758454" MODIFIED="1688828567383" TEXT="Job opening data"/>
+<node CREATED="1688828547815" ID="ID_1336503943" MODIFIED="1688828618900" TEXT="Flights data">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688828552554" ID="ID_890960287" MODIFIED="1688828618901" TEXT="GitHub data">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688828560009" ID="ID_165758454" MODIFIED="1688828618902" TEXT="Job opening data">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node CREATED="1661689419601" ID="ID_1869643221" MODIFIED="1663094502170" TEXT="Sources">
 <icon BUILTIN="xmag"/>
@@ -283,7 +289,7 @@
 </node>
 </node>
 </node>
-<node CREATED="1688473226904" ID="ID_1170492009" MODIFIED="1688476059497" TEXT="Asset types">
+<node CREATED="1688473226904" FOLDED="true" ID="ID_1170492009" MODIFIED="1688828630418" TEXT="Asset types">
 <icon BUILTIN="xmag"/>
 <node CREATED="1688473235560" ID="ID_1782305841" MODIFIED="1688473250845" TEXT="Equities">
 <icon BUILTIN="button_ok"/>
@@ -370,7 +376,7 @@
 <node CREATED="1663400319590" ID="ID_1394271879" LINK="https://www.quantstart.com/articles/Securities-Master-Databases-for-Algorithmic-Trading/" MODIFIED="1663400334940" TEXT="Security Master">
 <icon BUILTIN="xmag"/>
 </node>
-<node CREATED="1688472558397" ID="ID_1714232310" MODIFIED="1688475865879" TEXT="Protocol">
+<node CREATED="1688472558397" FOLDED="true" ID="ID_1714232310" MODIFIED="1688828631617" TEXT="Protocol">
 <icon BUILTIN="xmag"/>
 <node CREATED="1688472582826" ID="ID_1996367237" LINK="https://www.fixtrading.org/standards/" MODIFIED="1688472653380" TEXT="Financial Information eXchange (FIX)">
 <icon BUILTIN="button_ok"/>
@@ -750,7 +756,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663354111553" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1688593295440" POSITION="right" TEXT="Quantitative trading">
+<node CREATED="1663354111553" FOLDED="true" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1688828627350" POSITION="right" TEXT="Quantitative trading">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663354137319" ID="ID_357475166" MODIFIED="1663354187310" TEXT="Strategy Identification">
 <icon BUILTIN="button_ok"/>

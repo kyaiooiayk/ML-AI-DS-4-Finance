@@ -24,9 +24,21 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661794041283" FOLDED="true" ID="ID_1330534061" MODIFIED="1688593288799" POSITION="left" TEXT="Alpha">
+<node CREATED="1661794041283" FOLDED="true" ID="ID_1330534061" MODIFIED="1688839045313" POSITION="left" TEXT="Alpha">
 <node CREATED="1661794043988" ID="ID_908016985" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794107638" TEXT="delay-0 alpha"/>
 <node CREATED="1661794058662" ID="ID_1473195486" LINK="https://arxiv.org/ftp/arxiv/papers/1601/1601.00991.pdf" MODIFIED="1661794111967" TEXT="delay-1 alpha "/>
+<node CREATED="1688838950540" FOLDED="true" ID="ID_1672119388" LINK="https://www.qmr.ai/what-is-alpha-decay-in-investing/" MODIFIED="1688839043862" TEXT="Alpha decay">
+<icon BUILTIN="xmag"/>
+<node CREATED="1688838969057" ID="ID_401455647" MODIFIED="1688839014077" TEXT="More people replicate the strategy">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688838994650" ID="ID_918925134" MODIFIED="1688839014078" TEXT="Increasing allocated capital">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1688838999570" ID="ID_1463498412" MODIFIED="1688839014078" TEXT="Market regime change">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
 </node>
 <node CREATED="1662061291301" ID="ID_1186923471" LINK="https://www.investopedia.com/articles/investing/092115/alpha-and-beta-beginners.asp" MODIFIED="1662061316157" POSITION="left" TEXT="Alphas and Beta Factors"/>
 <node CREATED="1662208164307" FOLDED="true" ID="ID_960226577" MODIFIED="1688593007777" POSITION="left" TEXT="Models">
@@ -212,7 +224,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661690104223" ID="ID_363285369" MODIFIED="1688828531318" POSITION="right" TEXT="Data">
+<node CREATED="1661690104223" FOLDED="true" ID="ID_363285369" MODIFIED="1688838941826" POSITION="right" TEXT="Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661690110549" FOLDED="true" ID="ID_1717789771" MODIFIED="1688828537174" TEXT="Fundamental Data">
 <icon BUILTIN="xmag"/>
@@ -238,7 +250,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1661689127295" ID="ID_1040980611" LINK="https://www.qmr.ai/what-is-alternative-data-with-detailed-examples/" MODIFIED="1688828579143" TEXT="Alternative Data">
+<node CREATED="1661689127295" FOLDED="true" ID="ID_1040980611" LINK="https://www.qmr.ai/what-is-alternative-data-with-detailed-examples/" MODIFIED="1688838940177" TEXT="Alternative Data">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689281944" ID="ID_1804773283" MODIFIED="1663094506387" TEXT="What?">
 <icon BUILTIN="xmag"/>

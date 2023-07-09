@@ -1,6 +1,10 @@
 # Books
 ***
 
+## Generals
+- [What are the quantitative finance books that we should all have in our shelves?](https://quant.stackexchange.com/questions/38862/what-are-the-quantitative-finance-books-that-we-should-all-have-in-our-shelves)
+***
+
 ## Books | Theory
 - [Advances in Financial Machine Learning](https://www.amazon.co.uk/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)
 - [Investment Analysis and Portfolio Management](https://www.amazon.co.uk/Investment-Analysis-Portfolio-Management-Reilly/dp/0538482389)

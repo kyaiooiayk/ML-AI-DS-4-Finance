@@ -34,5 +34,6 @@
 ***
 
 ## Notes
-- [Notes on ML4T](https://drive.google.com/drive/u/2/folders/1r6RHJNe4_eqmTe50Ei88CIF--t0iQLNm)
+- [Study notes on ML4T](https://drive.google.com/drive/u/2/folders/1r6RHJNe4_eqmTe50Ei88CIF--t0iQLNm)
+- [Study note on time series](https://drive.google.com/drive/u/1/folders/1rPzOvJY3jlDH35hYYQAseg_m2rtgFj6d)
 ***

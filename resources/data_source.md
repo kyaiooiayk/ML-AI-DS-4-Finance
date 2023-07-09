@@ -32,6 +32,10 @@ EODData
 - World Bank
 ***
 
+## Survivorship bias-free data
+- [Closest to survivorship bias-free data](https://gist.github.com/kafkasl/078f2c65c4299d367b57c9835b34c333)
+***
+
 ## References
 - [Best free data sources for algorithm trading](https://www.qmr.ai/best-free-data-sources-for-algorithmic-trading/)
 ***

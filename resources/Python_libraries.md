@@ -11,6 +11,7 @@
 - [ffn](https://pmorissette.github.io/ffn/) | [GitHub](https://github.com/pmorissette/ffn) has plenty to offer to those who belong to the field of quantitative finance. It provides a vast array of utilities, from performance measurement and evaluation to graphing and common data transformations.
 - [alphatools](https://github.com/marketneutral/alphatools) Quantitative finance research tools in Python
 - [pandas-TA](https://twopirllc.github.io/pandas-ta/) | [GitHub](https://github.com/twopirllc/pandas-ta) Pandas Technical Analysis (Pandas TA) is an easy to use library that leverages the Pandas package with more than 130 Indicators and Utility functions and more than 60 TA Lib Candlestick Patterns. 
+- [Full list available here](https://www.qmr.ai/best-python-libraries-for-trading/)
 ***
 
 ## Backtesting

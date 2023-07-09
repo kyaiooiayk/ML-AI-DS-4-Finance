@@ -24,7 +24,6 @@
 - [Python projects](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/Python_projects.md)
 - [Most requested skills/tools stack](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/skills.md)
 - [Study materials](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/resources/main/study_materials.md)
-- [Notes on ML4T](https://drive.google.com/drive/u/2/folders/1r6RHJNe4_eqmTe50Ei88CIF--t0iQLNm)
 - [Quotes](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/Quotes.md)
 - [Podcasts](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/Podcasts.md)
 - [Online tools](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/Online_tools.md)
@@ -32,4 +31,8 @@
 - [University degree focused on quantitative finance - UK](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/University.md)
 - [Data source for finance](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/data_source.md)
 - [Talks](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/talks.md)
+***
+
+## Notes
+- [Notes on ML4T](https://drive.google.com/drive/u/2/folders/1r6RHJNe4_eqmTe50Ei88CIF--t0iQLNm)
 ***

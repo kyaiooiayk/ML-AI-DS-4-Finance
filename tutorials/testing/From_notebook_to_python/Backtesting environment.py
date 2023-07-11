@@ -4,7 +4,3 @@
 # https://www.quantstart.com/articles/Research-Backtesting-Environments-in-Python-with-pandas/
 
 # In[ ]:
-
-
-
-

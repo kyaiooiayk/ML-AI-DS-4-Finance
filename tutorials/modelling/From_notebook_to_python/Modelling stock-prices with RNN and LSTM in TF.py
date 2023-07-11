@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Modelling stock-prices with RNN and LSTM in TF
-# 
+#
 # </font>
 # </div>
 
@@ -30,20 +30,22 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.callbacks import EarlyStopping
-from tensorflow.keras.layers import (Dense, Dropout, 
-                                     Activation, Flatten, 
-                                     MaxPooling2D, SimpleRNN)
+from tensorflow.keras.layers import (
+    Dense,
+    Dropout,
+    Activation,
+    Flatten,
+    MaxPooling2D,
+    SimpleRNN,
+)
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.layers import LSTM
 
-plt.rcParams['figure.dpi'] = 300
-plt.rcParams['savefig.dpi'] = 300
+plt.rcParams["figure.dpi"] = 300
+plt.rcParams["savefig.dpi"] = 300
 
 
 # In[ ]:
-
-
-
 
 
 # # Get the data
@@ -67,11 +69,10 @@ def split_sequence(sequence, n_steps):
 # In[3]:
 
 
-ticker = ['AAPL', 'MSFT']
+ticker = ["AAPL", "MSFT"]
 start = datetime.datetime(2019, 1, 1)
-end = datetime.datetime(2020, 1 ,1)
-stock_prices = yf.download(ticker,start=start, end = end, interval='1d')\
-               .Close
+end = datetime.datetime(2020, 1, 1)
+stock_prices = yf.download(ticker, start=start, end=end, interval="1d").Close
 
 
 # In[4]:
@@ -83,11 +84,11 @@ diff_stock_prices = stock_prices.diff().dropna()
 # In[5]:
 
 
-split = int(len(diff_stock_prices['AAPL'].values) * 0.95)
-diff_train_aapl = diff_stock_prices['AAPL'].iloc[:split]
-diff_test_aapl = diff_stock_prices['AAPL'].iloc[split:]
-diff_train_msft = diff_stock_prices['MSFT'].iloc[:split]
-diff_test_msft = diff_stock_prices['MSFT'].iloc[split:]
+split = int(len(diff_stock_prices["AAPL"].values) * 0.95)
+diff_train_aapl = diff_stock_prices["AAPL"].iloc[:split]
+diff_test_aapl = diff_stock_prices["AAPL"].iloc[split:]
+diff_train_msft = diff_stock_prices["MSFT"].iloc[:split]
+diff_test_msft = diff_stock_prices["MSFT"].iloc[split:]
 
 
 # In[7]:
@@ -101,8 +102,7 @@ n_features = 1
 
 
 X_aapl, y_aapl = split_sequence(diff_train_aapl, n_steps)
-X_aapl = X_aapl.reshape((X_aapl.shape[0],  X_aapl.shape[1],
-                         n_features))
+X_aapl = X_aapl.reshape((X_aapl.shape[0], X_aapl.shape[1], n_features))
 
 
 # # RNN
@@ -112,29 +112,29 @@ X_aapl = X_aapl.reshape((X_aapl.shape[0],  X_aapl.shape[1],
 
 
 model = Sequential()
-model.add(SimpleRNN(512, activation='relu', 
-                    input_shape=(n_steps, n_features),
-                    return_sequences=True))
+model.add(
+    SimpleRNN(
+        512, activation="relu", input_shape=(n_steps, n_features), return_sequences=True
+    )
+)
 model.add(Dropout(0.2))
-model.add(Dense(256, activation = 'relu'))
+model.add(Dense(256, activation="relu"))
 model.add(Flatten())
-model.add(Dense(1, activation='linear'))
+model.add(Dense(1, activation="linear"))
 
 
 # In[10]:
 
 
-model.compile(optimizer='rmsprop',
-              loss='mean_squared_error',
-              metrics=['mse'])
+model.compile(optimizer="rmsprop", loss="mean_squared_error", metrics=["mse"])
 
 
 # In[11]:
 
 
-history = model.fit(X_aapl, y_aapl, 
-                    epochs=400, batch_size=150, verbose=1, 
-                    validation_split = 0.10)
+history = model.fit(
+    X_aapl, y_aapl, epochs=400, batch_size=150, verbose=1, validation_split=0.10
+)
 
 
 # In[12]:
@@ -161,16 +161,15 @@ for i in range(len(diff_test_aapl)):
 
 
 X_msft, y_msft = split_sequence(diff_train_msft, n_steps)
-X_msft = X_msft.reshape((X_msft.shape[0],  X_msft.shape[1],
-                         n_features))
+X_msft = X_msft.reshape((X_msft.shape[0], X_msft.shape[1], n_features))
 
 
 # In[15]:
 
 
-history = model.fit(X_msft, y_msft, 
-                    epochs=400, batch_size=150, verbose=1, 
-                    validation_split = 0.10)
+history = model.fit(
+    X_msft, y_msft, epochs=400, batch_size=150, verbose=1, validation_split=0.10
+)
 
 
 # In[16]:
@@ -196,21 +195,29 @@ for i in range(len(diff_test_msft)):
 # In[18]:
 
 
-fig, ax = plt.subplots(2,1, figsize=(18,15))
-ax[0].plot(diff_test_aapl, label='Actual Stock Price', linestyle='--')
-ax[0].plot(diff_test_aapl.index, np.array(tempList_aapl).flatten(),
-           linestyle='solid', label="Prediction")
-ax[0].set_title('Predicted Stock Price-Apple')
-ax[0].legend(loc='best')
-ax[1].plot(diff_test_msft, label='Actual Stock Price', linestyle='--')
-ax[1].plot(diff_test_msft.index,np.array(tempList_msft).flatten(),
-           linestyle='solid', label="Prediction")
-ax[1].set_title('Predicted Stock Price-Microsoft')
-ax[1].legend(loc='best')
+fig, ax = plt.subplots(2, 1, figsize=(18, 15))
+ax[0].plot(diff_test_aapl, label="Actual Stock Price", linestyle="--")
+ax[0].plot(
+    diff_test_aapl.index,
+    np.array(tempList_aapl).flatten(),
+    linestyle="solid",
+    label="Prediction",
+)
+ax[0].set_title("Predicted Stock Price-Apple")
+ax[0].legend(loc="best")
+ax[1].plot(diff_test_msft, label="Actual Stock Price", linestyle="--")
+ax[1].plot(
+    diff_test_msft.index,
+    np.array(tempList_msft).flatten(),
+    linestyle="solid",
+    label="Prediction",
+)
+ax[1].set_title("Predicted Stock Price-Microsoft")
+ax[1].legend(loc="best")
 
 
 for ax in ax.flat:
-    ax.set(xlabel='Date', ylabel='Differenced Price')
+    ax.set(xlabel="Date", ylabel="Differenced Price")
 plt.show()
 
 
@@ -219,15 +226,15 @@ plt.show()
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - LSTM tries to attack the weakness of RNN regarding long-term dependencies. 
-# - LSTM has a quite useful tool to get rid of the unnecessary information so that it works more efficiently. 
-# - LSTM works with gates, enabling it to forget irrelevant data. 
+#
+# - LSTM tries to attack the weakness of RNN regarding long-term dependencies.
+# - LSTM has a quite useful tool to get rid of the unnecessary information so that it works more efficiently.
+# - LSTM works with gates, enabling it to forget irrelevant data.
 # - These gates are:
 #     - Forget gates
 #     - Input gates
 #     - Output gates
-# 
+#
 # </font>
 # </div>
 
@@ -242,28 +249,29 @@ n_features = 1
 
 
 model = Sequential()
-model.add(LSTM(512, activation='relu',
-          input_shape=(n_steps, n_features),
-          return_sequences=True))
+model.add(
+    LSTM(
+        512, activation="relu", input_shape=(n_steps, n_features), return_sequences=True
+    )
+)
 model.add(Dropout(0.2))
-model.add(LSTM(256,activation='relu'))
+model.add(LSTM(256, activation="relu"))
 model.add(Flatten())
-model.add(Dense(1, activation='linear'))
+model.add(Dense(1, activation="linear"))
 
 
 # In[22]:
 
 
-model.compile(optimizer='rmsprop', loss='mean_squared_error',
-              metrics=['mse'])
+model.compile(optimizer="rmsprop", loss="mean_squared_error", metrics=["mse"])
 
 
 # In[23]:
 
 
-history = model.fit(X_aapl, y_aapl, 
-                    epochs=400, batch_size=150, verbose=1, 
-                    validation_split = 0.10)
+history = model.fit(
+    X_aapl, y_aapl, epochs=400, batch_size=150, verbose=1, validation_split=0.10
+)
 
 
 # In[24]:
@@ -289,9 +297,9 @@ for i in range(len(diff_test_aapl)):
 # In[26]:
 
 
-history = model.fit(X_msft, y_msft, 
-                    epochs=400, batch_size=150, verbose=1, 
-                    validation_split = 0.10)
+history = model.fit(
+    X_msft, y_msft, epochs=400, batch_size=150, verbose=1, validation_split=0.10
+)
 
 
 # In[27]:
@@ -318,19 +326,27 @@ for i in range(len(diff_test_msft)):
 
 
 fig, ax = plt.subplots(2, 1, figsize=(18, 15))
-ax[0].plot(diff_test_aapl, label='Actual Stock Price', linestyle='--')
-ax[0].plot(diff_test_aapl.index, np.array(tempList_aapl).flatten(),
-           linestyle='solid', label="Prediction")
-ax[0].set_title('Predicted Stock Price-Apple')
-ax[0].legend(loc='best')
-ax[1].plot(diff_test_msft, label='Actual Stock Price', linestyle='--')
-ax[1].plot(diff_test_msft.index, np.array(tempList_msft).flatten(),
-           linestyle='solid', label="Prediction")
-ax[1].set_title('Predicted Stock Price-Microsoft')
-ax[1].legend(loc='best')
+ax[0].plot(diff_test_aapl, label="Actual Stock Price", linestyle="--")
+ax[0].plot(
+    diff_test_aapl.index,
+    np.array(tempList_aapl).flatten(),
+    linestyle="solid",
+    label="Prediction",
+)
+ax[0].set_title("Predicted Stock Price-Apple")
+ax[0].legend(loc="best")
+ax[1].plot(diff_test_msft, label="Actual Stock Price", linestyle="--")
+ax[1].plot(
+    diff_test_msft.index,
+    np.array(tempList_msft).flatten(),
+    linestyle="solid",
+    label="Prediction",
+)
+ax[1].set_title("Predicted Stock Price-Microsoft")
+ax[1].legend(loc="best")
 
 for ax in ax.flat:
-    ax.set(xlabel='Date', ylabel='$')
+    ax.set(xlabel="Date", ylabel="$")
 plt.show()
 
 
@@ -339,15 +355,11 @@ plt.show()
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://github.com/abdullahkarasan/mlfrm/blob/main/codes/chp_3.ipynb
 # - Machine Learning for Financial Risk Management with Python Abdullah Karasan
-#     
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

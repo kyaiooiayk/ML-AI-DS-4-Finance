@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Sharpe Ratio
-# 
+#
 # </font>
 # </div>
 
@@ -20,19 +20,19 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Represents both the risk and return
 # - Developed by Nobel laureate William F. Sharpe and is used to help investors understand the return of an investment compared to its ris
-# - Goal is to get high $SR$. 
-# 
+# - Goal is to get high $SR$.
+#
 # $SR = \frac{R_p - R_f}{\sigma_p}$
-# 
-# 
+#
+#
 # - $SR$: Sharpe ratio
 # - $R_p$: return of portfolio
 # - $R_f$: risk free return
 # - $\sigma_p$: standard deviation of portfolio
-# 
+#
 # </font>
 # </div>
 
@@ -54,18 +54,18 @@ import matplotlib.pyplot as plt
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Where our portfolio will consist of the tickers for Apple, Microsoft, Twitter and IBM (AAPL, MSFT, TWTR, IBM). We read the data from start 2020 from the Yahoo! Finance API using Pandas Datareader.
-# 
+#
 # - Finally, we only keep the Adjusted Close price.
-# 
+#
 # </font>
 # </div>
 
 # In[2]:
 
 
-tickers = ['AAPL', 'MSFT', 'TWTR', 'IBM']
+tickers = ["AAPL", "MSFT", "TWTR", "IBM"]
 start = dt.datetime(2020, 1, 1)
 
 data = pdr.get_data_yahoo(tickers, start)
@@ -80,7 +80,7 @@ data.head()
 # In[4]:
 
 
-data = data['Adj Close']
+data = data["Adj Close"]
 
 
 # In[5]:
@@ -94,21 +94,21 @@ data
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Let’s assume our portfolio is balanced as follows, 25%, 15%, 40%, and 20% to AAPL, MSFT, TWTR, IBM, respectively.
-# 
+#
 # - Then we can calculate the daily log return of the portfolio.
-#     
+#
 # - This gives an impression of how volatile the portfolio is. The more data is centered around 0.0, the less volatile and risky.
-#     
+#
 # </font>
 # </div>
 
 # In[6]:
 
 
-portfolio = [.25, .15, .40, .20]
-log_return = np.sum(np.log(data/data.shift())*portfolio, axis=1)
+portfolio = [0.25, 0.15, 0.40, 0.20]
+log_return = np.sum(np.log(data / data.shift()) * portfolio, axis=1)
 
 
 # In[7]:
@@ -121,7 +121,7 @@ log_return
 
 
 fig, ax = plt.subplots()
-log_return.hist(bins=50, ax=ax);
+log_return.hist(bins=50, ax=ax)
 
 
 # # Capturing trade-off in a single number
@@ -129,15 +129,15 @@ log_return.hist(bins=50, ax=ax);
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - The return and risk objectives imply a trade-off: taking more risk may yield higher returns in some circumstances, but also implies greater downside. 
-# 
-# - To compare how different strategies navigate this trade-off, ratios that compute a measure of return per unit of risk are very popular. 
-# 
-# - Two of the most popular are: 
+#
+# - The return and risk objectives imply a trade-off: taking more risk may yield higher returns in some circumstances, but also implies greater downside.
+#
+# - To compare how different strategies navigate this trade-off, ratios that compute a measure of return per unit of risk are very popular.
+#
+# - Two of the most popular are:
 #     - Sharpe ratio (SR)
 #     - Information ratio (IR)
-# 
+#
 # </font>
 # </div>
 
@@ -146,18 +146,18 @@ log_return.hist(bins=50, ax=ax);
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - This gives a daily Sharpe Ratio, where we have the return to be the mean value. That is, the average return of the investment. And divided by the standard deviation.
-# 
+#
 # - The greater is the standard deviation the greater the magnitude of the deviation from the mean value can be expected.
-# 
+#
 # </font>
 # </div>
 
 # In[12]:
 
 
-sharpe_ratio = log_return.mean()/log_return.std()
+sharpe_ratio = log_return.mean() / log_return.std()
 sharpe_ratio
 
 
@@ -165,14 +165,14 @@ sharpe_ratio
 
 
 # To get an annualized Sharpe Ratio
-sharpe_ratio_annual = sharpe_ratio*252**.5
+sharpe_ratio_annual = sharpe_ratio * 252**0.5
 sharpe_ratio_annual
 
 
 # In[1]:
 
 
-252**.5
+252**0.5
 
 
 # # References
@@ -180,17 +180,13 @@ sharpe_ratio_annual
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [GitHub code](https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn/blob/main/03%20-%20Sharpe%20Ratio.ipynb)
 # - https://www.learnpythonwithrune.org/python-for-finance-risk-and-return/#lesson-3
 # - https://www.investopedia.com/terms/s/sharperatio.asp
 # - Jansen, Stefan. Hands-On Machine Learning for Algorithmic Trading: Design and implement investment strategies based on smart algorithms that learn from data using Python. Packt Publishing Ltd, 2018.
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

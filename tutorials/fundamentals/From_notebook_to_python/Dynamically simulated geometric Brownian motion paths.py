@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Dynamically simulated geometric Brownian motion paths
-# 
+#
 # </font>
 # </div>
 
@@ -20,11 +20,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - A stochastic process is a sequence of random variables. In that sense, one should expect something similar to a sequence of repeated simulations of a random variable when simulating a process. 
-# - This is mainly true, apart from the fact that the draws are typically not independent but rather depend on the result(s) of the previous draw(s). 
+#
+# - A stochastic process is a sequence of random variables. In that sense, one should expect something similar to a sequence of repeated simulations of a random variable when simulating a process.
+# - This is mainly true, apart from the fact that the draws are typically not independent but rather depend on the result(s) of the previous draw(s).
 # - In general, however, stochastic processes used in finance exhibit the Markov property, which mainly says that tomorrow’s value of the process only depends on today’s state of the process, and not any other more “historic” state or even the whole path history. The process then is also called memoryless.
-# 
+#
 # </font>
 # </div>
 
@@ -48,25 +48,24 @@ import scipy.stats as scs
 
 
 def print_statistics(a1, a2):
-    ''' Prints selected statistics.
+    """Prints selected statistics.
 
     Parameters
     ==========
     a1, a2: ndarray objects
         results objects from simulation
-    '''
+    """
     sta1 = scs.describe(a1)
     sta2 = scs.describe(a2)
-    print('%14s %14s %14s' %
-          ('statistic', 'data set 1', 'data set 2'))
+    print("%14s %14s %14s" % ("statistic", "data set 1", "data set 2"))
     print(45 * "-")
-    print('%14s %14.3f %14.3f' % ('size', sta1[0], sta2[0]))
-    print('%14s %14.3f %14.3f' % ('min', sta1[1][0], sta2[1][0]))
-    print('%14s %14.3f %14.3f' % ('max', sta1[1][1], sta2[1][1]))
-    print('%14s %14.3f %14.3f' % ('mean', sta1[2], sta2[2]))
-    print('%14s %14.3f %14.3f' % ('std', np.sqrt(sta1[3]), np.sqrt(sta2[3])))
-    print('%14s %14.3f %14.3f' % ('skew', sta1[4], sta2[4]))
-    print('%14s %14.3f %14.3f' % ('kurtosis', sta1[5], sta2[5]))
+    print("%14s %14.3f %14.3f" % ("size", sta1[0], sta2[0]))
+    print("%14s %14.3f %14.3f" % ("min", sta1[1][0], sta2[1][0]))
+    print("%14s %14.3f %14.3f" % ("max", sta1[1][1], sta2[1][1]))
+    print("%14s %14.3f %14.3f" % ("mean", sta1[2], sta2[2]))
+    print("%14s %14.3f %14.3f" % ("std", np.sqrt(sta1[3]), np.sqrt(sta2[3])))
+    print("%14s %14.3f %14.3f" % ("skew", sta1[4], sta2[4]))
+    print("%14s %14.3f %14.3f" % ("kurtosis", sta1[5], sta2[5]))
 
 
 # # Brownian motion
@@ -74,21 +73,21 @@ def print_statistics(a1, a2):
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - There exhists two versions of it:
 #     - static version
 #     - dynamic version (SDE)
-#     
+#
 # </font>
 # </div>
 
 # In[10]:
 
 
-S0 = 100  
-r = 0.05  
-sigma = 0.25  
-T = 2.0  
+S0 = 100
+r = 0.05
+sigma = 0.25
+T = 2.0
 
 
 # In[11]:
@@ -100,8 +99,9 @@ dt = T / M
 S = np.zeros((M + 1, I))
 S[0] = S0
 for t in range(1, M + 1):
-    S[t] = S[t - 1] * np.exp((r - 0.5 * sigma ** 2) * dt +
-                             sigma * math.sqrt(dt) * npr.standard_normal(I))
+    S[t] = S[t - 1] * np.exp(
+        (r - 0.5 * sigma**2) * dt + sigma * math.sqrt(dt) * npr.standard_normal(I)
+    )
 
 
 # In[12]:
@@ -109,8 +109,8 @@ for t in range(1, M + 1):
 
 plt.figure(figsize=(10, 6))
 plt.hist(S[-1], bins=50)
-plt.xlabel('index level')
-plt.ylabel('frequency')
+plt.xlabel("index level")
+plt.ylabel("frequency")
 
 
 # In[20]:
@@ -124,8 +124,8 @@ print_statistics(S[-1], S[-1])
 
 plt.figure(figsize=(10, 6))
 plt.plot(S[:, :10], lw=1.5)
-plt.xlabel('time')
-plt.ylabel('index level')
+plt.xlabel("time")
+plt.ylabel("index level")
 
 
 # # References
@@ -133,10 +133,10 @@ plt.ylabel('index level')
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - Hilpisch, Yves. Python for finance: mastering data-driven finance. O'Reilly Media, 2018.
 # - https://github.com/yhilpisch/py4fi2nd/blob/master/code/ch12/12_stochastics.ipynb
-# 
+#
 # </font>
 # </div>
 
@@ -146,12 +146,8 @@ plt.ylabel('index level')
 # In[22]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")
 
 
 # In[ ]:
-
-
-
-

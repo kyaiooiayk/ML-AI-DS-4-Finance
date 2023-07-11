@@ -6,7 +6,3 @@
 # - https://www.quantstart.com/articles/Supervised-Learning-for-Document-Classification-with-Scikit-Learn/
 
 # In[ ]:
-
-
-
-

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Resampling high-frequency data
-# 
+#
 # </font>
 # </div>
 
@@ -24,9 +24,10 @@
 import numpy as np
 import pandas as pd
 from pylab import mpl, plt
-plt.style.use('seaborn')
-mpl.rcParams['font.family'] = 'serif'
-get_ipython().run_line_magic('matplotlib', 'notebook')
+
+plt.style.use("seaborn")
+mpl.rcParams["font.family"] = "serif"
+get_ipython().run_line_magic("matplotlib", "notebook")
 
 
 # # Read-in data
@@ -35,7 +36,11 @@ get_ipython().run_line_magic('matplotlib', 'notebook')
 # In[2]:
 
 
-get_ipython().run_cell_magic('time', '', "# data from FXCM Forex Capital Markets Ltd.\ntick = pd.read_csv('../data/fxcm_eur_usd_tick_data.csv',\n                     index_col=0, parse_dates=True)\n")
+get_ipython().run_cell_magic(
+    "time",
+    "",
+    "# data from FXCM Forex Capital Markets Ltd.\ntick = pd.read_csv('../data/fxcm_eur_usd_tick_data.csv',\n                     index_col=0, parse_dates=True)\n",
+)
 
 
 # In[3]:
@@ -50,13 +55,13 @@ tick.info()
 # In[4]:
 
 
-tick['Mid'] = tick.mean(axis=1)  
+tick["Mid"] = tick.mean(axis=1)
 
 
 # In[5]:
 
 
-tick['Mid'].plot(figsize=(10, 6))
+tick["Mid"].plot(figsize=(10, 6))
 
 
 # # Resampling
@@ -65,7 +70,7 @@ tick['Mid'].plot(figsize=(10, 6))
 # In[6]:
 
 
-tick_resam = tick.resample(rule='5min', label='right').last()
+tick_resam = tick.resample(rule="5min", label="right").last()
 
 
 # In[7]:
@@ -77,7 +82,7 @@ tick_resam.head()
 # In[8]:
 
 
-tick_resam['Mid'].plot(figsize=(10, 6));
+tick_resam["Mid"].plot(figsize=(10, 6))
 
 
 # # References
@@ -85,11 +90,11 @@ tick_resam['Mid'].plot(figsize=(10, 6));
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://github.com/yhilpisch/py4fi2nd/blob/master/code/ch08/08_financial_time_series.ipynb
 # - Hilpisch, Yves. Python for finance: mastering data-driven finance. O'Reilly Media, 2018.
 # - [Data](https://github.com/yhilpisch/py4fi2nd/tree/master/source)
-# 
+#
 # </font>
 # </div>
 
@@ -99,12 +104,8 @@ tick_resam['Mid'].plot(figsize=(10, 6));
 # In[9]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")
 
 
 # In[ ]:
-
-
-
-

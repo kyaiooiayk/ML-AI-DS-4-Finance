@@ -4,7 +4,3 @@
 # https://www.quantstart.com/articles/Continuous-Futures-Contracts-for-Backtesting-Purposes/
 
 # In[ ]:
-
-
-
-

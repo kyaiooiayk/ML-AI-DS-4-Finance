@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Dynamic Hedge Ratio Using the Kalman Filter
-# 
+#
 # </font>
 # </div>
 
@@ -32,8 +32,8 @@ import matplotlib.dates as mdates
 import statsmodels.api as sm
 from matplotlib import rcParams
 
-rcParams['figure.figsize'] = 17, 8
-rcParams['font.size'] = 20
+rcParams["figure.figsize"] = 17, 8
+rcParams["font.size"] = 20
 
 
 # # Cointegration
@@ -41,28 +41,28 @@ rcParams['font.size'] = 20
 
 # <div class="alert alert-info">
 # <font color=black>
-#  
-# - It is difficult to find mean-reverting asset as equities broadly behave like GBMs and hence render the mean-reverting trade strategies relatively useless. 
+#
+# - It is difficult to find mean-reverting asset as equities broadly behave like GBMs and hence render the mean-reverting trade strategies relatively useless.
 # - However, we can still create a portfolio of price series that is stationary so we can apply a mean-reverting trading strategies.
 # - The **pairs trade** does exactly this. Two companies in the same sector are likely to be exposed to similar market factors, which affect their businesses. Occasionally their relative stock prices will diverge due to certain events, but will revert to the long-running mean.
-# 
+#
 # </font>
 # </div>
 
-# # Dynamic Hedge Ratio 
+# # Dynamic Hedge Ratio
 # <hr style = "border:2px solid black" ></hr>
 
 # <div class="alert alert-info">
 # <font color=black>
-#  
+#
 # - A common quant trading technique involves taking two assets that form a cointegrating relationship and utilising a mean-reverting approach to construct a trading strategy. This can be carried out by performing a linear regression between the two assets.
-# 
+#
 # - Any parameters introduced via this structural relationship such as the hedging ratio between the two assets are likely to be time-varying, thus we need to find a way for adjusting the hedging ratio over time.
-# 
+#
 # - One approach to this problem is to utilise a rolling linear regression with a lookback window for which the lookback window length must be found often via cross-validation.
-# 
-# - A more sophisticated approach is to utilise a state space model that treats the "true" hedge ratio as an unobserved hidden variable and attempts to estimate it with "noisy" observations. In our case this means the pricing data of each asset. The **Kalman filter** performs exactly this task. 
-# 
+#
+# - A more sophisticated approach is to utilise a state space model that treats the "true" hedge ratio as an unobserved hidden variable and attempts to estimate it with "noisy" observations. In our case this means the pricing data of each asset. The **Kalman filter** performs exactly this task.
+#
 # </font>
 # </div>
 
@@ -72,10 +72,10 @@ rcParams['font.size'] = 20
 # In[2]:
 
 
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import pandas_datareader as pdr 
+import pandas_datareader as pdr
 from pykalman import KalmanFilter
 
 
@@ -84,18 +84,18 @@ from pykalman import KalmanFilter
 
 # <div class="alert alert-info">
 # <font color=black>
-#  
-# - We are going to consider two fixed income ETFs, namely the iShares 20+ Year Treasury Bond ETF (TLT) and the iShares 3-7 Year Treasury Bond ETF (IEI). 
+#
+# - We are going to consider two fixed income ETFs, namely the iShares 20+ Year Treasury Bond ETF (TLT) and the iShares 3-7 Year Treasury Bond ETF (IEI).
 # - Both ETFs track the performance of varying duration US Treasury bonds and as such are both exposed to similar market factors.
-# 
+#
 # </font>
 # </div>
 
 # In[3]:
 
 
-# Choose the ETF symbols to work with along with 
-# start and end dates for the price histories 
+# Choose the ETF symbols to work with along with
+# start and end dates for the price histories
 etfs = ["TLT", "IEI"]
 start_date = "2010-8-01"
 end_date = "2016-08-01"
@@ -105,7 +105,7 @@ end_date = "2016-08-01"
 
 
 # Obtain the adjusted closing prices from Yahoo finance
-etf_df1 = pdr.get_data_yahoo(etfs[0], start_date, end_date) 
+etf_df1 = pdr.get_data_yahoo(etfs[0], start_date, end_date)
 etf_df2 = pdr.get_data_yahoo(etfs[1], start_date, end_date)
 
 
@@ -142,15 +142,18 @@ colour_map = plt.cm.get_cmap("YlOrRd")
 colours = np.linspace(0.1, 1, plen)
 # Create the scatterplot object
 scatterplot = plt.scatter(
-    prices[etfs[0]], prices[etfs[1]],
-    s=30, c=colours, cmap=colour_map,
-    edgecolor="k", alpha=0.8
+    prices[etfs[0]],
+    prices[etfs[1]],
+    s=30,
+    c=colours,
+    cmap=colour_map,
+    edgecolor="k",
+    alpha=0.8,
 )
 # Add a colour bar for the date colouring and set the
 # corresponding axis tick labels to equal string-formatted dates
 colourbar = plt.colorbar(scatterplot)
-colourbar.ax.set_yticklabels(
-    [str(p.date()) for p in prices[::plen//9].index])
+colourbar.ax.set_yticklabels([str(p.date()) for p in prices[:: plen // 9].index])
 plt.xlabel(prices.columns[0])
 plt.ylabel(prices.columns[1])
 plt.show()
@@ -170,8 +173,7 @@ ETF prices.
 
 delta = 1e-5
 trans_cov = delta / (1 - delta) * np.eye(2)
-obs_mat = np.vstack(
-    [prices[etfs[0]], np.ones(prices[etfs[0]].shape)]).T[:, np.newaxis]
+obs_mat = np.vstack([prices[etfs[0]], np.ones(prices[etfs[0]].shape)]).T[:, np.newaxis]
 kf = KalmanFilter(
     n_dim_obs=1,
     n_dim_state=2,
@@ -180,7 +182,7 @@ kf = KalmanFilter(
     transition_matrices=np.eye(2),
     observation_matrices=obs_mat,
     observation_covariance=1.0,
-    transition_covariance=trans_cov
+    transition_covariance=trans_cov,
 )
 state_means, state_covs = kf.filter(prices[etfs[1]].values)
 
@@ -194,9 +196,7 @@ state_means, state_covs = kf.filter(prices[etfs[1]].values)
 # Plot the slope and intercept changes from the Kalman Filter calculated values.
 
 pd.DataFrame(
-    dict(
-        slope=state_means[:, 0], intercept=state_means[:, 1]
-    ), index=prices.index
+    dict(slope=state_means[:, 0], intercept=state_means[:, 1]), index=prices.index
 ).plot(subplots=True)
 plt.show()
 
@@ -206,11 +206,11 @@ plt.show()
 
 # <div class="alert alert-danger">
 # <font color=black>
-# 
+#
 # - We have mentioned how using a rolling mean would have required to perform a cross-validated procedure to find the window.
 # - **Be aware that**, if this was to be put into production as a live trading strategy it would be necessary to
 # optimise the delta parameter across baskets of pairs of ETFs utilising cross-validation.
-# 
+#
 # </font>
 # </div>
 
@@ -219,16 +219,12 @@ plt.show()
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing/
 # - https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing-Part-II/
-# - https://www.quantstart.com/advanced-algorithmic-trading-ebook/ 
-# 
+# - https://www.quantstart.com/advanced-algorithmic-trading-ebook/
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

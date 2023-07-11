@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Summary statistics
-# 
+#
 # </font>
 # </div>
 
@@ -24,9 +24,10 @@
 import numpy as np
 import pandas as pd
 from pylab import mpl, plt
-plt.style.use('seaborn')
-mpl.rcParams['font.family'] = 'serif'
-get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'svg'")
+
+plt.style.use("seaborn")
+mpl.rcParams["font.family"] = "serif"
+get_ipython().run_line_magic("config", "InlineBackend.figure_format = 'svg'")
 
 
 # # Read-in data
@@ -37,22 +38,20 @@ get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'svg'")
 # In[2]:
 
 
-filename = '../data/tr_eikon_eod_data.csv'  
+filename = "../data/tr_eikon_eod_data.csv"
 
 
 # In[3]:
 
 
-f = open(filename, 'r')  
-f.readlines()[:5]  
+f = open(filename, "r")
+f.readlines()[:5]
 
 
 # In[4]:
 
 
-data = pd.read_csv(filename,  
-                   index_col=0, 
-                   parse_dates=True)  
+data = pd.read_csv(filename, index_col=0, parse_dates=True)
 
 
 # # Quick checks
@@ -61,19 +60,19 @@ data = pd.read_csv(filename,
 # In[5]:
 
 
-data.info()  
+data.info()
 
 
 # In[6]:
 
 
-data.head()  
+data.head()
 
 
 # In[7]:
 
 
-data.tail()  
+data.tail()
 
 
 # In[8]:
@@ -82,26 +81,34 @@ data.tail()
 data.plot(figsize=(10, 12), subplots=True)
 
 
-# - The data used is from the Thomson Reuters (TR) Eikon Data API. 
-# - In the TR world symbols for financial instruments are called Reuters Instrument Codes (RICs). 
+# - The data used is from the Thomson Reuters (TR) Eikon Data API.
+# - In the TR world symbols for financial instruments are called Reuters Instrument Codes (RICs).
 # - The financial instruments that the single RICs represent are:
 
 # In[9]:
 
 
-instruments = ['Apple Stock', 'Microsoft Stock',
-               'Intel Stock', 'Amazon Stock', 'Goldman Sachs Stock',
-               'SPDR S&P 500 ETF Trust', 'S&P 500 Index',
-               'VIX Volatility Index', 'EUR/USD Exchange Rate',
-               'Gold Price', 'VanEck Vectors Gold Miners ETF',
-               'SPDR Gold Trust']
+instruments = [
+    "Apple Stock",
+    "Microsoft Stock",
+    "Intel Stock",
+    "Amazon Stock",
+    "Goldman Sachs Stock",
+    "SPDR S&P 500 ETF Trust",
+    "S&P 500 Index",
+    "VIX Volatility Index",
+    "EUR/USD Exchange Rate",
+    "Gold Price",
+    "VanEck Vectors Gold Miners ETF",
+    "SPDR Gold Trust",
+]
 
 
 # In[10]:
 
 
 for ric, name in zip(data.columns, instruments):
-    print('{:8s} | {}'.format(ric, name))
+    print("{:8s} | {}".format(ric, name))
 
 
 # # Summary Statistics
@@ -110,36 +117,31 @@ for ric, name in zip(data.columns, instruments):
 # In[11]:
 
 
-data.info()  
+data.info()
 
 
 # In[12]:
 
 
-data.describe().round(2)  
+data.describe().round(2)
 
 
 # In[13]:
 
 
-data.mean()  
+data.mean()
 
 
 # In[14]:
 
 
-data.aggregate([min,  
-                np.mean,  
-                np.std,  
-                np.median,  
-                max]  
-).round(2)
+data.aggregate([min, np.mean, np.std, np.median, max]).round(2)
 
 
 # # Changes Over Time
 # <hr style = "border:2px solid black" ></hr>
 
-# - Statistical analysis methods are often based on changes over time and not the absolute values themselves. 
+# - Statistical analysis methods are often based on changes over time and not the absolute values themselves.
 # - There are multiple options to calculate the changes in a time series over time including:
 #     - Absolute differences
 #     - Percentage changes
@@ -148,28 +150,28 @@ data.aggregate([min,
 # In[15]:
 
 
-data.diff().head()  
+data.diff().head()
 
 
 # In[16]:
 
 
-data.diff().mean()  
+data.diff().mean()
 
 
-# - From a statistics point of view, absolute changes are not optimal because they are dependent on the scale of the time series data itself. 
+# - From a statistics point of view, absolute changes are not optimal because they are dependent on the scale of the time series data itself.
 # - Therefore, percentage changes are usually preferred.
 
 # In[17]:
 
 
-data.pct_change().round(3).head()  
+data.pct_change().round(3).head()
 
 
 # In[18]:
 
 
-data.pct_change().mean().plot(kind='bar', figsize=(10, 6));  
+data.pct_change().mean().plot(kind="bar", figsize=(10, 6))
 # plt.savefig('../../images/ch08/fts_02.png');
 
 
@@ -180,56 +182,55 @@ data.pct_change().mean().plot(kind='bar', figsize=(10, 6));
 # In[19]:
 
 
-rets = np.log(data / data.shift(1))  
+rets = np.log(data / data.shift(1))
 
 
 # In[20]:
 
 
-rets.head().round(3)  
+rets.head().round(3)
 
 
 # In[21]:
 
 
-rets.cumsum().apply(np.exp).plot(figsize=(10, 6));  
+rets.cumsum().apply(np.exp).plot(figsize=(10, 6))
 
 
 # # Resampling
 # <hr style = "border:2px solid black" ></hr>
 
-# - Resampling is an important operation on financial time series data. 
+# - Resampling is an important operation on financial time series data.
 # - Usually this takes the form of downsampling, meaning that, for example, a tick data series is resampled to one-minute intervals or a time series with daily observations is resampled to one with weekly or monthly observations
 
 # In[22]:
 
 
-data.resample('1w', label='right').last().head()  
+data.resample("1w", label="right").last().head()
 
 
 # In[23]:
 
 
-data.resample('1m', label='right').last().head()  
+data.resample("1m", label="right").last().head()
 
 
 # In[24]:
 
 
-rets.cumsum().apply(np.exp). resample('1m', label='right').last(
-                          ).plot(figsize=(10, 6));  
+rets.cumsum().apply(np.exp).resample("1m", label="right").last().plot(figsize=(10, 6))
 
 
 # ## Avoiding Foresight Bias
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - When resampling, pandas takes by default in many cases the left label (or index value) of the interval.
-# - To be financially consistent, make sure to use the right label (index value) and in general the last available data point in the interval. 
+# - To be financially consistent, make sure to use the right label (index value) and in general the last available data point in the interval.
 # - Otherwise, a foresight bias might sneak into the financial analysis.
 # - Foresight bias — or, in its strongest form, **perfect foresight**— means that at some point in the financial analysis, data is used that only becomes available at a later point. The result might be “too good” results, for example, when backtesting a trading strategy.
-#     
+#
 # </font>
 # </div>
 
@@ -239,7 +240,7 @@ rets.cumsum().apply(np.exp). resample('1m', label='right').last(
 # In[25]:
 
 
-sym = 'AAPL.O'
+sym = "AAPL.O"
 
 
 # In[26]:
@@ -257,43 +258,43 @@ data.tail()
 # In[28]:
 
 
-window = 20  
+window = 20
 
 
 # In[29]:
 
 
-data['min'] = data[sym].rolling(window=window).min()  
+data["min"] = data[sym].rolling(window=window).min()
 
 
 # In[30]:
 
 
-data['mean'] = data[sym].rolling(window=window).mean()  
+data["mean"] = data[sym].rolling(window=window).mean()
 
 
 # In[31]:
 
 
-data['std'] = data[sym].rolling(window=window).std()  
+data["std"] = data[sym].rolling(window=window).std()
 
 
 # In[32]:
 
 
-data['median'] = data[sym].rolling(window=window).median()  
+data["median"] = data[sym].rolling(window=window).median()
 
 
 # In[33]:
 
 
-data['max'] = data[sym].rolling(window=window).max()  
+data["max"] = data[sym].rolling(window=window).max()
 
 
 # In[34]:
 
 
-data['ewma'] = data[sym].ewm(halflife=0.5, min_periods=window).mean()  
+data["ewma"] = data[sym].ewm(halflife=0.5, min_periods=window).mean()
 
 
 # In[35]:
@@ -305,9 +306,12 @@ data.dropna().head()
 # In[36]:
 
 
-ax = data[['min', 'mean', 'max']].iloc[-200:].plot(
-    figsize=(10, 6), style=['g--', 'r--', 'g--'], lw=1)  
-data[sym].iloc[-200:].plot(ax=ax, lw=2.0);  
+ax = (
+    data[["min", "mean", "max"]]
+    .iloc[-200:]
+    .plot(figsize=(10, 6), style=["g--", "r--", "g--"], lw=1)
+)
+data[sym].iloc[-200:].plot(ax=ax, lw=2.0)
 
 
 # # References
@@ -315,11 +319,11 @@ data[sym].iloc[-200:].plot(ax=ax, lw=2.0);
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://github.com/yhilpisch/py4fi2nd/blob/master/code/ch08/08_financial_time_series.ipynb
 # - Hilpisch, Yves. Python for finance: mastering data-driven finance. O'Reilly Media, 2018.
 # - [Data](https://github.com/yhilpisch/py4fi2nd/tree/master/source)
-# 
+#
 # </font>
 # </div>
 
@@ -329,6 +333,5 @@ data[sym].iloc[-200:].plot(ax=ax, lw=2.0);
 # In[37]:
 
 
-get_ipython().run_line_magic('load_ext', 'watermark')
-get_ipython().run_line_magic('watermark', '-v -iv')
-
+get_ipython().run_line_magic("load_ext", "watermark")
+get_ipython().run_line_magic("watermark", "-v -iv")

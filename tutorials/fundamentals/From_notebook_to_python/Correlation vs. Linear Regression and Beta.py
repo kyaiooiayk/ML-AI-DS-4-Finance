@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Correlation vs. Linear Regression
-# 
+#
 # </font>
 # </div>
 
@@ -20,14 +20,14 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # **Similarities**
 # - Quantify the direction and strength of the relationship
-# 
+#
 # **Differences**
 # - Correlation is a single statistic
 # - Linear regression produces an equation
-# 
+#
 # </font>
 # </div>
 
@@ -50,10 +50,10 @@ import matplotlib.pyplot as plt
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - A great way to learn about relationships between variables is to compare it to random variables.
 # - Rhe plot below shows how two non-correlated variables look like.
-# 
+#
 # </font>
 # </div>
 
@@ -64,7 +64,7 @@ X = np.random.randn(5000)
 Y = np.random.randn(5000)
 
 fig, ax = plt.subplots()
-ax.scatter(X, Y, alpha=.2)
+ax.scatter(X, Y, alpha=0.2)
 
 
 # # Load some financial real data
@@ -73,7 +73,7 @@ ax.scatter(X, Y, alpha=.2)
 # In[3]:
 
 
-tickers = ['AAPL', 'TWTR', 'IBM', 'MSFT', '^GSPC']
+tickers = ["AAPL", "TWTR", "IBM", "MSFT", "^GSPC"]
 start = dt.datetime(2020, 1, 1)
 
 data = pdr.get_data_yahoo(tickers, start)
@@ -82,7 +82,7 @@ data = pdr.get_data_yahoo(tickers, start)
 # In[4]:
 
 
-data = data['Adj Close']
+data = data["Adj Close"]
 
 
 # In[5]:
@@ -94,7 +94,7 @@ data.head()
 # In[6]:
 
 
-log_returns = np.log(data/data.shift())
+log_returns = np.log(data / data.shift())
 
 
 # In[7]:
@@ -124,7 +124,7 @@ def linear_regression(ticker_a, ticker_b):
     fig, ax = plt.subplots()
     ax.set_title("Alpha: " + str(round(alpha, 5)) + ", Beta: " + str(round(beta, 3)))
     ax.scatter(X, Y)
-    ax.plot(X, Y_pred, c='r')
+    ax.plot(X, Y_pred, c="r")
 
 
 # In[9]:
@@ -150,55 +150,55 @@ linear_regression("AAPL", "TWTR")
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - Beta is a measure of a stock’s volatility in relation to the overall market (S&P 500). 
-# 
+#
+# - Beta is a measure of a stock’s volatility in relation to the overall market (S&P 500).
+#
 # - **High-beta** stocks are supposed to be riskier but provide higher potential return.
 # - **Low-beta** stocks pose less risk but also lower returns.
-#     
+#
 # - `Beta < 1` stock is more volatile than the market, but expects higher return.
 # - `Beta > 1` stock with lower volatility, and expects less return.
-# 
+#
 # - Beta is `Covariance / variance` and is generally calculated on the monthly price.
-# 
+#
 # </font>
 # </div>
 
 # In[13]:
 
 
-tickers = ['AAPL', 'MSFT', 'TWTR', 'IBM', '^GSPC']
+tickers = ["AAPL", "MSFT", "TWTR", "IBM", "^GSPC"]
 start = dt.datetime(2015, 12, 1)
 end = dt.datetime(2021, 1, 1)
 # m stands for month
 data = pdr.get_data_yahoo(tickers, start, end, interval="m")
-data = data['Adj Close']
+data = data["Adj Close"]
 
 
 # In[14]:
 
 
 # Calculating  beta
-log_returns = np.log(data/data.shift())
+log_returns = np.log(data / data.shift())
 cov = log_returns.cov()
-var = log_returns['^GSPC'].var()
-cov.loc['AAPL', '^GSPC']/var
+var = log_returns["^GSPC"].var()
+cov.loc["AAPL", "^GSPC"] / var
 
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Is this beta related to the Beta value from Linear Regression?
 # - Yes, it is and below is the proof.
-# 
+#
 # </font>
 # </div>
 
 # In[15]:
 
 
-X = log_returns['^GSPC'].iloc[1:].to_numpy().reshape(-1, 1)
-Y = log_returns['AAPL'].iloc[1:].to_numpy().reshape(-1, 1)
+X = log_returns["^GSPC"].iloc[1:].to_numpy().reshape(-1, 1)
+Y = log_returns["AAPL"].iloc[1:].to_numpy().reshape(-1, 1)
 lin_regr = LinearRegression()
 lin_regr.fit(X, Y)
 lin_regr.coef_[0, 0]
@@ -209,14 +209,10 @@ lin_regr.coef_[0, 0]
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn/blob/main/06%20-%20Linear%20Regression.ipynb
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

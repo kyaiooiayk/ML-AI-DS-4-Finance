@@ -6,9 +6,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** Average True Range (ATR)
-# 
+#
 # </font>
 # </div>
 
@@ -17,17 +17,17 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - Volatility can be thought as the equivalent as risk.
 # - The Average True Range (ATR) is a moving average of the True Range (TR). And the TR is given by the maximum of the current high (H) minus current low (L), the absolute value of current high (H) minus previous close (Cp), and the absolute value of current low (L) and previous close (Cp).
-# 
+#
 # </font>
 # </div>
 
 # $TR = \max[H − L, |H − C_P|, |L − C_P|]$
-# 
+#
 # $ATR = \frac{1}{n}\sum_{i=1}^{n} TR_i$
-# 
+#
 # - $TR_i$: A particular True Range
 # - $n$: The time period employed
 # - $H$: Current High
@@ -70,9 +70,9 @@ data.head()
 # In[4]:
 
 
-high_low = data['High'] - data['Low']
-high_cp = np.abs(data['High'] - data['Close'].shift())
-low_cp = np.abs(data['Low'] - data['Close'].shift())
+high_low = data["High"] - data["Low"]
+high_cp = np.abs(data["High"] - data["Close"].shift())
+low_cp = np.abs(data["Low"] - data["Close"].shift())
 
 
 # In[5]:
@@ -102,7 +102,7 @@ average_true_range
 # In[9]:
 
 
-true_range.rolling(14).sum()/14
+true_range.rolling(14).sum() / 14
 
 
 # # Visualisation against stock price
@@ -110,10 +110,10 @@ true_range.rolling(14).sum()/14
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
-# - In periods with **big** changes in price, the ATR moves **up**. 
-# - In periods with **small** changes in price, the ATR moves **down**. 
-# 
+#
+# - In periods with **big** changes in price, the ATR moves **up**.
+# - In periods with **small** changes in price, the ATR moves **down**.
+#
 # </font>
 # </div>
 
@@ -122,7 +122,7 @@ true_range.rolling(14).sum()/14
 
 fig, ax = plt.subplots()
 average_true_range.plot(ax=ax)
-ax2 = data['Close'].plot(ax=ax, secondary_y=True, alpha=.3)
+ax2 = data["Close"].plot(ax=ax, secondary_y=True, alpha=0.3)
 ax.set_ylabel("ATR")
 ax2.set_ylabel("Price")
 ax.legend()
@@ -134,16 +134,12 @@ ax2.legend()
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - [GitHub code](https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn/blob/main/02%20-%20Volatitlity.ipynb)
 # - [Volatility](https://www.investopedia.com/terms/v/volatility.asp)
 # - [Average True Range](https://www.investopedia.com/terms/a/atr.asp)
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

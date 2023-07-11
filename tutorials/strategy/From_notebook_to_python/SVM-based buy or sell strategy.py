@@ -22,6 +22,7 @@ from sklearn.pipeline import Pipeline
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
 #!pip install TA-lib
 import talib as ta
 
@@ -32,7 +33,7 @@ import talib as ta
 # In[2]:
 
 
-Df = pd.read_csv('../datasource/random_stock_data.csv')
+Df = pd.read_csv("../datasource/random_stock_data.csv")
 Df.head(30)
 
 
@@ -43,30 +44,30 @@ Df.head(30)
 
 
 # Drop the rows with 0 volume traded
-Df = Df.drop(Df[Df['Volume']==0].index)
+Df = Df.drop(Df[Df["Volume"] == 0].index)
 
 
 # In[4]:
 
 
 # Convert the 'Time' column into pandas datetime format
-Df['Time'] = pd.to_datetime(Df['Time'])
+Df["Time"] = pd.to_datetime(Df["Time"])
 
 
 # In[5]:
 
 
-Df['Close'].pct_change().plot(kind='hist', bins=100, figsize=(10, 5));
+Df["Close"].pct_change().plot(kind="hist", bins=100, figsize=(10, 5))
 
 
 # # Features engineering - indicators
 # <hr style="border:2px solid black"> </hr>
 
 # - **Relative Strength Index (RSI)** The RSI provides technical traders with signals about bullish and bearish price momentum, and it is often plotted beneath the graph of an asset’s price.
-# - **Simple Moving Average (SMA)** s an arithmetic moving average calculated by adding recent prices and then dividing that figure by the number of time periods in the calculation average. 
-# - **The parabolic SAR (stop and reversal)** is a technical indicator used to determine the price direction of an asset, as well as draw attention to when the price direction is changing. Sometimes known as the "stop and reversal system". 
-# - **Average Directional Index (ADX)**  makes use of a positive (+DI) and negative (-DI) directional indicator in addition to the trendline. The trend has strength when ADX is above 25; the trend is weak or the price is trendless when ADX is below 20, 
-# 
+# - **Simple Moving Average (SMA)** s an arithmetic moving average calculated by adding recent prices and then dividing that figure by the number of time periods in the calculation average.
+# - **The parabolic SAR (stop and reversal)** is a technical indicator used to determine the price direction of an asset, as well as draw attention to when the price direction is changing. Sometimes known as the "stop and reversal system".
+# - **Average Directional Index (ADX)**  makes use of a positive (+DI) and negative (-DI) directional indicator in addition to the trendline. The trend has strength when ADX is above 25; the trend is weak or the price is trendless when ADX is below 20,
+#
 
 # In[6]:
 
@@ -79,29 +80,34 @@ n = 10
 
 
 # Create a column by name, RSI and assign the calculation of RSI to it
-Df['RSI'] = ta.RSI(np.array(Df['Close'].shift(1)), timeperiod=n)
+Df["RSI"] = ta.RSI(np.array(Df["Close"].shift(1)), timeperiod=n)
 
 
 # In[8]:
 
 
 # Create a column by name, SMA and assign the SMA calculation to it
-Df['SMA']= Df['Close'].shift(1).rolling(window=n).mean()
+Df["SMA"] = Df["Close"].shift(1).rolling(window=n).mean()
 
 # Create a column by name, Corr and assign the calculation of correlation to it
-Df['Corr']= Df['Close'].shift(1).rolling(window=n).corr(Df['SMA'].shift(1))
+Df["Corr"] = Df["Close"].shift(1).rolling(window=n).corr(Df["SMA"].shift(1))
 
 
 # In[9]:
 
 
 # Create a column by name, SAR and assign the SAR calculation to it
-Df['SAR']=ta.SAR(np.array(Df['High'].shift(1)),np.array(Df['Low'].shift(1)),\
-                  0.2,0.2)
+Df["SAR"] = ta.SAR(
+    np.array(Df["High"].shift(1)), np.array(Df["Low"].shift(1)), 0.2, 0.2
+)
 
 # Create a column by name, ADX and assign the ADX calculation to it
-Df['ADX']=ta.ADX(np.array(Df['High'].shift(1)),np.array(Df['Low'].shift(1)),\
-                  np.array(Df['Open']), timeperiod =n)
+Df["ADX"] = ta.ADX(
+    np.array(Df["High"].shift(1)),
+    np.array(Df["Low"].shift(1)),
+    np.array(Df["Open"]),
+    timeperiod=n,
+)
 
 
 # We will pass yesterday's "High", "Low", and "Open" prices as input to the algorithm in variables named in lower cases. This will help the algorithm sense the volatility of the past time period.
@@ -110,9 +116,9 @@ Df['ADX']=ta.ADX(np.array(Df['High'].shift(1)),np.array(Df['Low'].shift(1)),\
 
 
 # Create columns 'high', 'low' and 'close' with previous day's OHLC data
-Df['high'] = Df['High'].shift(1)
-Df['low'] = Df['Low'].shift(1)
-Df['close'] = Df['Close'].shift(1)
+Df["high"] = Df["High"].shift(1)
+Df["low"] = Df["Low"].shift(1)
+Df["close"] = Df["Close"].shift(1)
 
 
 # We will also create two more columns as features: the change in "Open" prices between yesterday and today & the difference between today's "Open" and yesterday's "Close" prices.
@@ -120,42 +126,42 @@ Df['close'] = Df['Close'].shift(1)
 # In[11]:
 
 
-# Create columns 'OO' with the difference between today's open and previous day's open 
-Df['OO'] = Df['Open']-Df['Open'].shift(1)
+# Create columns 'OO' with the difference between today's open and previous day's open
+Df["OO"] = Df["Open"] - Df["Open"].shift(1)
 
-# Create columns 'OC' with the difference between today's open and previous day's close 
-Df['OC'] = Df['Open']-Df['close']
+# Create columns 'OC' with the difference between today's open and previous day's close
+Df["OC"] = Df["Open"] - Df["close"]
 
 
 # In[12]:
 
 
 # Create a column 'Ret' with calculation of returns
-Df['Ret'] = (Df['Open'].shift(-1)-Df['Open'])/Df['Open']
+Df["Ret"] = (Df["Open"].shift(-1) - Df["Open"]) / Df["Open"]
 
-# Create n columns and assign   
-for i in range(1,n):
-    Df['return%i'%i] = Df['Ret'].shift(i)
+# Create n columns and assign
+for i in range(1, n):
+    Df["return%i" % i] = Df["Ret"].shift(i)
 
 
 # # Clean/trim the data
 # <hr style="border:2px solid black"> </hr>
 
 # You need to keep the values of indicator 'Corr' between -1 and 1, as the correlation coefficient is always between these values. This is done by changing all values less than -1 to -1, and all values greater than 1 to 1.
-# 
+#
 # This doesn't affect our calculations negatively because the extreme values are realised due to NAN values in the data, which need to be handled before training the algorithm. Then we drop all NANs from the entire dataframe.
 
 # In[13]:
 
 
 # Change the value of 'Corr' to -1 if it is less than -1
-Df.loc[Df['Corr']<-1,'Corr'] = -1
+Df.loc[Df["Corr"] < -1, "Corr"] = -1
 
 # Change the value of 'Corr' to 1 if it is greater than 1
-Df.loc[Df['Corr']>1,'Corr'] = 1
+Df.loc[Df["Corr"] > 1, "Corr"] = 1
 
 # Drop the NAN values
-Df=Df.dropna()
+Df = Df.dropna()
 
 
 # In[14]:
@@ -168,76 +174,76 @@ Df
 # <hr style="border:2px solid black"> </hr>
 
 # We will be using 80% of the data to train and the rest 20% to test. To do this, you will create a split parameter which will divide the dataframe in an 80-20 ratio.
-# 
-# This can be changed as per your choice, but it is advisable to give at least 70% data as train data for good results. "split" is the integer index value for the row corresponding to test-train split. 
+#
+# This can be changed as per your choice, but it is advisable to give at least 70% data as train data for good results. "split" is the integer index value for the row corresponding to test-train split.
 
 # In[15]:
 
 
-# Create a variable split which is 80% of the length of the Dataframe 
-t = .8
-split = int(t*len(Df))
+# Create a variable split which is 80% of the length of the Dataframe
+t = 0.8
+split = int(t * len(Df))
 split
 
 
 # # Create output signals
 # <hr style="border:2px solid black"> </hr>
 
-# Next, assign signal values corresponding to 'returns' that were calculated earlier. To do this, you will split the data into three equal parts, using the split on 'Ret' column. 
+# Next, assign signal values corresponding to 'returns' that were calculated earlier. To do this, you will split the data into three equal parts, using the split on 'Ret' column.
 # 1. Highest returns’ quantile is assigned Signal '1' or "Buy".
 # 2. Middle quantile is assigned Signal '0' or 'Do nothing'.
-# 3. Lowest quantile is assigned Signal '-1' or 'Sell'. 
+# 3. Lowest quantile is assigned Signal '-1' or 'Sell'.
 
 # In[16]:
 
 
 # Create a column by name, 'Signal' and initialize with 0
-Df['Signal']=0
+Df["Signal"] = 0
 
 # Assign a value of 1 to 'Signal' column for the quantile with highest returns
-Df.loc[Df['Ret']>Df['Ret'][:split].quantile(q=0.66),'Signal']=1
+Df.loc[Df["Ret"] > Df["Ret"][:split].quantile(q=0.66), "Signal"] = 1
 
 # Assign a value of -1 to 'Signal' column for the quantile with lowest returns
-Df.loc[Df['Ret']<Df['Ret'][:split].quantile(q=0.34),'Signal']=-1
+Df.loc[Df["Ret"] < Df["Ret"][:split].quantile(q=0.34), "Signal"] = -1
 
 
 # In[17]:
 
 
 # Assign a value of 0 to 'Signal' column at 1529 time
-Df.loc[(Df['Time'].dt.hour==15) & (Df['Time'].dt.minute==29), 'Signal']=0        
+Df.loc[(Df["Time"].dt.hour == 15) & (Df["Time"].dt.minute == 29), "Signal"] = 0
 
 # Assign a value of 0 to 'Ret' column at 1529 time
-Df.loc[(Df['Time'].dt.hour==15) & (Df['Time'].dt.minute==29), 'Ret']=0
+Df.loc[(Df["Time"].dt.hour == 15) & (Df["Time"].dt.minute == 29), "Ret"] = 0
 
 
 # # Create features and target
 # <hr style="border:2px solid black"> </hr>
 
-# Drop the columns 'Close', 'Signal', 'Time', 'High', 'Low', 'Volume', and 'Ret' since the algorithm will not be trained on these features. Next, we assign 'Signal' to 'y' which is the output variable that you will predict using test data.   
+# Drop the columns 'Close', 'Signal', 'Time', 'High', 'Low', 'Volume', and 'Ret' since the algorithm will not be trained on these features. Next, we assign 'Signal' to 'y' which is the output variable that you will predict using test data.
 
 # In[18]:
 
 
 # Use df.drop() to drop the columns
-X = Df.drop(['Close', 'Signal', 'Time', 'High', 'Low', 'Volume', 'Ret'],axis=1)
+X = Df.drop(["Close", "Signal", "Time", "High", "Low", "Volume", "Ret"], axis=1)
 
 # Create a variable which contains all the 'Signal' values
-y = Df['Signal']
+y = Df["Signal"]
 
 
 # In[19]:
 
 
 # Plot them together
-pd.concat([X,y], axis=1)
+pd.concat([X, y], axis=1)
 
 
 # ## Find best parameters
 
 # ### Pipeline and functions
-# 
-# As the very first step to finding the best hyperparameters among C, Gamma and Kernel, you will first create a pipeline of functions which are required to run in a certain order on the training data. 
+#
+# As the very first step to finding the best hyperparameters among C, Gamma and Kernel, you will first create a pipeline of functions which are required to run in a certain order on the training data.
 
 # The ‘steps’ contains references to functions that would be applied to the data when called through a pipeline function. In this case, you will scale the data first and then fit it to the SVC function. This is done to avoid the effect of the individual weights of the features.
 
@@ -245,67 +251,64 @@ pd.concat([X,y], axis=1)
 
 
 # Create the 'steps' variable with the pipeline functions
-steps = [('scaler', StandardScaler()), ('svc', SVC())]
+steps = [("scaler", StandardScaler()), ("svc", SVC())]
 
 # Pass the 'steps' to the Pipeline function
 pipeline = Pipeline(steps)
 
 
 # ### Hyperparameters
-# 
-# The hyperparameters are iterated over to arrive at the best possible combination for the given training data. These test values can be changed as per your choice. Here, you will choose 4 test values for 'c' and 3 test values for 'g'.  
+#
+# The hyperparameters are iterated over to arrive at the best possible combination for the given training data. These test values can be changed as per your choice. Here, you will choose 4 test values for 'c' and 3 test values for 'g'.
 
 # In[21]:
 
 
 # Test variables for 'c' and 'g'
-c = [10,100,1000,10000]
-g = [1e-2,1e-1,1e0]
+c = [10, 100, 1000, 10000]
+g = [1e-2, 1e-1, 1e0]
 
 
 # The 'rbf' is used as a singular entry in the kernel parameters. But you can go ahead and try other kernel functions, such as linear, poly and sigmoid.
-# 
-# <b>Do remember:</b> A higher number of parameters would result in a greater time for the code to run. 
+#
+# <b>Do remember:</b> A higher number of parameters would result in a greater time for the code to run.
 
 # In[22]:
 
 
 # Intialize the parameters
-parameters = {'svc__C':c,
-              'svc__gamma':g,
-              'svc__kernel': ['rbf', 'poly', 'sigmoid']
-             }
+parameters = {"svc__C": c, "svc__gamma": g, "svc__kernel": ["rbf", "poly", "sigmoid"]}
 
 
 # Next, you need to create a RandomizedSearchCV function with a cross validation value of 7. This value can be anything more than or equal to 3. The concept of cross validation is used to arrive at the scores of different random combinations of the hyperparameters.
-# 
+#
 # These scores would be used to find the best parameters and create a newly optimized support vector classifier.
 
 # In[23]:
 
 
-# Call the RandomizedSearchCV function and pass the parameters 
-rcv = RandomizedSearchCV(pipeline, parameters, cv=7) #, iid=False)
+# Call the RandomizedSearchCV function and pass the parameters
+rcv = RandomizedSearchCV(pipeline, parameters, cv=7)  # , iid=False)
 
 
 # ### Training on and fetching the best parameters
-#              
+#
 # Next, you need to fit the train data to 'rcv' created above to obtain the best hyperparameters. The best parameters can be obtained using the best_params function.
 
 # In[24]:
 
 
-# Call the 'fit' method of rcv and pass the train data to it 
-rcv.fit(X.iloc[:split],y.iloc[:split])
+# Call the 'fit' method of rcv and pass the train data to it
+rcv.fit(X.iloc[:split], y.iloc[:split])
 
 # Call the 'best_params_' method to obtain the best parameters of C
-best_C = rcv.best_params_['svc__C']
+best_C = rcv.best_params_["svc__C"]
 
 # Call the 'best_params_' method to obtain the best parameters of kernel
-best_kernel = rcv.best_params_['svc__kernel']
+best_kernel = rcv.best_params_["svc__kernel"]
 
 # Call the 'best_params_' method to obtain the best parameters of gamma
-best_gamma = rcv.best_params_['svc__gamma']
+best_gamma = rcv.best_params_["svc__gamma"]
 
 
 # In[25]:
@@ -338,13 +341,13 @@ cls = SVC(C=best_C, kernel=best_kernel, gamma=best_gamma)
 
 
 # ### Train the data
-# 
+#
 # As done previously, for finding the best hyperparameters, you will first scale the data before you fit it to the classifier to train on. To do this, you need to first instantiate the Standard Scaler function.
 
 # In[29]:
 
 
-# Instantiate the StandardScaler 
+# Instantiate the StandardScaler
 ss1 = StandardScaler()
 
 
@@ -355,17 +358,17 @@ ss1 = StandardScaler()
 
 # Pass the scaled train data to the SVC classifier
 # please note we are doing out-of-time (prediction) on unseen data
-cls.fit(ss1.fit_transform(X.iloc[:split]),y.iloc[:split])
+cls.fit(ss1.fit_transform(X.iloc[:split]), y.iloc[:split])
 
 
 # ## Predict the signals
 
-# Now, you can use the test data to make predictions and save the value of output 'y' in a list called 'y_predict'. This list will have the predicted values of 'Signal' for the test data.  
+# Now, you can use the test data to make predictions and save the value of output 'y' in a list called 'y_predict'. This list will have the predicted values of 'Signal' for the test data.
 
 # In[31]:
 
 
-# Pass the test data to the predict function and store the values into 'y_predict' 
+# Pass the test data to the predict function and store the values into 'y_predict'
 y_predict = cls.predict(ss1.transform(X.iloc[split:]))
 
 
@@ -375,7 +378,7 @@ y_predict = cls.predict(ss1.transform(X.iloc[split:]))
 
 
 # Initiate a column by name, 'Pred_Signal' and assign 0 to it
-Df['Pred_Signal'] = 0
+Df["Pred_Signal"] = 0
 
 
 # ### Save the predictions
@@ -386,27 +389,29 @@ Df['Pred_Signal'] = 0
 
 
 # Save the predicted values for the train data
-Df.iloc[:split,Df.columns.get_loc('Pred_Signal')] = pd.Series(cls.predict(ss1.transform(X.iloc[:split])).tolist())
+Df.iloc[:split, Df.columns.get_loc("Pred_Signal")] = pd.Series(
+    cls.predict(ss1.transform(X.iloc[:split])).tolist()
+)
 
 # Save the predicted values for the test data
-Df.iloc[split:,Df.columns.get_loc('Pred_Signal')] = y_predict
+Df.iloc[split:, Df.columns.get_loc("Pred_Signal")] = y_predict
 
 
 # Since, the algorithm was trained on the train data, it’s accuracy of prediction is expected to be better on this train data compared to the test data. You can print these two seperately to check the accuracies. (TRY ON YOUR OWN!)
 
-# ## Use the model for trading strategy 
+# ## Use the model for trading strategy
 
-# ### Trading strategy 
-#         
-# Our trading strategy is simply to buy/sell/do-nothing at that period for which the Signal is generated by the algorithm. The strategy assumes that you always get a fill at the "Open" prices. 
-# 
+# ### Trading strategy
+#
+# Our trading strategy is simply to buy/sell/do-nothing at that period for which the Signal is generated by the algorithm. The strategy assumes that you always get a fill at the "Open" prices.
+#
 # You had already calculated and saved returns on 'Open' prices in 'Ret'. You will create a column named 'Ret1' to store the strategy's returns based on the Signal.
 
 # In[34]:
 
 
-# Calculate strategy returns and store them in 'Ret1' column 
-Df['Ret1'] = Df['Ret']*Df['Pred_Signal'] 
+# Calculate strategy returns and store them in 'Ret1' column
+Df["Ret1"] = Df["Ret"] * Df["Pred_Signal"]
 
 
 # ## Analyze the performance
@@ -417,24 +422,24 @@ Df['Ret1'] = Df['Ret']*Df['Pred_Signal']
 
 
 # Calculate the annualized Sharpe ratio
-sharpe = np.sqrt(252) * Df['Ret1'][split:].mean() / Df['Ret1'][split:].std()
+sharpe = np.sqrt(252) * Df["Ret1"][split:].mean() / Df["Ret1"][split:].std()
 
-print('Sharpe', sharpe)
+print("Sharpe", sharpe)
 
 
 # ## Plot the results
-# 
+#
 # Now you can plot the results to visualize the performance.
-# 
+#
 
 # In[36]:
 
 
 Df.set_index("Time", inplace=True)
 # Plot the stretegy returns
-plt.figure(figsize=(10,5))
-plt.plot(((Df['Ret'][split:]+1).cumprod()),color='r',label='Market Returns')
-plt.plot(((Df['Ret1'][split:]+1).cumprod()),color='g',label='Strategy Returns')
+plt.figure(figsize=(10, 5))
+plt.plot(((Df["Ret"][split:] + 1).cumprod()), color="r", label="Market Returns")
+plt.plot(((Df["Ret1"][split:] + 1).cumprod()), color="g", label="Strategy Returns")
 plt.legend()
 plt.show()
 
@@ -445,7 +450,3 @@ plt.show()
 # - https://github.com/Datatouille/findalpha/tree/master
 
 # In[ ]:
-
-
-
-

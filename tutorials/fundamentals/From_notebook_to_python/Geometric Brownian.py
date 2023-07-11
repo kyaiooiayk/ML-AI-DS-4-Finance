@@ -27,11 +27,11 @@ import pandas as pd
 
 # <div class="alert alert-info">
 # <font color=black>
-#  
+#
 # - Demonstrate how to generate multiple CSV files of synthetic daily stock pricing and volume data using the analytical solution to the Geometric Brownian Motion stochastic differential equation.
-# 
+#
 # - The purposes is to examine the 'what if?' scenarios in systematic trading.
-#     
+#
 # </font>
 # </div>
 
@@ -84,7 +84,7 @@ class GeometricBrownianMotionAssetSimulator:
         init_price,
         mu,
         sigma,
-        pareto_shape
+        pareto_shape,
     ):
         self.start_date = start_date
         self.end_date = end_date
@@ -105,12 +105,7 @@ class GeometricBrownianMotionAssetSimulator:
         `str`
             The random ticker string composed of uppercase letters.
         """
-        return ''.join(
-            random.choices(
-                string.ascii_uppercase,
-                k=self.symbol_length
-            )
-        )
+        return "".join(random.choices(string.ascii_uppercase, k=self.symbol_length))
 
     def _create_empty_frame(self):
         """
@@ -123,24 +118,20 @@ class GeometricBrownianMotionAssetSimulator:
         `pd.DataFrame`
             The empty OHLCV DataFrame for subsequent population.
         """
-        date_range = pd.date_range(
-            self.start_date,
-            self.end_date,
-            freq='B'
-        )
+        date_range = pd.date_range(self.start_date, self.end_date, freq="B")
 
         zeros = pd.Series(np.zeros(len(date_range)))
 
         return pd.DataFrame(
             {
-                'date': date_range,
-                'open': zeros,
-                'high': zeros,
-                'low': zeros,
-                'close': zeros,
-                'volume': zeros
+                "date": date_range,
+                "open": zeros,
+                "high": zeros,
+                "low": zeros,
+                "close": zeros,
+                "volume": zeros,
             }
-        )[['date', 'open', 'high', 'low', 'close', 'volume']]
+        )[["date", "open", "high", "low", "close", "volume"]]
 
     def _create_geometric_brownian_motion(self, data):
         """
@@ -170,8 +161,8 @@ class GeometricBrownianMotionAssetSimulator:
         # Vectorised implementation of asset path generation
         # including four prices per day, used to create OHLC
         asset_path = np.exp(
-            (self.mu - self.sigma**2 / 2) * dt +
-            self.sigma * np.random.normal(0, np.sqrt(dt), size=(4 * n))
+            (self.mu - self.sigma**2 / 2) * dt
+            + self.sigma * np.random.normal(0, np.sqrt(dt), size=(4 * n))
         )
 
         return self.init_price * asset_path.cumprod()
@@ -200,17 +191,15 @@ class GeometricBrownianMotionAssetSimulator:
         path : `np.ndarray`
             The original NumPy array of the asset price path.
         """
-        data['open'] = path[0::4]
-        data['close'] = path[3::4]
+        data["open"] = path[0::4]
+        data["close"] = path[3::4]
 
-        data['high'] = np.maximum(
-            np.maximum(path[0::4], path[1::4]),
-            np.maximum(path[2::4], path[3::4])
+        data["high"] = np.maximum(
+            np.maximum(path[0::4], path[1::4]), np.maximum(path[2::4], path[3::4])
         )
 
-        data['low'] = np.minimum(
-            np.minimum(path[0::4], path[1::4]),
-            np.minimum(path[2::4], path[3::4])
+        data["low"] = np.minimum(
+            np.minimum(path[0::4], path[1::4]), np.minimum(path[2::4], path[3::4])
         )
 
     def _append_volume_to_data(self, data):
@@ -225,14 +214,10 @@ class GeometricBrownianMotionAssetSimulator:
         data : `pd.DataFrame`
             The DataFrame to append volume data to, in place.
         """
-        data['volume'] = np.array(
+        data["volume"] = np.array(
             list(
                 map(
-                    int,
-                    np.random.pareto(
-                        self.pareto_shape,
-                        size=len(data)
-                    ) * 1000000.0
+                    int, np.random.pareto(self.pareto_shape, size=len(data)) * 1000000.0
                 )
             )
         )
@@ -250,8 +235,8 @@ class GeometricBrownianMotionAssetSimulator:
         data : `pd.DataFrame`
             The DataFrame containing the generated OHLCV data.
         """
-        output_file = os.path.join(self.output_dir, '%s.csv' % symbol)
-        data.to_csv(output_file, index=False, float_format='%.2f')
+        output_file = os.path.join(self.output_dir, "%s.csv" % symbol)
+        data.to_csv(output_file, index=False, float_format="%.2f")
 
     def __call__(self):
         """
@@ -273,9 +258,9 @@ class GeometricBrownianMotionAssetSimulator:
 
 num_assets = 5
 random_seed = 41
-start_date = '1993-01-01'
-end_date = '2022-07-31'
-output_dir = './'
+start_date = "1993-01-01"
+end_date = "2022-07-31"
+output_dir = "./"
 symbol_length = 5
 init_price = 100.0
 mu = 0.1
@@ -299,29 +284,20 @@ random.seed(random_seed)
 np.random.seed(seed=random_seed)
 
 gbmas = GeometricBrownianMotionAssetSimulator(
-    start_date,
-    end_date,
-    output_dir,
-    symbol_length,
-    init_price,
-    mu,
-    sigma,
-    pareto_shape
+    start_date, end_date, output_dir, symbol_length, init_price, mu, sigma, pareto_shape
 )
 
 # Create num_assets files by repeatedly calling
 # the instantiated class
 for i in range(num_assets):
-    print('Generating asset path %d of %d...' % (i+1, num_assets))
+    print("Generating asset path %d of %d..." % (i + 1, num_assets))
     gbmas()
-
-
 
 
 # In[5]:
 
 
-get_ipython().system('ls ./*csv')
+get_ipython().system("ls ./*csv")
 
 
 # # Plotting
@@ -331,8 +307,8 @@ get_ipython().system('ls ./*csv')
 
 
 # Change BUAWV.csv to your preferred ticker symbol
-df = pd.read_csv('./BUAWV.csv').set_index('date')
-df[['open', 'high', 'low', 'close']].plot()
+df = pd.read_csv("./BUAWV.csv").set_index("date")
+df[["open", "high", "low", "close"]].plot()
 plt.show()
 
 
@@ -342,27 +318,23 @@ plt.show()
 # In[7]:
 
 
-get_ipython().system('rm ./DSERQ.csv')
-get_ipython().system('rm ./JFEXP.csv')
-get_ipython().system('rm ./ROJTO.csv')
-get_ipython().system('rm ./BUAWV.csv')
-get_ipython().system('rm ./URVLE.csv')
+get_ipython().system("rm ./DSERQ.csv")
+get_ipython().system("rm ./JFEXP.csv")
+get_ipython().system("rm ./ROJTO.csv")
+get_ipython().system("rm ./BUAWV.csv")
+get_ipython().system("rm ./URVLE.csv")
 
 
 # In[8]:
 
 
-get_ipython().system('ls ./*csv')
+get_ipython().system("ls ./*csv")
 
 
 # # References
 # <hr style = "border:2px solid black" ></hr>
 
-# 
+#
 # - https://www.quantstart.com/articles/geometric-brownian-motion-simulation-with-python/
 
 # In[ ]:
-
-
-
-

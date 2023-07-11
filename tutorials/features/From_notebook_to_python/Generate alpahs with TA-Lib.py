@@ -250,6 +250,14 @@ pd.concat([X, y], axis=1)
 # # References
 # <hr style="border:2px solid black"> </hr>
 
+# <div class="alert alert-warning">
+# <font color=black>
+#
 # - https://github.com/Datatouille/findalpha/tree/master
+# - [Coding the Relative Strength (RSI) Index in Python](https://www.qmr.ai/relative-strength-index-rsi-in-python/)
+#
+#
+# </font>
+# </div>
 
 # In[ ]:

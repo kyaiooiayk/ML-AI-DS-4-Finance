@@ -160,8 +160,11 @@ sns.despine()
 # - [Dataset](https://github.com/Datatouille/findalpha/tree/master)
 # - [Tutorial](https://github.com/stefan-jansen/machine-learning-for-trading/blob/main/04_alpha_factor_research/02_how_to_use_talib.ipynb)
 # - [https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/bollinger-bands](https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/bollinger-bands)
+# - [Coding the Relative Strength (RSI) Index in Python](https://www.qmr.ai/relative-strength-index-rsi-in-python/)
 #
 # </font>
 # </div>
+
+#
 
 # In[ ]:

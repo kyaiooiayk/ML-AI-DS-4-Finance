@@ -29,6 +29,7 @@
 - [Didact AI: The anatomy of an ML-powered stock picking engine](https://principiamundi.com/posts/didact-anatomy/?utm_source=substack&utm_medium=email)
 - [Marty MK's blog](https://www.qmr.ai/blog/)
 - [Quantstart blogs](https://www.quantstart.com/articles/)
+- [The Alpha Scientist](https://alphascientist.com/index.html)
 ***
 
 ## Jobs/careers

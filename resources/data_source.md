@@ -1,6 +1,10 @@
 # Data sources
 ***
 
+## Historic data
+- [US monthly Fama/French 3 factors and 5 factors](http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
+***
+
 ## Stock Market Data
 - Polygon.io
 - [Alpaca](https://alpaca.markets/) offers a free brokerage account. This commission-free brokerage firm specializes in offering an excellent API for us to the interface, fetch live market data, and even place our orders. | [How to create a cryptocurrency bot in Python and Alpaca](https://www.qmr.ai/cryptocurrency-trading-bot-with-alpaca-in-python/)

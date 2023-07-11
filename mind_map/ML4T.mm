@@ -83,7 +83,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662278842836" ID="ID_1575445950" MODIFIED="1688891646228" POSITION="left" TEXT="Numerical modelling">
+<node CREATED="1662278842836" FOLDED="true" ID="ID_1575445950" MODIFIED="1688898879266" POSITION="left" TEXT="Numerical modelling">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662278865077" ID="ID_1779329758" LINK="https://www.simtrade.fr/blog_simtrade/fama-macbeth-two-step-regression-method/" MODIFIED="1662278923188" TEXT="Fama&#x2013;Macbeth regression">
 <icon BUILTIN="button_ok"/>
@@ -224,7 +224,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1688891693661" ID="ID_1601922959" LINK="https://www.qmr.ai/examples-of-algorithmic-trading-strategies-trading-bots/#Machine_Learning_Strategies" MODIFIED="1688892349008" POSITION="left" TEXT="Algorithm strategies">
+<node CREATED="1688891693661" FOLDED="true" ID="ID_1601922959" LINK="https://www.qmr.ai/examples-of-algorithmic-trading-strategies-trading-bots/#Machine_Learning_Strategies" MODIFIED="1688898857401" POSITION="left" TEXT="Algorithm strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1688891710010" ID="ID_402594560" MODIFIED="1688892388503" TEXT="Mean Reversion Strategies">
 <icon BUILTIN="button_ok"/>
@@ -464,7 +464,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662062750617" FOLDED="true" ID="ID_809887904" MODIFIED="1662793279963" POSITION="right" TEXT="Optimisation">
+<node CREATED="1662062750617" FOLDED="true" ID="ID_809887904" MODIFIED="1688898898438" POSITION="right" TEXT="Optimisation">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662062761458" ID="ID_1742342764" LINK="https://www.investopedia.com/terms/m/meanvariance-analysis.asp" MODIFIED="1662148658896" TEXT="Mean-variance optimisation">
 <icon BUILTIN="button_ok"/>
@@ -482,7 +482,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662288038631" FOLDED="true" ID="ID_174620185" MODIFIED="1663672823365" POSITION="right" TEXT="Backtesting">
+<node CREATED="1662288038631" FOLDED="true" ID="ID_174620185" MODIFIED="1688898897433" POSITION="right" TEXT="Backtesting">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662288045467" ID="ID_1525319379" MODIFIED="1662288071242" TEXT="Vectorized">
 <icon BUILTIN="button_ok"/>
@@ -490,7 +490,7 @@
 <node CREATED="1662288048489" ID="ID_611456128" LINK="https://quantra.quantinsti.com/glossary/Event-Driven-Backtest" MODIFIED="1663082346338" TEXT="Event-driven backtesting">
 <icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1663015460945" ID="ID_1708815872" MODIFIED="1663015599120" TEXT="Why backtesting">
+<node CREATED="1663015460945" FOLDED="true" ID="ID_1708815872" MODIFIED="1688898896434" TEXT="Why backtesting">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663015469326" ID="ID_269821110" MODIFIED="1663015497683" TEXT="Filtration">
 <icon BUILTIN="button_ok"/>
@@ -505,7 +505,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663015593037" FOLDED="true" ID="ID_273339638" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1663672821764" TEXT="Backtesting biases">
+<node CREATED="1663015593037" FOLDED="true" ID="ID_273339638" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1688898895550" TEXT="Backtesting biases">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663015606525" ID="ID_599195391" MODIFIED="1663015669651" TEXT="Optimisation bias">
 <icon BUILTIN="button_ok"/>

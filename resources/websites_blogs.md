@@ -30,6 +30,7 @@
 - [Marty MK's blog](https://www.qmr.ai/blog/)
 - [Quantstart blogs](https://www.quantstart.com/articles/)
 - [The Alpha Scientist](https://alphascientist.com/index.html)
+- [Quantitativity](https://quantivity.wordpress.com/)
 ***
 
 ## Jobs/careers

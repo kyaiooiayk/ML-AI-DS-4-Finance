@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Technical analysis
-#
+# 
 # </font>
 # </div>
 
@@ -24,10 +24,9 @@
 import numpy as np
 import pandas as pd
 from pylab import mpl, plt
-
-plt.style.use("seaborn")
-mpl.rcParams["font.family"] = "serif"
-get_ipython().run_line_magic("config", "InlineBackend.figure_format = 'svg'")
+plt.style.use('seaborn')
+mpl.rcParams['font.family'] = 'serif'
+get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'svg'")
 
 
 # # Read-in data
@@ -38,26 +37,28 @@ get_ipython().run_line_magic("config", "InlineBackend.figure_format = 'svg'")
 # In[2]:
 
 
-filename = "../data/tr_eikon_eod_data.csv"
+filename = '../data/tr_eikon_eod_data.csv'  
 
 
 # In[3]:
 
 
-f = open(filename, "r")
-f.readlines()[:5]
+f = open(filename, 'r')  
+f.readlines()[:5]  
 
 
 # In[4]:
 
 
-data = pd.read_csv(filename, index_col=0, parse_dates=True)
+data = pd.read_csv(filename,  
+                   index_col=0, 
+                   parse_dates=True)  
 
 
 # In[5]:
 
 
-rets = np.log(data / data.shift(1))
+rets = np.log(data / data.shift(1))  
 
 
 # # Technical analysis
@@ -65,17 +66,17 @@ rets = np.log(data / data.shift(1))
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Rolling statistics are a major tool in the so-called **technical analysis** of stocks, as compared to the fundamental analysis.
 # - **Fundamental analysis** focuses, for instance, on financial reports and the strategic positions of the company whose stock is being analyzed.
-#
+# 
 # </font>
 # </div>
 
 # In[6]:
 
 
-sym = "AAPL.O"
+sym = 'AAPL.O'
 
 
 # In[7]:
@@ -93,43 +94,43 @@ data.tail()
 # In[9]:
 
 
-window = 20
+window = 20  
 
 
 # In[10]:
 
 
-data["min"] = data[sym].rolling(window=window).min()
+data['min'] = data[sym].rolling(window=window).min()  
 
 
 # In[11]:
 
 
-data["mean"] = data[sym].rolling(window=window).mean()
+data['mean'] = data[sym].rolling(window=window).mean()  
 
 
 # In[12]:
 
 
-data["std"] = data[sym].rolling(window=window).std()
+data['std'] = data[sym].rolling(window=window).std()  
 
 
 # In[13]:
 
 
-data["median"] = data[sym].rolling(window=window).median()
+data['median'] = data[sym].rolling(window=window).median()  
 
 
 # In[14]:
 
 
-data["max"] = data[sym].rolling(window=window).max()
+data['max'] = data[sym].rolling(window=window).max()  
 
 
 # In[15]:
 
 
-data["ewma"] = data[sym].ewm(halflife=0.5, min_periods=window).mean()
+data['ewma'] = data[sym].ewm(halflife=0.5, min_periods=window).mean()  
 
 
 # In[16]:
@@ -141,12 +142,9 @@ data.dropna().head()
 # In[17]:
 
 
-ax = (
-    data[["min", "mean", "max"]]
-    .iloc[-200:]
-    .plot(figsize=(10, 6), style=["g--", "r--", "g--"], lw=1)
-)
-data[sym].iloc[-200:].plot(ax=ax, lw=2.0)
+ax = data[['min', 'mean', 'max']].iloc[-200:].plot(
+    figsize=(10, 6), style=['g--', 'r--', 'g--'], lw=1)  
+data[sym].iloc[-200:].plot(ax=ax, lw=2.0);  
 
 
 # # Simple moving averages - SMAs
@@ -154,66 +152,65 @@ data[sym].iloc[-200:].plot(ax=ax, lw=2.0)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - A decades-old trading strategy based on technical analysis is using two simple moving averages (SMAs).
-# - The idea is that the trader should go long on a stock (or financial instrument in general) when the shorter-term SMA is above the longer-term SMA and should go short when the opposite holds true.
-#
+#     
+# - A decades-old trading strategy based on technical analysis is using two simple moving averages (SMAs). 
+# - The idea is that the trader should go long on a stock (or financial instrument in general) when the shorter-term SMA is above the longer-term SMA and should go short when the opposite holds true. 
+# 
 # </font>
 # </div>
 
 # In[18]:
 
 
-data["SMA1"] = data[sym].rolling(window=42).mean()
+data['SMA1'] = data[sym].rolling(window=42).mean()  
 
 
 # In[19]:
 
 
-data["SMA2"] = data[sym].rolling(window=252).mean()
+data['SMA2'] = data[sym].rolling(window=252).mean()  
 
 
 # In[20]:
 
 
-data[[sym, "SMA1", "SMA2"]].tail()
+data[[sym, 'SMA1', 'SMA2']].tail()
 
 
 # In[21]:
 
 
-data[[sym, "SMA1", "SMA2"]].plot(figsize=(10, 6))
+data[[sym, 'SMA1', 'SMA2']].plot(figsize=(10, 6))
 
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - SMAs are used to derive posi‐ tions to implement a trading strategy.
-# - Figure below visualizes a long position by a value of 1 and a short position by a value of -1.
+# 
+# - SMAs are used to derive posi‐ tions to implement a trading strategy. 
+# - Figure below visualizes a long position by a value of 1 and a short position by a value of -1. 
 # - The change in the position is triggered (visually) by a crossover of the two lines representing the SMA time series
-#
+# 
 # </font>
 # </div>
 
 # In[22]:
 
 
-data.dropna(inplace=True)
+data.dropna(inplace=True)  
 
 
 # In[23]:
 
 
-data["positions"] = np.where(data["SMA1"] > data["SMA2"], 1, -1)
+data['positions'] = np.where(data['SMA1'] > data['SMA2'], 1, -1)
 
 
 # In[24]:
 
 
-ax = data[[sym, "SMA1", "SMA2", "positions"]].plot(
-    figsize=(10, 6), secondary_y="positions"
-)
-ax.get_legend().set_bbox_to_anchor((0.25, 0.85))
+ax = data[[sym, 'SMA1', 'SMA2', 'positions']].plot(figsize=(10, 6),
+                                              secondary_y='positions')
+ax.get_legend().set_bbox_to_anchor((0.25, 0.85));
 
 
 # # References
@@ -221,11 +218,11 @@ ax.get_legend().set_bbox_to_anchor((0.25, 0.85))
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://github.com/yhilpisch/py4fi2nd/blob/master/code/ch08/08_financial_time_series.ipynb
 # - Hilpisch, Yves. Python for finance: mastering data-driven finance. O'Reilly Media, 2018.
 # - [Data](https://github.com/yhilpisch/py4fi2nd/tree/master/source)
-#
+# 
 # </font>
 # </div>
 
@@ -235,8 +232,12 @@ ax.get_legend().set_bbox_to_anchor((0.25, 0.85))
 # In[25]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv')
 
 
 # In[ ]:
+
+
+
+

@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Beta
-#
+# 
 # </font>
 # </div>
 
@@ -30,9 +30,9 @@ import statsmodels.api as sm
 # In[ ]:
 
 
-plt.style.use("seaborn")
-mpl.rcParams["font.family"] = "serif"
-get_ipython().run_line_magic("config", "InlineBackend.figure_format = 'svg'")
+plt.style.use('seaborn')
+mpl.rcParams['font.family'] = 'serif'
+get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'svg'")
 
 
 # # Read-in data
@@ -43,20 +43,22 @@ get_ipython().run_line_magic("config", "InlineBackend.figure_format = 'svg'")
 # In[2]:
 
 
-filename = "../data/tr_eikon_eod_data.csv"
+filename = '../data/tr_eikon_eod_data.csv'  
 
 
 # In[3]:
 
 
-f = open(filename, "r")
-f.readlines()[:5]
+f = open(filename, 'r')  
+f.readlines()[:5]  
 
 
 # In[4]:
 
 
-data = pd.read_csv(filename, index_col=0, parse_dates=True)
+data = pd.read_csv(filename,  
+                   index_col=0, 
+                   parse_dates=True)  
 
 
 # # Quick checks
@@ -65,19 +67,19 @@ data = pd.read_csv(filename, index_col=0, parse_dates=True)
 # In[5]:
 
 
-data.info()
+data.info()  
 
 
 # In[7]:
 
 
-data.head()
+data.head()  
 
 
 # In[9]:
 
 
-data.tail()
+data.tail()  
 
 
 # In[10]:
@@ -86,34 +88,26 @@ data.tail()
 data.plot(figsize=(10, 12), subplots=True)
 
 
-# - The data used is from the Thomson Reuters (TR) Eikon Data API.
-# - In the TR world symbols for financial instruments are called Reuters Instrument Codes (RICs).
+# - The data used is from the Thomson Reuters (TR) Eikon Data API. 
+# - In the TR world symbols for financial instruments are called Reuters Instrument Codes (RICs). 
 # - The financial instruments that the single RICs represent are:
 
 # In[11]:
 
 
-instruments = [
-    "Apple Stock",
-    "Microsoft Stock",
-    "Intel Stock",
-    "Amazon Stock",
-    "Goldman Sachs Stock",
-    "SPDR S&P 500 ETF Trust",
-    "S&P 500 Index",
-    "VIX Volatility Index",
-    "EUR/USD Exchange Rate",
-    "Gold Price",
-    "VanEck Vectors Gold Miners ETF",
-    "SPDR Gold Trust",
-]
+instruments = ['Apple Stock', 'Microsoft Stock',
+               'Intel Stock', 'Amazon Stock', 'Goldman Sachs Stock',
+               'SPDR S&P 500 ETF Trust', 'S&P 500 Index',
+               'VIX Volatility Index', 'EUR/USD Exchange Rate',
+               'Gold Price', 'VanEck Vectors Gold Miners ETF',
+               'SPDR Gold Trust']
 
 
 # In[12]:
 
 
 for ric, name in zip(data.columns, instruments):
-    print("{:8s} | {}".format(ric, name))
+    print('{:8s} | {}'.format(ric, name))
 
 
 # # Summary Statistics
@@ -122,25 +116,30 @@ for ric, name in zip(data.columns, instruments):
 # In[13]:
 
 
-data.info()
+data.info()  
 
 
 # In[14]:
 
 
-data.describe().round(2)
+data.describe().round(2)  
 
 
 # In[18]:
 
 
-data.mean()
+data.mean()  
 
 
 # In[19]:
 
 
-data.aggregate([min, np.mean, np.std, np.median, max]).round(2)
+data.aggregate([min,  
+                np.mean,  
+                np.std,  
+                np.median,  
+                max]  
+).round(2)
 
 
 # # Clean data
@@ -156,7 +155,8 @@ data
 # In[26]:
 
 
-data[["AMZN.O", "SPY"]].plot(figsize=(10, 6), style=["g--", "r--", "g--"], lw=1)
+data[['AMZN.O', 'SPY']].plot(
+    figsize=(10, 6), style=['g--', 'r--', 'g--'], lw=1);
 
 
 # # Calculating Beta
@@ -164,7 +164,7 @@ data[["AMZN.O", "SPY"]].plot(figsize=(10, 6), style=["g--", "r--", "g--"], lw=1)
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A stock that swings more than the market over time has a beta greater than 1.0 = High Beta
 # - A stock beta is less than 1.0 = Low Beta
 # - High-Beta tend to be Riskier but provide the potential for higher returns; Low-Beta stocks pose less risk but typically yield lower returns.
@@ -172,7 +172,7 @@ data[["AMZN.O", "SPY"]].plot(figsize=(10, 6), style=["g--", "r--", "g--"], lw=1)
 # - For beta to be meaningful, the stock should be related to the benchmark that is used in the calculation.
 # - The S&P 500 has a beta of 1.0.
 # Stocks with betas above 1 will tend to move with more momentum than the S&P 500; stocks with betas less than 1 with less momentum.
-#
+# 
 # </font>
 # </div>
 
@@ -182,7 +182,7 @@ data[["AMZN.O", "SPY"]].plot(figsize=(10, 6), style=["g--", "r--", "g--"], lw=1)
 
 
 # Create a regression model
-reg = sm.OLS(data["AMZN.O"], data["SPY"])
+reg = sm.OLS(data['AMZN.O'], data['SPY'])
 
 
 # In[36]:
@@ -211,7 +211,7 @@ print(f"Beta for Amazon {results.params[0]}")
 
 
 # Calculate the covariance of Amazon and S&P500
-covariance = np.cov(data["AMZN.O"], data["SPY"])[0][1]
+covariance = np.cov(data['AMZN.O'], data['SPY'])[0][1]
 
 
 # In[43]:
@@ -224,7 +224,7 @@ covariance
 
 
 # Calculate the variance of S&P500
-variance = np.var(data["SPY"])
+variance = np.var(data['SPY'])
 
 
 # In[45]:
@@ -245,10 +245,10 @@ print(f"Beta for Amazon {covariance/variance}")
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://github.com/Datatouille/findalpha/blob/master/slides.pdf
 # - [Data](https://github.com/yhilpisch/py4fi2nd/tree/master/source)
-#
+# 
 # </font>
 # </div>
 
@@ -258,5 +258,6 @@ print(f"Beta for Amazon {covariance/variance}")
 # In[37]:
 
 
-get_ipython().run_line_magic("load_ext", "watermark")
-get_ipython().run_line_magic("watermark", "-v -iv")
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv')
+

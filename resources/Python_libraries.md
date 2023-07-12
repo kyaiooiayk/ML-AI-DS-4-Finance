@@ -26,6 +26,7 @@
 - [Full list available here](https://www.qmr.ai/best-backtesting-library-for-python/)
 - [zipline](https://github.com/quantopian/zipline) is an open source event-driven backtesting system library. It generates market events to simulate the reactions of an algorithmic trading strategy and tracks its performance. A particularly important feature is that it provides the algorithm with historical point-in-time data that avoids look-ahead bias. It is used to simulate realistic slippage, transaction costs and order delays. Process each event individually and avoids look-ahead bias. Zipline too is maintained by Quantopian.
 - [finmarketpy](https://github.com/cuemacro/finmarketpy) is a Python-based library which enables you to analyze markets and backtest trading strategies using a simple to use API, which has inbuilt templates. With this library, one can visualise the trading strategies over a certain period and investigate the seasonality surrounding these strategies. It also allows the users to conduct surveys around specific events corresponding the data under consideration. An in-built calculator can be used to assess how volatile the targets are. It depends on pandas and NumPy libraries.
+- [backtrader](https://www.backtrader.com/) | [GitHub](https://github.com/mementum/backtrader) A feature-rich Python framework for backtesting and trading. backtrader allows you to focus on writing reusable trading strategies, indicators and analyzers instead of having to spend time building infrastructure.
 ***
 
 ## References

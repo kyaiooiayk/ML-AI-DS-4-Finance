@@ -1,7 +1,7 @@
 # Python libraries
 ***
 
-
+## General
 - [FinQuant](https://github.com/fmilthaler/FinQuant)
 - [PyAlgoTrade](https://github.com/gbeced/pyalgotrade) is an event-driven algorithmic trading Python library which supports back-testing, live-feed paper trading and real-time trading on Bitstamp. No longer maintained.
 - [quantecon](https://pypi.org/project/quantecon/) is a python library which consists of modules like game theory, Markov chains, random generation utilities (random), a collection of tools (tools), and other utilities (util) which are mainly used by developers internal to the package.

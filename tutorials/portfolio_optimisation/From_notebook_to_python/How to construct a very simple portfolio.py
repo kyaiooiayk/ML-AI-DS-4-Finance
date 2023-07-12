@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # **What?** How to construct a very simple portfolio
-# 
+#
 # </font>
 # </div>
 
@@ -38,14 +38,14 @@ aapl = pdr.get_data_yahoo("AAPL", start)
 
 # <div class="alert alert-info">
 # <font color=black>
-# 
+#
 # - `Open` - When the stock market opens in the morning for trading, what was the price of one share?
 # - `High` - over the course of the trading day, what was the highest value for that day?
 # - `Low` - over the course of the trading day, what was the lowest value for that day?
 # - `Close` - When the trading day was over, what was the final price?
 # - `Volume` - For that day, how many shares were traded?
 # - `Adj Close` - Over time, companies may decide to do something called a stock split. For example, Apple did one once their stock price exceeded 1000USD. Since in most cases, people cannot buy fractions of shares, a stock price of 1,000 USD is fairly limiting to investors. Companies can do a stock split where they say every share is now 2 shares, and the price is half. Anyone who had 1 share of Apple for 1,000 USD, after a split where Apple doubled the shares, they would have 2 shares of Apple (AAPL), each worth 500 USD. Adj Close is helpful, since it accounts for future stock splits, and gives the relative price to splits. For this reason, the **adjusted** prices are the prices you're most likely to be dealing with.
-# 
+#
 # </font>
 # </div>
 
@@ -76,7 +76,7 @@ aapl
 # In[6]:
 
 
-tickers = ['AAPL', 'MSFT', 'NFLX', 'AMZN']
+tickers = ["AAPL", "MSFT", "NFLX", "AMZN"]
 
 start = dt.datetime(2010, 1, 1)
 
@@ -95,7 +95,7 @@ data.head()
 # In[8]:
 
 
-data = data['Adj Close']
+data = data["Adj Close"]
 
 
 # In[9]:
@@ -114,7 +114,7 @@ data.iloc[0]
 
 
 # normalisation wrt the first entry
-norm = data/data.iloc[0]
+norm = data / data.iloc[0]
 
 
 # In[12]:
@@ -129,13 +129,13 @@ norm.head()
 # In[13]:
 
 
-portfolio = [.25, .25, .25, .25]
+portfolio = [0.25, 0.25, 0.25, 0.25]
 
 
 # In[21]:
 
 
-weights = norm*portfolio
+weights = norm * portfolio
 
 
 # In[22]:
@@ -148,7 +148,7 @@ weights.head()
 
 
 # Calculate the sum and add index
-weights['Total'] = (norm*portfolio).sum(axis=1)
+weights["Total"] = (norm * portfolio).sum(axis=1)
 
 
 # In[17]:
@@ -163,19 +163,19 @@ weights.head()
 # In[18]:
 
 
-(weights*100000).head()
+(weights * 100000).head()
 
 
 # In[19]:
 
 
-(weights*100000).tail()
+(weights * 100000).tail()
 
 
 # In[20]:
 
 
-(weights['Total']*100000).iloc[-1]
+(weights["Total"] * 100000).iloc[-1]
 
 
 # # References
@@ -183,10 +183,10 @@ weights.head()
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://github.com/LearnPythonWithRune/PythonForFinancialAnalysis/blob/main/01%20-%20Read%20from%20API.ipynb
 # - https://www.learnpythonwithrune.org/start-python-with-pandas-for-financial-analysis/
 # - https://pythonprogramming.net/getting-stock-prices-python-programming-for-finance/
-# 
+#
 # </font>
 # </div>

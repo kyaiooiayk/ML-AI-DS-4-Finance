@@ -8,15 +8,15 @@
 # <hr style = "border:2px solid black" ></hr>
 
 # # Portfolio Optimization using Second Order Cone
-# 
+#
 # In this notebook we show how to use the Second Order Cone (SOC) constraint in the variance portfolio optimization problem.
-# 
+#
 # ## 1. Variance Optimization
-# 
+#
 # ### 1.1 Variance Minimization
-# 
+#
 # The minimization of portfolio variance is a quadratic optimization problem that can be posed as:
-# 
+#
 # $$
 # \begin{equation}
 # \begin{aligned}
@@ -27,7 +27,7 @@
 # \end{aligned}
 # \end{equation}
 # $$
-# 
+#
 # Where $x$ are the weights of assets, $\mu$ is the mean vector of expected returns and $\bar{\mu}$ the minimum expected return of portfolio.
 
 # In[1]:
@@ -36,7 +36,7 @@
 ####################################
 # Downloading Data
 ####################################
-get_ipython().system('pip install --quiet yfinance')
+get_ipython().system("pip install --quiet yfinance")
 
 import numpy as np
 import pandas as pd
@@ -46,21 +46,45 @@ import warnings
 warnings.filterwarnings("ignore")
 
 yf.pdr_override()
-pd.options.display.float_format = '{:.4%}'.format
+pd.options.display.float_format = "{:.4%}".format
 
 # Date range
-start = '2016-01-01'
-end = '2019-12-30'
+start = "2016-01-01"
+end = "2019-12-30"
 
 # Tickers of assets
-assets = ['JCI', 'TGT', 'CMCSA', 'CPB', 'MO', 'APA', 'MMC', 'JPM',
-          'ZION', 'PSA', 'BAX', 'BMY', 'LUV', 'PCAR', 'TXT', 'TMO',
-          'DE', 'MSFT', 'HPQ', 'SEE', 'VZ', 'CNP', 'NI', 'T', 'BA']
+assets = [
+    "JCI",
+    "TGT",
+    "CMCSA",
+    "CPB",
+    "MO",
+    "APA",
+    "MMC",
+    "JPM",
+    "ZION",
+    "PSA",
+    "BAX",
+    "BMY",
+    "LUV",
+    "PCAR",
+    "TXT",
+    "TMO",
+    "DE",
+    "MSFT",
+    "HPQ",
+    "SEE",
+    "VZ",
+    "CNP",
+    "NI",
+    "T",
+    "BA",
+]
 assets.sort()
 
 # Downloading data
-data = yf.download(assets, start = start, end = end)
-data = data.loc[:,('Adj Close', slice(None))]
+data = yf.download(assets, start=start, end=end)
+data = data.loc[:, ("Adj Close", slice(None))]
 data.columns = assets
 
 # Calculating returns
@@ -80,16 +104,14 @@ import cvxpy as cp
 from timeit import default_timer as timer
 
 # Defining initial inputs
-mu = Y.mean().to_numpy().reshape(1,-1)
+mu = Y.mean().to_numpy().reshape(1, -1)
 sigma = Y.cov().to_numpy()
 
 # Defining initial variables
 x = cp.Variable((mu.shape[1], 1))
 
 # Budget and weights constraints
-constraints = [cp.sum(x) == 1,
-               x <= 1,
-               x >= 0]
+constraints = [cp.sum(x) == 1, x <= 1, x >= 0]
 
 # Defining risk objective
 risk = cp.quad_form(x, sigma)
@@ -98,7 +120,7 @@ objective = cp.Minimize(risk)
 weights = pd.DataFrame([])
 # Solving the problem with several solvers
 prob = cp.Problem(objective, constraints)
-solvers = ['ECOS', 'SCS']
+solvers = ["ECOS", "SCS"]
 for i in solvers:
     prob.solve(solver=i)
     # Showing Optimal Weights
@@ -120,15 +142,15 @@ std = np.sqrt(var)
 ret = Y.mean().to_frame().T @ weights * 252
 
 stats = pd.concat([ret, std, var], axis=0)
-stats.index = ['Return', 'Std. Dev.', 'Variance']
+stats.index = ["Return", "Std. Dev.", "Variance"]
 
 display(stats)
 
 
 # ### 1.2 Return Maximization with Variance Constraint
-# 
+#
 # The maximization of portfolio return is a problem with a quadratic constraint that can be posed as:
-# 
+#
 # $$
 # \begin{equation}
 # \begin{aligned}
@@ -139,7 +161,7 @@ display(stats)
 # \end{aligned}
 # \end{equation}
 # $$
-# 
+#
 # Where $x$ are the weights of assets and $\bar{\sigma}$ is the maximum expected standard deviation of portfolio..
 
 # In[4]:
@@ -154,7 +176,7 @@ import cvxpy as cp
 from timeit import default_timer as timer
 
 # Defining initial inputs
-mu = Y.mean().to_numpy().reshape(1,-1)
+mu = Y.mean().to_numpy().reshape(1, -1)
 sigma = Y.cov().to_numpy()
 
 # Defining initial variables
@@ -163,19 +185,17 @@ sigma_hat = 15 / (252**0.5 * 100)
 ret = mu @ x
 
 # Budget and weights constraints
-constraints = [cp.sum(x) == 1,
-               x <= 1,
-               x >= 0]
+constraints = [cp.sum(x) == 1, x <= 1, x >= 0]
 
 # Defining risk constraint and objective
 risk = cp.quad_form(x, sigma)
-constraints += [risk <= sigma_hat**2] # variance constraint
+constraints += [risk <= sigma_hat**2]  # variance constraint
 objective = cp.Maximize(ret)
 
 weights = pd.DataFrame([])
 # Solving the problem with several solvers
 prob = cp.Problem(objective, constraints)
-solvers = ['ECOS', 'SCS']
+solvers = ["ECOS", "SCS"]
 for i in solvers:
     prob.solve(solver=i)
     # Showing Optimal Weights
@@ -197,17 +217,17 @@ std = np.sqrt(var)
 ret = Y.mean().to_frame().T @ weights * 252
 
 stats = pd.concat([ret, std, var], axis=0)
-stats.index = ['Return', 'Std. Dev.', 'Variance']
+stats.index = ["Return", "Std. Dev.", "Variance"]
 
 display(stats)
 
 
 # ## 2 Standard Deviation Optimization
-# 
+#
 # ### 2.1 Standard Deviation Minimization
-# 
+#
 # An alternative problem is to minimize the standard deviation (square root of variance). To do this we can use the SOC constraint. The minimization of portfolio standard deviation can be posed as:
-# 
+#
 # $$
 # \begin{equation}
 # \begin{aligned}
@@ -219,9 +239,9 @@ display(stats)
 # \end{aligned}
 # \end{equation}
 # $$
-# 
+#
 # Where $\left\|\Sigma^{1/2} x\right\| \leq g$ is the SOC constraint, $x$ are the weights of assets, $\mu$ is the mean vector of expected returns, $\bar{\mu}$ the minimum expected return of portfolio and $r$ is the matrix of observed returns.
-# 
+#
 # __Note:__ the SOC constraint can be expressed as $(g,\Sigma^{1/2} x) \in Q^{n+1}$, this notation is used to model the __SOC constraint__ in CVXPY.
 
 # In[6]:
@@ -234,7 +254,7 @@ display(stats)
 from scipy.linalg import sqrtm
 
 # Defining initial inputs
-mu = Y.mean().to_numpy().reshape(1,-1)
+mu = Y.mean().to_numpy().reshape(1, -1)
 sigma = Y.cov().to_numpy()
 G = sqrtm(sigma)
 
@@ -243,19 +263,18 @@ x = cp.Variable((mu.shape[1], 1))
 g = cp.Variable(nonneg=True)
 
 # Budget and weights constraints
-constraints = [cp.sum(x) == 1,
-               x >= 0]
+constraints = [cp.sum(x) == 1, x >= 0]
 
 # Defining risk objective
 risk = g
-constraints += [cp.SOC(g, G @ x)] # SOC constraint
-constraints += [risk <= sigma_hat] # variance constraint
+constraints += [cp.SOC(g, G @ x)]  # SOC constraint
+constraints += [risk <= sigma_hat]  # variance constraint
 objective = cp.Minimize(risk)
 
 weights = pd.DataFrame([])
 # Solving the problem with several solvers
 prob = cp.Problem(objective, constraints)
-solvers = ['ECOS', 'SCS']
+solvers = ["ECOS", "SCS"]
 for i in solvers:
     prob.solve(solver=i)
     # Showing Optimal Weights
@@ -277,15 +296,15 @@ std = np.sqrt(var)
 ret = Y.mean().to_frame().T @ weights * 252
 
 stats = pd.concat([ret, std, var], axis=0)
-stats.index = ['Return', 'Std. Dev.', 'Variance']
+stats.index = ["Return", "Std. Dev.", "Variance"]
 
 display(stats)
 
 
 # ### 2.2 Return Maximization with Standard Deviation Constraint
-# 
+#
 # The maximization of portfolio return using SOC constraints can be posed as:
-# 
+#
 # $$
 # \begin{equation}
 # \begin{aligned}
@@ -309,7 +328,7 @@ display(stats)
 from scipy.linalg import sqrtm
 
 # Defining initial inputs
-mu = Y.mean().to_numpy().reshape(1,-1)
+mu = Y.mean().to_numpy().reshape(1, -1)
 sigma = Y.cov().to_numpy()
 G = sqrtm(sigma)
 
@@ -320,21 +339,19 @@ sigma_hat = 15 / (252**0.5 * 100)
 ret = mu @ x
 
 # Budget and weights constraints
-constraints = [cp.sum(x) == 1,
-               x <= 1,
-               x >= 0]
+constraints = [cp.sum(x) == 1, x <= 1, x >= 0]
 
 
 # Defining risk constraint and objective
 risk = g
-constraints += [cp.SOC(g, G @ x)] # SOC constraint
-constraints += [risk <= sigma_hat] # standard deviation constraint
+constraints += [cp.SOC(g, G @ x)]  # SOC constraint
+constraints += [risk <= sigma_hat]  # standard deviation constraint
 objective = cp.Maximize(ret)
 
 weights = pd.DataFrame([])
 # Solving the problem with several solvers
 prob = cp.Problem(objective, constraints)
-solvers = ['ECOS', 'SCS']
+solvers = ["ECOS", "SCS"]
 for i in solvers:
     prob.solve(solver=i)
     # Showing Optimal Weights
@@ -356,7 +373,7 @@ std = np.sqrt(var)
 ret = Y.mean().to_frame().T @ weights * 252
 
 stats = pd.concat([ret, std, var], axis=0)
-stats.index = ['Return', 'Std. Dev.', 'Variance']
+stats.index = ["Return", "Std. Dev.", "Variance"]
 
 display(stats)
 
@@ -366,14 +383,10 @@ display(stats)
 
 # <div class="alert alert-warning">
 # <font color=black>
-# 
+#
 # - https://www.cvxpy.org/examples/index.html
-# 
+#
 # </font>
 # </div>
 
 # In[ ]:
-
-
-
-

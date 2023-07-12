@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Risk-return relationship
-#
+# 
 # </font>
 # </div>
 
@@ -27,10 +27,9 @@ import plotly.graph_objs as go
 import matplotlib.pyplot as plt
 import plotly
 import warnings
-
-warnings.filterwarnings("ignore")
-plt.rcParams["figure.dpi"] = 300
-plt.rcParams["savefig.dpi"] = 300
+warnings.filterwarnings('ignore')
+plt.rcParams['figure.dpi'] = 300
+plt.rcParams['savefig.dpi'] = 300
 
 
 # # Risk-return
@@ -38,21 +37,21 @@ plt.rcParams["savefig.dpi"] = 300
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - There is a trade-off between risk and return: the higher the assumed risk, the greater the realized return.
-#
-# - As it is a formidable task to come up with an optimum solution, this trade-off is one of the most controversial issues in finance.
-#
+# 
+# - There is a trade-off between risk and return: the higher the assumed risk, the greater the realized return. 
+# 
+# - As it is a formidable task to come up with an optimum solution, this trade-off is one of the most controversial issues in finance. 
+# 
 # - However, **Markowitz** (1952) proposes an intuitive and appealing solution to this long-standing issue. He used standard deviation to quantify risk.
-#
-#
+# 
+# 
 # </font>
 # </div>
 
 # # Generate data
 # <hr style = "border:2px solid black" ></hr>
 
-# - An hypothetical portfolio is constructed to calculate necessary statistics: standard deviation and covariance
+# - An hypothetical portfolio is constructed to calculate necessary statistics: standard deviation and covariance 
 
 # In[3]:
 
@@ -71,12 +70,12 @@ returns = np.random.randn(n_assets, n_simulation)
 
 
 rand = np.random.rand(n_assets)
-weights = rand / sum(rand)
+weights = rand/sum(rand)
 
 
 def port_return(returns):
     """
-    Function used to calculate expected portfolio
+    Function used to calculate expected portfolio 
     return and portfolio standard deviation
     """
     rets = np.mean(returns, axis=1)
@@ -102,7 +101,8 @@ print(portfolio_std_dev)
 # In[13]:
 
 
-portfolio = np.array([port_return(np.random.randn(n_assets, i)) for i in range(1, 101)])
+portfolio = np.array([port_return(np.random.randn(n_assets, i))
+                      for i in range(1, 101)])
 
 
 # # Fit the data
@@ -111,27 +111,23 @@ portfolio = np.array([port_return(np.random.randn(n_assets, i)) for i in range(1
 # In[14]:
 
 
-best_fit = sm.OLS(portfolio[:, 1], sm.add_constant(portfolio[:, 0])).fit().fittedvalues
+best_fit = sm.OLS(portfolio[:, 1], sm.add_constant(portfolio[:, 0]))\
+           .fit().fittedvalues
 
 
 # In[15]:
 
 
 fig = go.Figure()
-fig.add_trace(
-    go.Scatter(
-        name="Risk-Return Relationship",
-        x=portfolio[:, 0],
-        y=portfolio[:, 1],
-        mode="markers",
-    )
-)
-fig.add_trace(
-    go.Scatter(name="Best Fit Line", x=portfolio[:, 0], y=best_fit, mode="lines")
-)
-fig.update_layout(
-    xaxis_title="Return", yaxis_title="Standard Deviation", width=900, height=470
-)
+fig.add_trace(go.Scatter(name='Risk-Return Relationship',
+                         x=portfolio[:, 0],
+                         y=portfolio[:, 1], mode='markers'))
+fig.add_trace(go.Scatter(name='Best Fit Line',
+                         x=portfolio[:, 0],
+                         y=best_fit, mode='lines'))
+fig.update_layout(xaxis_title = 'Return',
+                  yaxis_title = 'Standard Deviation',
+                  width=900, height=470)
 fig.show()
 
 
@@ -140,12 +136,12 @@ fig.show()
 
 # <div class="alert alert-danger">
 # <font color=black>
-#
+# 
 # - The plot confirms that the risk and return go in tandem.
-#
+#     
 # - However, keep in mind that the magnitude of this correlation varies depending on the individual stock and the financial market conditions.
-#
-#
+# 
+# 
 # </font>
 # </div>
 
@@ -154,9 +150,9 @@ fig.show()
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://github.com/abdullahkarasan/mlfrm/blob/main/codes/chp_1.ipynb
 # - Machine Learning for Financial Risk Management with Python Abdullah Karasan
-#
+# 
 # </font>
 # </div>

@@ -6,9 +6,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Vectorised Backtest of SMA - Simple Moving Average
-#
+# 
 # </font>
 # </div>
 
@@ -17,11 +17,11 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - A **vectorised** backtest is the most basic way to evaluate a strategy. It simply multiplies a signal vector that represents the target position size with a vector of returns for the investment horizon to compute the period performance (some used the term equity curve). Vectorised backtesters are for quick research ideas. vectorized backtesting with NumPy and pandas is generally convenient and efficient to implement due to the concise code, and it is fast to execute due to these packages being optimized for such operations.
 # - An **event-driven** backtester is a more well thought out simulation. By making use of an event driven backtester we can stop look ahead bias to a large extent by only feeding in the data as it becomes available. This also very closely matches how your trading will take place in real life via an execution system. We also have the advantage of building in transaction costs, liquidity constraints, and market impact. This is not something you can do with the vectorized method. (You could add transaction costs after the fact).
 # - There seems to be a bit of a confusion of what what vectorised really means: if behind the scenes, the said vectorised function is simply passing the elements through a loop, just like an event-driven backtester in that sense. Then, there's no correctness reason for preferring one approach over another.
-#
+# 
 # </font>
 # </div>
 
@@ -37,7 +37,6 @@ import datetime
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-
 plt.style.use("seaborn")
 from tqdm import tqdm
 
@@ -47,13 +46,11 @@ from tqdm import tqdm
 
 # Getting rid of the warning messages
 import warnings
-
 warnings.filterwarnings("ignore")
 
 # Pandas future warning
 import warnings
-
-warnings.simplefilter(action="ignore", category=FutureWarning)
+warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas
 
 
@@ -65,12 +62,13 @@ import pandas
 
 # pull historical data
 def get_data(pair):
-    NUM_DAYS = 10000  # The number of days of historical data to retrieve
-    INTERVAL = "1d"
-    symbol = str(pair)  # Symbol of the desired stock
+
+    NUM_DAYS = 10000    # The number of days of historical data to retrieve
+    INTERVAL = '1d'
+    symbol = str(pair)   # Symbol of the desired stock
 
     # define start & dates
-    start = datetime.date.today() - datetime.timedelta(NUM_DAYS)
+    start = (datetime.date.today() - datetime.timedelta(NUM_DAYS))
     end = datetime.datetime.today()
 
     # pull data
@@ -108,11 +106,8 @@ data
 # In[6]:
 
 
-data.plot(
-    figsize=(18, 7),
-    y=["Close", "SMA_S", "SMA_L"],
-    title=f"{pair} + SMA{sma_short} & SMA{sma_long}",
-)
+data.plot(figsize=(18, 7), y=["Close", "SMA_S", "SMA_L"],
+          title=f"{pair} + SMA{sma_short} & SMA{sma_long}")
 # plt.grid()
 plt.show()
 
@@ -122,10 +117,10 @@ plt.show()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Where short SMA is greater than the long SMA, the position is +1 (buy)
 # - Where short SMA is less than the long SMA, the position is -1 (sell).
-#
+# 
 # </font>
 # </div>
 
@@ -142,18 +137,18 @@ data
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The daily log returns are calculated by taking the natural logarithm of the division of the present close price by the previous price.
-# - Log returns are an important financial metrics for determining the returns of an investment.
+# - Log returns are an important financial metrics for determining the returns of an investment. 
 # - Strategy returns is the return from the position taken based on the previous close price. i.e the return for the present close price multiplied by the signal position — Buy(+1) or Sell(-1). The logic behind this is simple; if by the end of day 1, the signal says “Buy (+1)” and you take a long position, by day 2, the return of the strategy from the position taken from the signal on day 1 would be the log returns between the price of day 1 and day 2 multiplied by the position itself. E.g. If the position at day 1 is -1 and the log returns at day 2 is -0.00302, the strategy returns = -1 * -0.00302 i.e a profit return of 0.00302
-#
+#     
 # </font>
 # </div>
 
 # In[8]:
 
 
-data.Close / data.Close.shift(1)
+data.Close/data.Close.shift(1)
 
 
 # In[9]:
@@ -184,12 +179,12 @@ data.head()
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - **Absolute performance** — the sum of the log returns of buy & hold and strategy. This gives an overview of the absolute returns after the test period.
 # - **Annual returns** — The mean of the log returns of buy & hold and strategy multiplied by the total number of trading days in a year (252).
 # - **Annual risk** — The standard deviation of the log returns of buy & hold and strategy multiplied by the square root of total number of trading days in a year (252).
 # - **Cumulative Returns** — is calculated by the cumulative sum of exponential of the strategy log returns and the buy & hold returns
-#
+# 
 # </font>
 # </div>
 
@@ -234,18 +229,17 @@ data
 
 # Visualize Cummulative returns
 data[["cum_returns", "cum_strategy"]].plot(
-    figsize=(20, 7), title=f"{pair} Returns + SMA{sma_short} & SMA{sma_long}"
-)
+    figsize=(20, 7), title=f"{pair} Returns + SMA{sma_short} & SMA{sma_long}")
 plt.legend(fontsize=12)
 plt.show()
 
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - This shows the strategy using a SMA(sma_short = 55, sma_long = 200) performed worse than a buy & hold investment and would not be profitable to trade.
 # - The strategy performance can be calculated by subtracting the last cumulative returns of buy & hold from the last cumulative return of the strategy. T0his shows a -11.0% performance compared to buy & hold
-#
+# 
 # </font>
 # </div>
 
@@ -253,7 +247,7 @@ plt.show()
 
 
 strat_perf = data.cum_strategy.iloc[-1] - data.cum_returns.iloc[-1]
-round(strat_perf, 5) * 100
+round(strat_perf, 5)*100
 
 
 # # Optimise SMA combination
@@ -372,7 +366,8 @@ new_data
 # In[38]:
 
 
-new_data["2021"].plot(figsize=(18, 7), title=f"{pair} + SMA{sma_short} & SMA{sma_long}")
+new_data["2021"].plot(
+    figsize=(18, 7), title=f"{pair} + SMA{sma_short} & SMA{sma_long}")
 plt.show()
 
 
@@ -437,8 +432,7 @@ new_data
 
 # Visualize Cummulative returns
 new_data[["cum_returns", "cum_strategy"]].plot(
-    figsize=(20, 7), title=f"{pair} Returns + SMA{sma_short} & SMA{sma_long}"
-)
+    figsize=(20, 7), title=f"{pair} Returns + SMA{sma_short} & SMA{sma_long}")
 plt.legend(fontsize=12)
 plt.show()
 
@@ -448,13 +442,17 @@ plt.show()
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - [YAHOO AUD/USD](https://finance.yahoo.com/quote/AUDUSD=X/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvLnVrLw&guce_referrer_sig=AQAAALNbKvdnnyycC3agGxv2fNzx__G73WarjVfBU63B7R9XGoqbvxhA3w9GcR3L9FLa8dLwc66QMCF26cabsJGtchOasiKqmt8cQaoNpVmRM6nZyYSu0yh96F93qHmzud_O1HgswybhoZM4CTiX9kybecUul4nmAlvBODyHEXBmyJ5t)
 # - [Blog article](https://wire.insiderfinance.io/vectorized-backtest-of-sma-cross-strategy-991cb13ffcd0)
 # - [Why do we need event-driven backtesters?](https://quant.stackexchange.com/questions/46791/why-do-we-need-event-driven-backtesters)
 # - [Why log return?](https://quantivity.wordpress.com/2011/02/21/why-log-returns/)
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

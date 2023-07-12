@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Capital Asset Pricing Model (CAPM)
-#
+# 
 # </font>
 # </div>
 
@@ -20,22 +20,22 @@
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - Relationship between systematic risk and expected return
 # - There are several assumptions behind the CAPM formula that have been shown not to hold in reality.
 # - CAPM formula is still widely used:
-#
+# 
 #  $ER_i = R_f + \beta_i(ER_m - R_f)$
-#
-#
+# 
+# 
 # * $ER_i$: Expected return from investment
 # * $R_f$: Risk free return
 # * $\beta_i$: The beta of the investment
-# * $(ER_m - R_f)$: Market risk premium
+# * $(ER_m - R_f)$: Market risk premium   
 # </font>
 # </div>
-#
-#
+# 
+#     
 
 # # Imports
 # <hr style = "border:2px solid black" ></hr>
@@ -55,7 +55,7 @@ import pandas as pd
 # In[2]:
 
 
-tickers = ["AAPL", "MSFT", "TWTR", "IBM", "^GSPC"]
+tickers = ['AAPL', 'MSFT', 'TWTR', 'IBM', '^GSPC']
 start = dt.datetime(2015, 12, 1)
 end = dt.datetime(2021, 1, 1)
 
@@ -65,26 +65,26 @@ data = pdr.get_data_yahoo(tickers, start, end, interval="m")
 # In[3]:
 
 
-data = data["Adj Close"]
+data = data['Adj Close']
 
 
 # In[4]:
 
 
-log_returns = np.log(data / data.shift())
+log_returns = np.log(data/data.shift())
 
 
 # In[5]:
 
 
 cov = log_returns.cov()
-var = log_returns["^GSPC"].var()
+var = log_returns['^GSPC'].var()
 
 
 # In[6]:
 
 
-beta = cov.loc["AAPL", "^GSPC"] / var
+beta = cov.loc['AAPL', '^GSPC']/var
 
 
 # # CAPM
@@ -92,9 +92,9 @@ beta = cov.loc["AAPL", "^GSPC"] / var
 
 # <div class="alert alert-info">
 # <font color=black>
-#
+# 
 # - The risk free return is often set to 0. Otherwise, the [10 years treasury note is used](https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield). Here, we use 1.38%. You can update it for more up to date value with the link.
-#
+# 
 # </font>
 # </div>
 
@@ -102,8 +102,8 @@ beta = cov.loc["AAPL", "^GSPC"] / var
 
 
 risk_free_return = 0.0138
-market_return = 0.105
-expected_return = risk_free_return + beta * (market_return - risk_free_return)
+market_return = .105
+expected_return = risk_free_return + beta*(market_return - risk_free_return)
 
 
 # In[8]:
@@ -115,13 +115,13 @@ expected_return
 # In[9]:
 
 
-beta * market_return
+beta*market_return
 
 
 # In[10]:
 
 
-beta = cov.loc["^GSPC"] / var
+beta = cov.loc['^GSPC']/var
 
 
 # In[11]:
@@ -133,7 +133,7 @@ beta
 # In[12]:
 
 
-market_return = risk_free_return + beta * (market_return - risk_free_return)
+market_return = risk_free_return + beta*(market_return - risk_free_return)
 
 
 # In[13]:
@@ -147,11 +147,15 @@ market_return
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://github.com/LearnPythonWithRune/PythonForFinanceRiskAndReturn/blob/main/08%20-%20CAPM.ipynb
 # - [Market risk premium](https://www.investopedia.com/terms/m/marketriskpremium.asp)
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

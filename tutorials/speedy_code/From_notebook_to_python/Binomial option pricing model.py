@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Binomial option pricing model
-#
+# 
 # </font>
 # </div>
 
@@ -31,11 +31,11 @@ import numba
 
 # <div class="alert alert-info">
 # <font color=black>
-#
-# - A popular numerical method to value options is the binomial option pricing model pioneered by Cox, Ross, and Rubinstein (1979).
-# - This method relies on representing the possible future evolution of an asset by a (recombining) tree.
-# - In this model, as in the Black-Scholes-Merton (1973) setup, there is a risky asset, an index or stock, and a riskless asset, a bond.
-#
+# 
+# - A popular numerical method to value options is the binomial option pricing model pioneered by Cox, Ross, and Rubinstein (1979). 
+# - This method relies on representing the possible future evolution of an asset by a (recombining) tree. 
+# - In this model, as in the Black-Scholes-Merton (1973) setup, there is a risky asset, an index or stock, and a riskless asset, a bond. 
+#     
 # </font>
 # </div>
 
@@ -50,26 +50,26 @@ import math
 # In[3]:
 
 
-S0 = 36.0
-T = 1.0
-r = 0.06
-sigma = 0.2
+S0 = 36.  
+T = 1.0  
+r = 0.06  
+sigma = 0.2  
 
 
 # In[4]:
 
 
 def simulate_tree(M):
-    dt = T / M
-    u = math.exp(sigma * math.sqrt(dt))
-    d = 1 / u
+    dt = T / M  
+    u = math.exp(sigma * math.sqrt(dt))  
+    d = 1 / u  
     S = np.zeros((M + 1, M + 1))
     S[0, 0] = S0
     z = 1
     for t in range(1, M + 1):
         for i in range(z):
-            S[i, t] = S[i, t - 1] * u
-            S[i + 1, t] = S[i, t - 1] * d
+            S[i, t] = S[i, t-1] * u
+            S[i+1, t] = S[i, t-1] * d
         z += 1
     return S
 
@@ -77,19 +77,20 @@ def simulate_tree(M):
 # In[5]:
 
 
-np.set_printoptions(formatter={"float": lambda x: "%6.2f" % x})
+np.set_printoptions(formatter={'float':
+                               lambda x: '%6.2f' % x})  
 
 
 # In[6]:
 
 
-simulate_tree(4)
+simulate_tree(4)  
 
 
 # In[7]:
 
 
-get_ipython().run_line_magic("time", "simulate_tree(500)")
+get_ipython().run_line_magic('time', 'simulate_tree(500)')
 
 
 # ### NumPy
@@ -104,21 +105,21 @@ M = 4
 
 
 up = np.arange(M + 1)
-up = np.resize(up, (M + 1, M + 1))
+up = np.resize(up, (M + 1, M + 1))  
 up
 
 
 # In[10]:
 
 
-down = up.T * 2
+down = up.T * 2  
 down
 
 
 # In[11]:
 
 
-up - down
+up - down  
 
 
 # In[12]:
@@ -130,7 +131,7 @@ dt = T / M
 # In[13]:
 
 
-S0 * np.exp(sigma * math.sqrt(dt) * (up - down))
+S0 * np.exp(sigma * math.sqrt(dt) * (up - down))  
 
 
 # In[14]:
@@ -154,7 +155,7 @@ simulate_tree_np(4)
 # In[16]:
 
 
-get_ipython().run_line_magic("time", "simulate_tree_np(500)")
+get_ipython().run_line_magic('time', 'simulate_tree_np(500)')
 
 
 # ### Numba
@@ -174,13 +175,13 @@ simulate_tree_nb(4)
 # In[19]:
 
 
-get_ipython().run_line_magic("time", "simulate_tree_nb(500)")
+get_ipython().run_line_magic('time', 'simulate_tree_nb(500)')
 
 
 # In[20]:
 
 
-get_ipython().run_line_magic("timeit", "simulate_tree_nb(500)")
+get_ipython().run_line_magic('timeit', 'simulate_tree_nb(500)')
 
 
 # ### Cython
@@ -188,17 +189,13 @@ get_ipython().run_line_magic("timeit", "simulate_tree_nb(500)")
 # In[21]:
 
 
-get_ipython().run_line_magic("load_ext", "Cython")
+get_ipython().run_line_magic('load_ext', 'Cython')
 
 
 # In[22]:
 
 
-get_ipython().run_cell_magic(
-    "cython",
-    "-a",
-    "import numpy as np\ncimport cython\nfrom libc.math cimport exp, sqrt\ncdef float S0 = 36.\ncdef float T = 1.0\ncdef float r = 0.06\ncdef float sigma = 0.2\ndef simulate_tree_cy(int M):\n    cdef int z, t, i\n    cdef float dt, u, d\n    cdef float[:, :] S = np.zeros((M + 1, M + 1),\n                                  dtype=np.float32)  \n    dt = T / M\n    u = exp(sigma * sqrt(dt))\n    d = 1 / u\n    S[0, 0] = S0\n    z = 1\n    for t in range(1, M + 1):\n        for i in range(z):\n            S[i, t] = S[i, t-1] * u\n            S[i+1, t] = S[i, t-1] * d\n        z += 1\n    return np.array(S)\n",
-)
+get_ipython().run_cell_magic('cython', '-a', 'import numpy as np\ncimport cython\nfrom libc.math cimport exp, sqrt\ncdef float S0 = 36.\ncdef float T = 1.0\ncdef float r = 0.06\ncdef float sigma = 0.2\ndef simulate_tree_cy(int M):\n    cdef int z, t, i\n    cdef float dt, u, d\n    cdef float[:, :] S = np.zeros((M + 1, M + 1),\n                                  dtype=np.float32)  \n    dt = T / M\n    u = exp(sigma * sqrt(dt))\n    d = 1 / u\n    S[0, 0] = S0\n    z = 1\n    for t in range(1, M + 1):\n        for i in range(z):\n            S[i, t] = S[i, t-1] * u\n            S[i+1, t] = S[i, t-1] * d\n        z += 1\n    return np.array(S)\n')
 
 
 # In[23]:
@@ -210,13 +207,13 @@ simulate_tree_cy(4)
 # In[24]:
 
 
-get_ipython().run_line_magic("time", "simulate_tree_cy(500)")
+get_ipython().run_line_magic('time', 'simulate_tree_cy(500)')
 
 
 # In[25]:
 
 
-get_ipython().run_line_magic("timeit", "S = simulate_tree_cy(500)")
+get_ipython().run_line_magic('timeit', 'S = simulate_tree_cy(500)')
 
 
 # # References
@@ -224,12 +221,16 @@ get_ipython().run_line_magic("timeit", "S = simulate_tree_cy(500)")
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://github.com/yhilpisch/py4fi2nd/blob/master/code/ch10/10_performance_python.ipynb
 # - https://llvm.org/
 # - Hilpisch, Yves. Python for finance: mastering data-driven finance. O'Reilly Media, 2018.
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

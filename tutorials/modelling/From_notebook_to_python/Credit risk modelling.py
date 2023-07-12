@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Credit risk modelling
-#
+# 
 # </font>
 # </div>
 
@@ -33,16 +33,14 @@ import seaborn as sns
 import pymc3 as pm
 import arviz as az
 import logging
-
 sns.set()
-plt.rcParams["figure.figsize"] = (10, 6)
+plt.rcParams["figure.figsize"] = (10,6)
 
 
 # In[ ]:
 
 
 import warnings
-
 warnings.filterwarnings("ignore")
 
 
@@ -51,15 +49,15 @@ warnings.filterwarnings("ignore")
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
-# - **Credit risk** is most simply defined as the potential that a bank borrower or counterparty will fail to meet its obligations in accordance with agreed terms. The goal of credit risk management is to maximise a bank’s risk-adjusted rate of return by maintaining credit risk exposure within acceptable parameters. The importance of having strong capital requirements for a bank rests on the idea that banks should have a capital buffer in turbulent times. Of course, ensuring at least a minimum capital requirement is a burden for financial institutions in the sense that capital is an asset they cannot channel to deficit entities to make a profit.
+# 
+# - **Credit risk** is most simply defined as the potential that a bank borrower or counterparty will fail to meet its obligations in accordance with agreed terms. The goal of credit risk management is to maximise a bank’s risk-adjusted rate of return by maintaining credit risk exposure within acceptable parameters. The importance of having strong capital requirements for a bank rests on the idea that banks should have a capital buffer in turbulent times. Of course, ensuring at least a minimum capital requirement is a burden for financial institutions in the sense that capital is an asset they cannot channel to deficit entities to make a profit.                 
 # The most important and challenging part of estimating credit risk is to model the probability of default.
-#
-#
-# - **Risk bucketing** is nothing but grouping borrowers with similar creditworthiness. The behind-the-scenes story of risk bucketing is to obtain homogenous groups or clusters so that we can better estimate the credit risk.
-# Treating different risky borrowers equally may result in poor predictions because the model cannot capture entirely different characteristics of the data at once.
+# 
+# 
+# - **Risk bucketing** is nothing but grouping borrowers with similar creditworthiness. The behind-the-scenes story of risk bucketing is to obtain homogenous groups or clusters so that we can better estimate the credit risk. 
+# Treating different risky borrowers equally may result in poor predictions because the model cannot capture entirely different characteristics of the data at once. 
 # Thus, by dividing the borrowers into different groups based on riskiness, risk bucketing enables us to make accurate predictions.
-#
+# 
 # </font>
 # </div>
 
@@ -68,18 +66,18 @@ warnings.filterwarnings("ignore")
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
-# - Let’s create a practice exer‐ cise using German credit risk data.
+# 
+# - Let’s create a practice exer‐ cise using German credit risk data. 
 # - The data is gathered from the Kaggle platform.
 # - The dataset includes both categorical and numerical values, which need to be treated differently.
-#
+# 
 # </font>
 # </div>
 
 # In[2]:
 
 
-credit = pd.read_csv("credit_data_risk.csv")
+credit = pd.read_csv('credit_data_risk.csv')
 
 
 # # EDA
@@ -94,7 +92,7 @@ credit.head()
 # In[4]:
 
 
-del credit["Unnamed: 0"]
+del credit['Unnamed: 0']
 
 
 # In[5]:
@@ -106,7 +104,7 @@ credit.describe()
 # In[7]:
 
 
-numerical_credit = credit.select_dtypes(exclude="O")
+numerical_credit = credit.select_dtypes(exclude='O')
 
 
 # In[8]:
@@ -116,7 +114,7 @@ plt.figure(figsize=(10, 8))
 k = 0
 cols = numerical_credit.columns
 for i, j in zip(range(len(cols)), cols):
-    k += 1
+    k +=1
     plt.subplot(2, 2, k)
     plt.hist(numerical_credit.iloc[:, i])
     plt.title(j)
@@ -136,11 +134,11 @@ scaled_credit = scaler.fit_transform(numerical_credit)
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
+# 
 # - the **elbow method** is based on the inertia.
-# - The elbow method is used to find the optimal number of clusters, we observe the slope of the curve and decide the cut-off point at which the curve gets flatter—that is, the slope of the curve gets lower.
+# - The elbow method is used to find the optimal number of clusters, we observe the slope of the curve and decide the cut-off point at which the curve gets flatter—that is, the slope of the curve gets lower. 
 # - As it gets flatter, the inertia, telling us how far away the points within a cluster are located, decreases, which is nice for the purpose of clustering. On the other hand, as we allow inertia to decrease, the number of clusters increases, which makes the analysis more complicated. Given that trade-off, the stopping criteria is the point where the **curve gets flatter**.
-#
+# 
 # </font>
 # </div>
 
@@ -157,10 +155,10 @@ for k in range(1, 10):
 # In[12]:
 
 
-plt.plot(range(1, 10), distance, "bx-")
-plt.xlabel("k")
-plt.ylabel("Inertia")
-plt.title("The Elbow Method")
+plt.plot(range(1, 10), distance, 'bx-')
+plt.xlabel('k')
+plt.ylabel('Inertia')
+plt.title('The Elbow Method')
 plt.show()
 
 
@@ -168,11 +166,11 @@ plt.show()
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
-# - The Silhouette score is introduced as a tool to decide the optimal number of clusters. This takes a value between 1 and -1.
+# 
+# - The Silhouette score is introduced as a tool to decide the optimal number of clusters. This takes a value between 1 and -1. 
 # - A value of 1 indicates that an observation is close to the correct centroid and correctly classified. However, -1 shows that an observation is not correctly clustered.
 # - The strength of the Silhouette score rests on taking into account both the intracluster distance and the intercluster distance.
-#
+# 
 # </font>
 # </div>
 
@@ -183,9 +181,10 @@ fig, ax = plt.subplots(4, 2, figsize=(25, 20))
 for i in range(2, 10):
     km = KMeans(n_clusters=i)
     q, r = divmod(i, 2)
-    visualizer = SilhouetteVisualizer(km, colors="yellowbrick", ax=ax[q - 1][r])
+    visualizer = SilhouetteVisualizer(km, colors='yellowbrick',
+                                      ax=ax[q - 1][r])
     visualizer.fit(scaled_credit)
-    ax[q - 1][r].set_title("For Cluster_" + str(i))
+    ax[q - 1][r].set_title("For Cluster_"+str(i))
     ax[q - 1][r].set_xlabel("Silhouette Score")
 
 
@@ -193,10 +192,10 @@ for i in range(2, 10):
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
+# 
 # - Calinski-Harabasz (CH), which is known as the variance ratio criterion.
 # - We are seeking a high CH score, as the larger (lower) the between-cluster variance (within cluster variance), the better it is for finding the optimal number of clusters.
-#
+# 
 # </font>
 # </div>
 
@@ -204,30 +203,29 @@ for i in range(2, 10):
 
 
 from yellowbrick.cluster import KElbowVisualizer
-
 model = KMeans()
-visualizer = KElbowVisualizer(
-    model, k=(2, 10), metric="calinski_harabasz", timings=False
-)
+visualizer = KElbowVisualizer(model, k=(2, 10),
+                              metric='calinski_harabasz',
+                              timings=False)
 visualizer.fit(scaled_credit)
-visualizer.show()
+visualizer.show();
 
 
 # ## Gap analysis
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
-# - The estimate of the optimal clusters will be the value that maximizes the **gap statistic**, as the gap statistic is the difference between the total within-intracluster variation for different values of k and their expected values under null reference distribution of the respective data.
+# 
+# - The estimate of the optimal clusters will be the value that maximizes the **gap statistic**, as the gap statistic is the difference between the total within-intracluster variation for different values of k and their expected values under null reference distribution of the respective data. 
 # - The decision is made when we get the highest gap value.
-#
+# 
 # </font>
 # </div>
 
 # In[17]:
 
 
-optimalK = OptimalK(n_jobs=8, parallel_backend="joblib")
+optimalK = OptimalK(n_jobs=8, parallel_backend='joblib')
 n_clusters = optimalK(scaled_credit, cluster_array=np.arange(1, 10))
 
 
@@ -243,10 +241,11 @@ gap_result.head()
 
 plt.plot(gap_result.n_clusters, gap_result.gap_value)
 min_ylim, max_ylim = plt.ylim()
-plt.axhline(np.max(gap_result.gap_value), color="r", linestyle="dashed", linewidth=2)
-plt.title("Gap Analysis")
-plt.xlabel("Number of Cluster")
-plt.ylabel("Gap Value")
+plt.axhline(np.max(gap_result.gap_value), color='r',
+            linestyle='dashed', linewidth=2)
+plt.title('Gap Analysis')
+plt.xlabel('Number of Cluster')
+plt.ylabel('Gap Value')
 plt.show()
 
 
@@ -255,10 +254,10 @@ plt.show()
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
-# - In light of these discussions, two clusters are chosen to be the optimal number of clusters, and the K-means clustering analysis is conducted accordingly.
+# 
+# - In light of these discussions, two clusters are chosen to be the optimal number of clusters, and the K-means clustering analysis is conducted accordingly. 
 # - To illustrate the result let's visualize 2-D clusters.
-#
+# 
 # </font>
 # </div>
 
@@ -274,35 +273,26 @@ clusters = kmeans.fit_predict(scaled_credit)
 
 plt.figure(figsize=(10, 12))
 plt.subplot(311)
-plt.scatter(scaled_credit[:, 0], scaled_credit[:, 2], c=kmeans.labels_, cmap="viridis")
-plt.scatter(
-    kmeans.cluster_centers_[:, 0],
-    kmeans.cluster_centers_[:, 2],
-    s=80,
-    marker="x",
-    color="k",
-)
-plt.title("Age vs Credit")
+plt.scatter(scaled_credit[:, 0], scaled_credit[:, 2],
+            c=kmeans.labels_, cmap='viridis')
+plt.scatter(kmeans.cluster_centers_[:, 0],
+            kmeans.cluster_centers_[:, 2], s = 80,
+            marker= 'x', color = 'k')
+plt.title('Age vs Credit')
 plt.subplot(312)
-plt.scatter(scaled_credit[:, 0], scaled_credit[:, 2], c=kmeans.labels_, cmap="viridis")
-plt.scatter(
-    kmeans.cluster_centers_[:, 0],
-    kmeans.cluster_centers_[:, 2],
-    s=80,
-    marker="x",
-    color="k",
-)
-plt.title("Credit vs Duration")
+plt.scatter(scaled_credit[:, 0], scaled_credit[:, 2],
+            c=kmeans.labels_, cmap='viridis')
+plt.scatter(kmeans.cluster_centers_[:, 0],
+            kmeans.cluster_centers_[:, 2], s = 80,
+            marker= 'x', color = 'k')
+plt.title('Credit vs Duration')
 plt.subplot(313)
-plt.scatter(scaled_credit[:, 2], scaled_credit[:, 3], c=kmeans.labels_, cmap="viridis")
-plt.scatter(
-    kmeans.cluster_centers_[:, 2],
-    kmeans.cluster_centers_[:, 3],
-    s=120,
-    marker="x",
-    color="k",
-)
-plt.title("Age vs Duration")
+plt.scatter(scaled_credit[:, 2], scaled_credit[:, 3],
+            c=kmeans.labels_, cmap='viridis')
+plt.scatter(kmeans.cluster_centers_[:, 2],
+            kmeans.cluster_centers_[:, 3], s = 120,
+            marker= 'x', color = 'k')
+plt.title('Age vs Duration')
 plt.show()
 
 
@@ -317,56 +307,59 @@ clusters, counts = np.unique(kmeans.labels_, return_counts=True)
 
 cluster_dict = {}
 for i in range(len(clusters)):
-    cluster_dict[i] = scaled_credit[np.where(kmeans.labels_ == i)]
+    cluster_dict[i] = scaled_credit[np.where(kmeans.labels_==i)]
 
 
 # In[24]:
 
 
-credit["clusters"] = pd.DataFrame(kmeans.labels_)
+credit['clusters'] = pd.DataFrame(kmeans.labels_)
 
 
 # In[25]:
 
 
 df_scaled = pd.DataFrame(scaled_credit)
-df_scaled["clusters"] = credit["clusters"]
+df_scaled['clusters'] = credit['clusters']
 
 
 # In[26]:
 
 
-df_scaled["Risk"] = credit["Risk"]
-df_scaled.columns = ["Age", "Job", "Credit amount", "Duration", "Clusters", "Risk"]
+df_scaled['Risk'] = credit['Risk']
+df_scaled.columns = ['Age', 'Job', 'Credit amount',
+                     'Duration', 'Clusters', 'Risk']
 
 
 # In[27]:
 
 
-df_scaled[df_scaled.Clusters == 0]["Risk"].value_counts()
+df_scaled[df_scaled.Clusters == 0]['Risk'].value_counts()
 
 
 # In[28]:
 
 
-df_scaled[df_scaled.Clusters == 1]["Risk"].value_counts()
+df_scaled[df_scaled.Clusters == 1]['Risk'].value_counts()
 
 
 # In[29]:
 
 
-df_scaled[df_scaled.Clusters == 0]["Risk"].value_counts().plot(
-    kind="bar", figsize=(10, 6), title="Frequency of Risk Level"
-)
+df_scaled[df_scaled.Clusters == 0]['Risk'].value_counts()\
+                                    .plot(kind='bar',
+                                    figsize=(10, 6),
+                                    title="Frequency of Risk Level")
 plt.show()
 
 
 # In[30]:
 
 
-df_scaled[df_scaled.Clusters == 1]["Risk"].value_counts().plot(
-    kind="bar", figsize=(10, 6), title="Frequency of Risk Level"
-)
+df_scaled[df_scaled.Clusters == 1]['Risk'].value_counts()\
+                                    .plot(kind='bar',
+                                    figsize=(10, 6),
+                                    title="Frequency of Risk Level")
 plt.show()
 
 
@@ -382,22 +375,22 @@ from sklearn.model_selection import train_test_split
 # In[84]:
 
 
-df_scaled["Risk"] = df_scaled["Risk"].replace({"good": 1, "bad": 0})
+df_scaled['Risk'] = df_scaled['Risk'].replace({'good': 1, 'bad': 0})
 
 
 # In[85]:
 
 
-X = df_scaled.drop("Risk", axis=1)
-y = df_scaled.loc[:, ["Risk", "Clusters"]]
+X = df_scaled.drop('Risk', axis=1)
+y = df_scaled.loc[:, ['Risk', 'Clusters']]
 
 
 # In[86]:
 
 
-X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.2, random_state=42
-)
+X_train, X_test, y_train, y_test = train_test_split(X, y,
+                                                    test_size=0.2,
+                                                    random_state=42)
 
 
 # In[87]:
@@ -417,16 +410,15 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import roc_auc_score, roc_curve
 from imblearn.combine import SMOTEENN
 import warnings
-
-warnings.filterwarnings("ignore")
+warnings.filterwarnings('ignore')
 
 
 # In[37]:
 
 
 X_train1 = first_cluster_train
-y_train1 = y_train[y_train.Clusters == 0]["Risk"]
-smote = SMOTEENN(random_state=2)
+y_train1 = y_train[y_train.Clusters == 0]['Risk']
+smote = SMOTEENN(random_state = 2)
 X_train1, y_train1 = smote.fit_resample(X_train1, y_train1.ravel())
 logit = sm.Logit(y_train1, X_train1)
 logit_fit1 = logit.fit()
@@ -444,19 +436,20 @@ second_cluster_test = X_test[X_test.Clusters == 1].iloc[:, :-1]
 
 
 X_test1 = first_cluster_test
-y_test1 = y_test[y_test.Clusters == 0]["Risk"]
+y_test1 = y_test[y_test.Clusters == 0]['Risk']
 pred_prob1 = logit_fit1.predict(X_test1)
 
 
 # In[40]:
 
 
-false_pos, true_pos, _ = roc_curve(y_test1.values, pred_prob1)
+false_pos, true_pos, _ = roc_curve(y_test1.values,  pred_prob1)
 auc = roc_auc_score(y_test1, pred_prob1)
-plt.plot(false_pos, true_pos, label="AUC for cluster 1={:.4f} ".format(auc))
-plt.plot([0, 1], [0, 1], linestyle="--", label="45 degree line")
-plt.legend(loc="best")
-plt.title("AUC-ROC Curve 1")
+plt.plot(false_pos,true_pos, label="AUC for cluster 1={:.4f} "
+         .format(auc))
+plt.plot([0, 1], [0, 1], linestyle = '--', label='45 degree line')
+plt.legend(loc='best')
+plt.title('AUC-ROC Curve 1')
 plt.show()
 
 
@@ -464,7 +457,7 @@ plt.show()
 
 
 X_train2 = second_cluster_train
-y_train2 = y_train[y_train.Clusters == 1]["Risk"]
+y_train2 = y_train[y_train.Clusters == 1]['Risk']
 logit = sm.Logit(y_train2, X_train2)
 logit_fit2 = logit.fit()
 print(logit_fit2.summary())
@@ -474,19 +467,20 @@ print(logit_fit2.summary())
 
 
 X_test2 = second_cluster_test
-y_test2 = y_test[y_test.Clusters == 1]["Risk"]
+y_test2 = y_test[y_test.Clusters == 1]['Risk']
 pred_prob2 = logit_fit2.predict(X_test2)
 
 
 # In[43]:
 
 
-false_pos, true_pos, _ = roc_curve(y_test2.values, pred_prob2)
+false_pos, true_pos, _ = roc_curve(y_test2.values,  pred_prob2)
 auc = roc_auc_score(y_test2, pred_prob2)
-plt.plot(false_pos, true_pos, label="AUC for cluster 2={:.4f} ".format(auc))
-plt.plot([0, 1], [0, 1], linestyle="--", label="45 degree line")
-plt.legend(loc="best")
-plt.title("AUC-ROC Curve 2")
+plt.plot(false_pos,true_pos,label="AUC for cluster 2={:.4f} "
+         .format(auc))
+plt.plot([0, 1], [0, 1], linestyle = '--', label='45 degree line')
+plt.legend(loc='best')
+plt.title('AUC-ROC Curve 2')
 plt.show()
 
 
@@ -494,11 +488,11 @@ plt.show()
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
-# - `PYMC3` package, which is a Python package for Bayesian estimation, to predict the probability of default.
-# - There are several approaches for running Bayesian analysis using `PYMC3`, and for the first application, we’ll use the MAP distribution discussed. As a quick reminder, given the representative posterior distribution, MAP becomes an efficient model in this case.
+# 
+# - `PYMC3` package, which is a Python package for Bayesian estimation, to predict the probability of default. 
+# - There are several approaches for running Bayesian analysis using `PYMC3`, and for the first application, we’ll use the MAP distribution discussed. As a quick reminder, given the representative posterior distribution, MAP becomes an efficient model in this case. 
 # - Moreover, we select the Bayesian model with a deterministic variable (p) that is entirely determined by its parents—that is, age, job, credit amount, and duration.
-#
+# 
 # </font>
 # </div>
 
@@ -507,24 +501,21 @@ plt.show()
 
 # Identifying Bayesian model as logistic_model1
 with pm.Model() as logistic_model1:
-    # dentifying the assumed distributions of the variables as
-    # normal with defined mu and sigma parameters
-    beta_age = pm.Normal("coeff_age", mu=0, sd=10)
-    beta_job = pm.Normal("coeff_job", mu=0, sd=10)
-    beta_credit = pm.Normal("coeff_credit_amount", mu=0, sd=10)
-    beta_dur = pm.Normal("coeff_duration", mu=0, sd=10)
-
+    
+    #dentifying the assumed distributions of the variables as 
+    #normal with defined mu and sigma parameters
+    beta_age = pm.Normal('coeff_age', mu=0, sd=10)
+    beta_job = pm.Normal('coeff_job', mu=0, sd=10)
+    beta_credit = pm.Normal('coeff_credit_amount', mu=0, sd=10)
+    beta_dur = pm.Normal('coeff_duration', mu=0, sd=10)
+    
     # Running a deterministic model using the first sample
-    p = pm.Deterministic(
-        "p",
-        pm.math.sigmoid(
-            beta_age * X_train1["Age"]
-            + beta_job * X_train1["Job"]
-            + beta_credit * X_train1["Credit amount"]
-            + beta_dur * X_train1["Duration"]
-        ),
-    )
-
+    p = pm.Deterministic('p', pm.math.sigmoid(beta_age * 
+                              X_train1['Age'] + beta_job *
+                              X_train1['Job'] + beta_credit *
+                              X_train1['Credit amount'] + beta_dur *
+                              X_train1['Duration']))
+    
 
 with logistic_model1:
     # Running a Bernoulli distribution to model the dependent variable
@@ -536,57 +527,57 @@ with logistic_model1:
 # In[48]:
 
 
-param_list = ["coeff_age", "coeff_job", "coeff_credit_amount", "coeff_duration"]
+param_list = ['coeff_age', 'coeff_job',
+              'coeff_credit_amount', 'coeff_duration']
 params = {}
 for i in param_list:
-    params[i] = [np.round(map_estimate[i], 6)]
-
-bayesian_params = pd.DataFrame.from_dict(params)
-print("The result of Bayesian estimation:\n {}".format(bayesian_params))
+    params[i] = [np.round(map_estimate[i], 6)] 
+    
+bayesian_params = pd.DataFrame.from_dict(params)    
+print('The result of Bayesian estimation:\n {}'.format(bayesian_params))
 
 
 # In[49]:
 
 
 with pm.Model() as logistic_model2:
-    beta_age = pm.Normal("coeff_age", mu=0, sd=10)
-    beta_job = pm.Normal("coeff_job", mu=0, sd=10)
-    beta_credit = pm.Normal("coeff_credit_amount", mu=0, sd=10)
-    beta_dur = pm.Normal("coeff_duration", mu=0, sd=10)
-    p = pm.Deterministic(
-        "p",
-        pm.math.sigmoid(
-            beta_age * second_cluster_train["Age"]
-            + beta_job * second_cluster_train["Job"]
-            + beta_credit * second_cluster_train["Credit amount"]
-            + beta_dur * second_cluster_train["Duration"]
-        ),
-    )
+    beta_age = pm.Normal('coeff_age', mu=0, sd=10)
+    beta_job = pm.Normal('coeff_job', mu=0, sd=10)
+    beta_credit = pm.Normal('coeff_credit_amount', mu=0, sd=10)
+    beta_dur = pm.Normal('coeff_duration', mu=0, sd=10)
+    p = pm.Deterministic('p', pm.math.sigmoid(beta_age *
+                              second_cluster_train['Age'] + 
+                              beta_job * second_cluster_train['Job'] + 
+                              beta_credit * second_cluster_train['Credit amount'] + 
+                              beta_dur * second_cluster_train['Duration']))
 with logistic_model2:
-    observed = pm.Bernoulli("risk", p, observed=y_train[y_train.Clusters == 1]["Risk"])
+    observed = pm.Bernoulli("risk", p,
+                            observed=y_train[y_train.Clusters == 1]
+                            ['Risk'])
     map_estimate = pm.find_MAP()
 
 
 # In[50]:
 
 
-param_list = ["coeff_age", "coeff_job", "coeff_credit_amount", "coeff_duration"]
+param_list = [ 'coeff_age', 'coeff_job',
+              'coeff_credit_amount', 'coeff_duration']
 params = {}
 for i in param_list:
     params[i] = [np.round(map_estimate[i], 6)]
-
-bayesian_params = pd.DataFrame.from_dict(params)
-print("The result of Bayesian estimation:\n {}".format(bayesian_params))
+    
+bayesian_params = pd.DataFrame.from_dict(params)    
+print('The result of Bayesian estimation:\n {}'.format(bayesian_params))
 
 
 # ## Markov Chain for PD Estimation
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
+# 
 # - Instead of finding the local maximum, which is sometimes difficult to get, we look for an approximate expectation based on the sampling procedure. This is referred to as MCMC in the Bayesian setting. One of the most well known methods is the Metropolis-Hastings (M-H) algorithm.
 # - Accordingly, we draw 10,000 posterior samples to simulate the posterior distribution for two independent Markov chains.
-#
+# 
 # </font>
 # </div>
 
@@ -594,7 +585,7 @@ print("The result of Bayesian estimation:\n {}".format(bayesian_params))
 
 
 # Importing the logging package to suppress the warning messages
-logger = logging.getLogger("pymc3")
+logger = logging.getLogger('pymc3')
 logger.setLevel(logging.ERROR)
 
 
@@ -603,7 +594,7 @@ logger.setLevel(logging.ERROR)
 
 with logistic_model1:
     step = pm.Metropolis()
-    trace = pm.sample(10000, step=step, progressbar=False)
+    trace = pm.sample(10000, step=step,progressbar = False)
 az.plot_trace(trace)
 plt.show()
 
@@ -620,7 +611,7 @@ with logistic_model1:
 
 with logistic_model2:
     step = pm.Metropolis()
-    trace = pm.sample(10000, step=step, progressbar=False)
+    trace = pm.sample(10000, step=step,progressbar = False)
 az.plot_trace(trace)
 plt.show()
 
@@ -634,11 +625,11 @@ with logistic_model2:
 
 # <div class="alert alert-info">
 # <font color=bla ck>
-#
-# - One disadvantage of the M-H algorithm is its sensitivity to step size.
-# - Small steps hinder the convergence process. Conversely, big steps may cause a high rejection rate.
+# 
+# - One disadvantage of the M-H algorithm is its sensitivity to step size. 
+# - Small steps hinder the convergence process. Conversely, big steps may cause a high rejection rate. 
 # - Besides, M-H may suffer from rare events—as the probability of these events are low, requiring a large sample to obtain a reliable estimation—and that is our focus in this case.
-#
+# 
 # </font>
 # </div>
 
@@ -656,57 +647,44 @@ import time
 # In[57]:
 
 
-param_svc = {
-    "gamma": [1e-6, 1e-2],
-    "C": [0.001, 0.09, 1, 5, 10],
-    "kernel": ("linear", "rbf"),
-}
+param_svc = {'gamma': [1e-6, 1e-2],
+             'C':[0.001,.09,1,5,10],
+             'kernel':('linear','rbf')}
 
 
 # In[58]:
 
 
-svc = SVC(class_weight="balanced")
-halve_SVC = HalvingRandomSearchCV(svc, param_svc, scoring="roc_auc", n_jobs=-1)
+svc = SVC(class_weight='balanced')
+halve_SVC = HalvingRandomSearchCV(svc, param_svc, 
+                                  scoring = 'roc_auc', n_jobs=-1)
 halve_SVC.fit(X_train1, y_train1)
-print(
-    "Best hyperparameters for first cluster in SVC {} with {}".format(
-        halve_SVC.best_score_, halve_SVC.best_params_
-    )
-)
+print('Best hyperparameters for first cluster in SVC {} with {}'.
+      format(halve_SVC.best_score_, halve_SVC.best_params_))
 
 
 # In[59]:
 
 
 y_pred_SVC1 = halve_SVC.predict(X_test1)
-print(
-    "The ROC AUC score of SVC for first cluster is {:.4f}".format(
-        roc_auc_score(y_test1, y_pred_SVC1)
-    )
-)
+print('The ROC AUC score of SVC for first cluster is {:.4f}'.
+      format(roc_auc_score(y_test1, y_pred_SVC1)))
 
 
 # In[60]:
 
 
 halve_SVC.fit(X_train2, y_train2)
-print(
-    "Best hyperparameters for second cluster in SVC {} with {}".format(
-        halve_SVC.best_score_, halve_SVC.best_params_
-    )
-)
+print('Best hyperparameters for second cluster in SVC {} with {}'.
+      format(halve_SVC.best_score_, halve_SVC.best_params_))
 
 
 # In[61]:
 
 
 y_pred_SVC2 = halve_SVC.predict(X_test2)
-print(
-    "The ROC AUC score of SVC for first cluster is {:.4f}".format(
-        roc_auc_score(y_test2, y_pred_SVC2)
-    )
-)
+print('The ROC AUC score of SVC for first cluster is {:.4f}'.
+      format(roc_auc_score(y_test2, y_pred_SVC2)))
 
 
 # ## RF for PD Estimation
@@ -726,58 +704,45 @@ rfc = RandomForestClassifier(random_state=42)
 # In[64]:
 
 
-param_rfc = {
-    "n_estimators": [100, 300],
-    "criterion": ["gini", "entropy"],
-    "max_features": ["auto", "sqrt", "log2"],
-    "max_depth": [3, 4, 5, 6],
-    "min_samples_split": [5, 10],
-}
+param_rfc = {'n_estimators': [100, 300],
+    'criterion' :['gini', 'entropy'],
+    'max_features': ['auto', 'sqrt', 'log2'],
+    'max_depth' : [3, 4, 5, 6],
+    'min_samples_split':[5, 10]}
 
 
 # In[65]:
 
 
-halve_RF = HalvingRandomSearchCV(rfc, param_rfc, scoring="roc_auc", n_jobs=-1)
+halve_RF = HalvingRandomSearchCV(rfc, param_rfc,
+                                 scoring = 'roc_auc', n_jobs=-1)
 halve_RF.fit(X_train1, y_train1)
-print(
-    "Best hyperparameters for first cluster in RF {} with {}".format(
-        halve_RF.best_score_, halve_RF.best_params_
-    )
-)
+print('Best hyperparameters for first cluster in RF {} with {}'.
+      format(halve_RF.best_score_, halve_RF.best_params_))
 
 
 # In[66]:
 
 
 y_pred_RF1 = halve_RF.predict(X_test1)
-print(
-    "The ROC AUC score of RF for first cluster is {:.4f}".format(
-        roc_auc_score(y_test1, y_pred_RF1)
-    )
-)
+print('The ROC AUC score of RF for first cluster is {:.4f}'.
+      format(roc_auc_score(y_test1, y_pred_RF1)))
 
 
 # In[67]:
 
 
 halve_RF.fit(X_train2, y_train2)
-print(
-    "Best hyperparameters for second cluster in RF {} with {}".format(
-        halve_RF.best_score_, halve_RF.best_params_
-    )
-)
+print('Best hyperparameters for second cluster in RF {} with {}'.
+      format(halve_RF.best_score_, halve_RF.best_params_))
 
 
 # In[68]:
 
 
 y_pred_RF2 = halve_RF.predict(X_test2)
-print(
-    "The ROC AUC score of RF for first cluster is {:.4f}".format(
-        roc_auc_score(y_test2, y_pred_RF2)
-    )
-)
+print('The ROC AUC score of RF for first cluster is {:.4f}'.
+      format(roc_auc_score(y_test2, y_pred_RF2)))
 
 
 # ## NN for PD Estimation
@@ -791,11 +756,9 @@ from sklearn.neural_network import MLPClassifier
 # In[70]:
 
 
-param_NN = {
-    "hidden_layer_sizes": [(100, 50), (50, 50), (10, 100)],
-    "solver": ["lbfgs", "sgd", "adam"],
-    "learning_rate_init": [0.001, 0.05],
-}
+param_NN = {"hidden_layer_sizes": [(100, 50), (50, 50), (10, 100)],
+            "solver": ["lbfgs", "sgd", "adam"], 
+            "learning_rate_init": [0.001, 0.05]}
 
 
 # In[71]:
@@ -807,46 +770,35 @@ MLP = MLPClassifier(random_state=42)
 # In[72]:
 
 
-param_halve_NN = HalvingRandomSearchCV(MLP, param_NN, scoring="roc_auc")
+param_halve_NN = HalvingRandomSearchCV(MLP, param_NN,
+                                       scoring = 'roc_auc')
 param_halve_NN.fit(X_train1, y_train1)
-print(
-    "Best hyperparameters for first cluster in NN are {}".format(
-        param_halve_NN.best_params_
-    )
-)
+print('Best hyperparameters for first cluster in NN are {}'.
+      format(param_halve_NN.best_params_))
 
 
 # In[73]:
 
 
 y_pred_NN1 = param_halve_NN.predict(X_test1)
-print(
-    "The ROC AUC score of NN for first cluster is {:.4f}".format(
-        roc_auc_score(y_test1, y_pred_NN1)
-    )
-)
+print('The ROC AUC score of NN for first cluster is {:.4f}'.
+      format(roc_auc_score(y_test1, y_pred_NN1)))
 
 
 # In[74]:
 
 
 param_halve_NN.fit(X_train2, y_train2)
-print(
-    "Best hyperparameters for first cluster in NN are {}".format(
-        param_halve_NN.best_params_
-    )
-)
+print('Best hyperparameters for first cluster in NN are {}'.
+      format(param_halve_NN.best_params_))
 
 
 # In[75]:
 
 
 y_pred_NN2 = param_halve_NN.predict(X_test2)
-print(
-    "The ROC AUC score of NN for first cluster is {:.4f}".format(
-        roc_auc_score(y_test2, y_pred_NN2)
-    )
-)
+print('The ROC AUC score of NN for first cluster is {:.4f}'.
+      format(roc_auc_score(y_test2, y_pred_NN2)))
 
 
 # ## DL for PD Estimation
@@ -860,80 +812,80 @@ from tensorflow.keras.layers import Dense, Dropout
 from sklearn.model_selection import GridSearchCV
 import tensorflow as tf
 import logging
-
 tf.get_logger().setLevel(logging.ERROR)
 
 
 # In[77]:
 
 
-def DL_risk(dropout_rate, verbose=0):
+def DL_risk(dropout_rate,verbose=0):
     model = keras.Sequential()
-    model.add(Dense(128, kernel_initializer="normal", activation="relu", input_dim=4))
-    model.add(Dense(64, kernel_initializer="normal", activation="relu"))
-    model.add(Dense(8, kernel_initializer="normal", activation="relu"))
+    model.add(Dense(128,kernel_initializer='normal', 
+        activation = 'relu', input_dim=4))
+    model.add(Dense(64, kernel_initializer='normal', 
+        activation = 'relu'))
+    model.add(Dense(8,kernel_initializer='normal', 
+        activation = 'relu'))
     model.add(Dropout(dropout_rate))
     model.add(Dense(1, activation="sigmoid"))
-    model.compile(loss="binary_crossentropy", optimizer="rmsprop")
+    model.compile(loss='binary_crossentropy', optimizer='rmsprop')
     return model
 
 
 # In[78]:
 
 
-parameters = {
-    "batch_size": [10, 50, 100],
-    "epochs": [50, 100, 150],
-    "dropout_rate": [0.2, 0.4],
-}
-model = KerasClassifier(build_fn=DL_risk)
-gs = GridSearchCV(estimator=model, param_grid=parameters, scoring="roc_auc")
+parameters = {'batch_size':  [10, 50, 100],
+          'epochs':  [50, 100, 150],
+             'dropout_rate':[0.2, 0.4]}
+model = KerasClassifier(build_fn = DL_risk)
+gs = GridSearchCV(estimator = model,
+                       param_grid = parameters,
+                          scoring = 'roc_auc')
 
 
 # In[79]:
 
 
 gs.fit(X_train1, y_train1, verbose=0)
-print("Best hyperparameters for first cluster in DL are {}".format(gs.best_params_))
+print('Best hyperparameters for first cluster in DL are {}'.
+      format(gs.best_params_))
 
 
 # In[80]:
 
 
-model = KerasClassifier(
-    build_fn=DL_risk,
-    dropout_rate=gs.best_params_["dropout_rate"],
-    verbose=0,
-    batch_size=gs.best_params_["batch_size"],
-    epochs=gs.best_params_["epochs"],
-)
+model = KerasClassifier(build_fn = DL_risk,
+                        dropout_rate = gs.best_params_['dropout_rate'],
+                        verbose = 0,
+                        batch_size = gs.best_params_['batch_size'],
+                        epochs = gs.best_params_['epochs'])
 model.fit(X_train1, y_train1)
 DL_predict1 = model.predict(X_test1)
 DL_ROC_AUC = roc_auc_score(y_test1, pd.DataFrame(DL_predict1.flatten()))
-print("DL_ROC_AUC is {:.4f}".format(DL_ROC_AUC))
+print('DL_ROC_AUC is {:.4f}'.format(DL_ROC_AUC))
 
 
 # In[81]:
 
 
 gs.fit(X_train2.values, y_train2.values, verbose=0)
-print("Best parameters for second cluster in DL are {}".format(gs.best_params_))
+print('Best parameters for second cluster in DL are {}'.
+      format(gs.best_params_))
 
 
 # In[82]:
 
 
-model = KerasClassifier(
-    build_fn=DL_risk,
-    dropout_rate=gs.best_params_["dropout_rate"],
-    verbose=0,
-    batch_size=gs.best_params_["batch_size"],
-    epochs=gs.best_params_["epochs"],
-)
+model = KerasClassifier(build_fn = DL_risk,
+                        dropout_rate= gs.best_params_['dropout_rate'],
+                        verbose = 0,
+                        batch_size = gs.best_params_['batch_size'],
+                        epochs = gs.best_params_['epochs'])
 model.fit(X_train2, y_train2)
-DL_predict2 = model.predict(X_test2)
-DL_ROC_AUC = roc_auc_score(y_test2, DL_predict2.flatten())
-print("DL_ROC_AUC is {:.4f}".format(DL_ROC_AUC))
+DL_predict2 =  model.predict(X_test2)
+DL_ROC_AUC = roc_auc_score(y_test2, DL_predict2.flatten()) 
+print('DL_ROC_AUC is {:.4f}'.format(DL_ROC_AUC))
 
 
 # # References
@@ -941,12 +893,16 @@ print("DL_ROC_AUC is {:.4f}".format(DL_ROC_AUC))
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - Machine Learning for Financial Risk Management with Python Abdullah Karasan
 # - [Kaggle dataset download link](https://www.kaggle.com/datasets/uciml/german-credit)
 # - https://github.com/abdullahkarasan/mlfrm/blob/main/codes/chp_6.ipynb
-#
+#     
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

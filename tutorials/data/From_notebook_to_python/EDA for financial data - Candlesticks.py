@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** EDA for financial data - candlesticks
-#
+# 
 # </font>
 # </div>
 
@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pandas_datareader.data as web
 from datetime import datetime as dt
-import plotly.graph_objects as go
+import plotly.graph_objects as go 
 from plotly.subplots import make_subplots
 
 
@@ -46,7 +46,7 @@ aapl
 # In[4]:
 
 
-aapl.plot(y="Adj Close")
+aapl.plot(y="Adj Close");
 
 
 # In[5]:
@@ -63,11 +63,11 @@ goog = web.DataReader("GOOG", "yahoo", start, end)
 # define the data
 candlestick = go.Candlestick(
     x=aapl.index,
-    open=goog["Open"],
-    high=goog["High"],
-    low=goog["Low"],
-    close=goog["Close"],
-    name="OHLC",
+    open=goog['Open'],
+    high=goog['High'],
+    low=goog['Low'],
+    close=goog['Close'],
+    name="OHLC"
 )
 
 # create the figure
@@ -82,10 +82,14 @@ fig.show()
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://www.quantstart.com/articles/creating-an-algorithmic-trading-prototyping-environment-with-jupyter-notebooks-and-plotly/
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

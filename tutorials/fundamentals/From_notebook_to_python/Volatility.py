@@ -9,9 +9,9 @@
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # **What?** Volatily
-#
+# 
 # </font>
 # </div>
 
@@ -49,43 +49,43 @@ data
 # In[4]:
 
 
-data["Log returns"] = np.log(data["Adj Close"] / data["Adj Close"].shift())
+data['Log returns'] = np.log(data['Adj Close']/data['Adj Close'].shift())
 
 
 # In[5]:
 
 
-data["Adj Close"].iloc[-1] / data["Adj Close"].iloc[0]
+data['Adj Close'].iloc[-1]/data['Adj Close'].iloc[0]
 
 
 # In[6]:
 
 
-data["Log returns"].sum()
+data['Log returns'].sum()
 
 
 # In[7]:
 
 
-np.exp(data["Log returns"].sum())
+np.exp(data['Log returns'].sum())
 
 
 # In[8]:
 
 
-data["Normalize"] = data["Adj Close"] / data["Adj Close"].iloc[0]
+data['Normalize'] = data['Adj Close']/data['Adj Close'].iloc[0]
 
 
 # In[9]:
 
 
-data["Exp sum"] = data["Log returns"].cumsum().apply(np.exp)
+data['Exp sum'] = data['Log returns'].cumsum().apply(np.exp)
 
 
 # In[10]:
 
 
-data[["Normalize", "Exp sum"]].tail()
+data[['Normalize', 'Exp sum']].tail()
 
 
 # # Compute volatility
@@ -96,7 +96,7 @@ data[["Normalize", "Exp sum"]].tail()
 # In[11]:
 
 
-volatility = data["Log returns"].std() * (252**0.5)
+volatility = data['Log returns'].std()*(252**0.5)
 
 
 # In[12]:
@@ -108,23 +108,23 @@ volatility
 # In[13]:
 
 
-str_vol = str(round(volatility, 3) * 100)
+str_vol = str(round(volatility, 3)*100)
 
 
 # In[14]:
 
 
 fig, ax = plt.subplots()
-data["Log returns"].hist(ax=ax, bins=50, alpha=0.6, color="b")
+data['Log returns'].hist(ax=ax, bins=50, alpha=0.6, color='b')
 ax.set_xlabel("Log returns of stock price")
 ax.set_ylabel("Frequencey of log returns")
-ax.set_title("Historic Volatility for S&P 500 (" + str_vol + "%)")
+ax.set_title("Historic Volatility for S&P 500 (" + str_vol +"%)")
 
 
 # In[15]:
 
 
-np.log(1.2) + np.log(1.15) + np.log(1.1) + np.log(1.3)
+np.log(1.2)+np.log(1.15)+np.log(1.1)+np.log(1.3)
 
 
 # In[16]:
@@ -138,11 +138,15 @@ np.exp(0.6797579434409292)
 
 # <div class="alert alert-warning">
 # <font color=black>
-#
+# 
 # - https://github.com/LearnPythonWithRune/PythonForFinancialAnalysis/blob/main/04%20-%20Volatility.ipynb
 # - https://www.learnpythonwithrune.org/start-python-with-pandas-for-financial-analysis/#lesson-6
-#
+# 
 # </font>
 # </div>
 
 # In[ ]:
+
+
+
+

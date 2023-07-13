@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Imports" data-toc-modified-id="Imports-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Imports</a></span></li><li><span><a href="#Random-walk" data-toc-modified-id="Random-walk-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Random-walk</a></span></li><li><span><a href="#Ornstein-Uhlenbeck-series" data-toc-modified-id="Ornstein-Uhlenbeck-series-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Ornstein-Uhlenbeck series</a></span></li><li><span><a href="#Stationary-timeseries" data-toc-modified-id="Stationary-timeseries-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Stationary timeseries</a></span></li><li><span><a href="#Cointegration" data-toc-modified-id="Cointegration-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Cointegration</a></span></li><li><span><a href="#Get-the-data" data-toc-modified-id="Get-the-data-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Get the data</a></span></li><li><span><a href="#EDA" data-toc-modified-id="EDA-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>EDA</a></span></li><li><span><a href="#Create-residual" data-toc-modified-id="Create-residual-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Create residual</a></span></li><li><span><a href="#Cointegrated-Augmented-Dickey-Fuller-(CADF)" data-toc-modified-id="Cointegrated-Augmented-Dickey-Fuller-(CADF)-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Cointegrated Augmented Dickey-Fuller (CADF)</a></span></li><li><span><a href="#References" data-toc-modified-id="References-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>References</a></span></li></ul></div>
+# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1"><span class="toc-item-num">1&nbsp;&nbsp;</span>Introduction</a></span></li><li><span><a href="#Imports" data-toc-modified-id="Imports-2"><span class="toc-item-num">2&nbsp;&nbsp;</span>Imports</a></span></li><li><span><a href="#Random-walk" data-toc-modified-id="Random-walk-3"><span class="toc-item-num">3&nbsp;&nbsp;</span>Random-walk</a></span></li><li><span><a href="#Ornstein-Uhlenbeck-series" data-toc-modified-id="Ornstein-Uhlenbeck-series-4"><span class="toc-item-num">4&nbsp;&nbsp;</span>Ornstein-Uhlenbeck series</a></span></li><li><span><a href="#Stationary-timeseries" data-toc-modified-id="Stationary-timeseries-5"><span class="toc-item-num">5&nbsp;&nbsp;</span>Stationary timeseries</a></span></li><li><span><a href="#Cointegration" data-toc-modified-id="Cointegration-6"><span class="toc-item-num">6&nbsp;&nbsp;</span>Cointegration</a></span></li><li><span><a href="#Get-the-data" data-toc-modified-id="Get-the-data-7"><span class="toc-item-num">7&nbsp;&nbsp;</span>Get the data</a></span></li><li><span><a href="#EDA" data-toc-modified-id="EDA-8"><span class="toc-item-num">8&nbsp;&nbsp;</span>EDA</a></span></li><li><span><a href="#Create-residual" data-toc-modified-id="Create-residual-9"><span class="toc-item-num">9&nbsp;&nbsp;</span>Create residual</a></span></li><li><span><a href="#Cointegrated-Augmented-Dickey-Fuller-(CADF)" data-toc-modified-id="Cointegrated-Augmented-Dickey-Fuller-(CADF)-10"><span class="toc-item-num">10&nbsp;&nbsp;</span>Cointegrated Augmented Dickey-Fuller (CADF)</a></span></li><li><span><a href="#References" data-toc-modified-id="References-11"><span class="toc-item-num">11&nbsp;&nbsp;</span>References</a></span></li><li><span><a href="#Requirements" data-toc-modified-id="Requirements-12"><span class="toc-item-num">12&nbsp;&nbsp;</span>Requirements</a></span></li></ul></div>
 
 # # Introduction
 # <hr style = "border:2px solid black" ></hr>
@@ -227,7 +227,7 @@ plt.show()
 # 
 # - The Cointegrated Augmented Dickey-Fuller (CADF) determines the optimal hedge ratio by performing a linear regression against the two time series and then tests for stationarity under the linear combination.
 # - It can be seen that the calculated test statistic of -2.891 is more negative than the 5% critical value of -2.873, which means that we can reject the null hypothesis that there isn't a cointegrating relationship at the 5% level. 
-# - Hence we can conclude, with a reasonable degree of certainty, that USO and XOM possess a cointegrating relationship, at least for the time period sample considered.
+# - Hence we can conclude, with a reasonable degree of certainty, that USO and XOM **possess a cointegrating relationship**, at least for the time period sample considered.
 # 
 # </font>
 # </div>
@@ -246,9 +246,21 @@ ts.adfuller(df["Residuals"])
 # 
 # - https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing/
 # - https://www.quantstart.com/articles/Basics-of-Statistical-Mean-Reversion-Testing-Part-II/
+# - https://github.com/stefan-jansen/machine-learning-for-trading/blob/main/09_time_series_models/05_cointegration_tests.ipynb
+# - [Spurious correlation](https://www.investopedia.com/terms/s/spurious_correlation.asp)
 #     
 # </font>
 # </div>
+
+# # Requirements
+# <hr style = "border:2px solid black" ></hr>
+
+# In[1]:
+
+
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv -m')
+
 
 # In[ ]:
 

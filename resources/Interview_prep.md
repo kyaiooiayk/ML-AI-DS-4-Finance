@@ -19,4 +19,5 @@
 
 ## Guides
 - [AN INTERVIEW PRIMER FOR QUANTITATIVE FINANCE *BY DIRK BESTER*](https://www.linkedin.com/in/dwbester/overlay/1537424893391/single-media-viewer/?profileId=ACoAABA0dAsBhbr6Ppy9cYt-oBD7YXr-hhQ8xaI) | [Also available here](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/An%20interview%20primer%20for%20qunatitative%20finance.pdf)
+- [List of Summer 2024 Quant Internships with some info on each one of them](https://www.linkedin.com/posts/bhavyekhetan_internship-quant-ai-activity-7082508455755874304-wSgd?utm_source=share&utm_medium=member_desktop)
 ***

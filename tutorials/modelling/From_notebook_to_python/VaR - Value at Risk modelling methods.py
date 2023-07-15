@@ -22,13 +22,10 @@
 # <font color=bla ck>
 # 
 # - VaR addresses one of the most common questions an investor has: what is the maximum expected loss of my investment? Suppose that a daily VaR of an investment is 1 million with 95% confidence interval. This would read as there being a 5% chance that an investor might incur a loss greater than $1 million in a day.
-#     
-# - The VaR  has two important characteristics: ot provides a common consistent measure of risk across different positions and it takes account of the correlations between different risk factors.
-# 
+# - The VaR  has two important characteristics: to provide a common consistent measure of risk across different positions and it takes account of the correlations between different risk factors.
 # - In summary:
 #     - VaR needs an estimation of the probability of loss.
 #     - VaR concentrates on the potential losses not on realised losses
-# 
 # - VaR has three key ingredients:
 #     1. Standard deviation that defines the level of loss
 #     2. Fixed time horizon over which risk is assessed
@@ -298,6 +295,7 @@ MC_VaR(initial_investment, conf_level)
 # - https://github.com/abdullahkarasan/mlfrm/blob/main/codes/chp_5.ipynb
 # - Machine Learning for Financial Risk Management with Python Abdullah Karasan
 # - https://www.quantstart.com/articles/Value-at-Risk-VaR-for-Algorithmic-Trading-Risk-Management-Part-I/
+# - [Using Bidirectional Generative Adversarial Networks to estimate Value-at-Risk for Market Risk Management](https://medium.com/towards-data-science/using-bidirectional-generative-adversarial-networks-to-estimate-value-at-risk-for-market-risk-c3dffbbde8dd)
 #     
 # </font>
 # </div>

@@ -10,6 +10,10 @@
 - [Investment Analysis and Portfolio Management](https://www.amazon.co.uk/Investment-Analysis-Portfolio-Management-Reilly/dp/0538482389)
 ***
 
+## Strategies
+- [Building Winning Algorithmic Trading Systems + Website: A Trader's Journey From Data Mining to MonteCarlo Simulation to Live Trading by Kevin J. Davey](https://www.amazon.co.uk/Building-Winning-Algorithmic-Trading-Systems/dp/1118778987)
+***
+
 ## Books | Python
 - [Advances in Financial Machine Learning](https://www.amazon.co.uk/Advances-Financial-Machine-Learning-Marcos/dp/1119482089) | [GitHub #1](https://github.com/boyboi86/AFML) | [GitHub #2](https://github.com/ki33elev/Adv_Fin_ML) | [GitHub #3](https://github.com/BlackArbsCEO/Adv_Fin_ML_Exercises) | [GitHub #4](https://github.com/fernandodelacalle/adv-financial-ml-marcos-exercises) 
 - [Advanced algorithm trading](https://www.quantstart.com/advanced-algorithmic-trading-ebook/) | [GitHub](https://github.com/zslucky/algorithmic_trading_book)

@@ -5,7 +5,7 @@
 - [What are the quantitative finance books that we should all have in our shelves?](https://quant.stackexchange.com/questions/38862/what-are-the-quantitative-finance-books-that-we-should-all-have-in-our-shelves)
 ***
 
-## Books | Theory
+## Theory
 - [Advances in Financial Machine Learning](https://www.amazon.co.uk/Advances-Financial-Machine-Learning-Marcos/dp/1119482089)
 - [Investment Analysis and Portfolio Management](https://www.amazon.co.uk/Investment-Analysis-Portfolio-Management-Reilly/dp/0538482389)
 ***
@@ -14,7 +14,7 @@
 - [Building Winning Algorithmic Trading Systems + Website: A Trader's Journey From Data Mining to MonteCarlo Simulation to Live Trading by Kevin J. Davey](https://www.amazon.co.uk/Building-Winning-Algorithmic-Trading-Systems/dp/1118778987)
 ***
 
-## Books | Python
+## Python
 - [Advances in Financial Machine Learning](https://www.amazon.co.uk/Advances-Financial-Machine-Learning-Marcos/dp/1119482089) | [GitHub #1](https://github.com/boyboi86/AFML) | [GitHub #2](https://github.com/ki33elev/Adv_Fin_ML) | [GitHub #3](https://github.com/BlackArbsCEO/Adv_Fin_ML_Exercises) | [GitHub #4](https://github.com/fernandodelacalle/adv-financial-ml-marcos-exercises) 
 - [Advanced algorithm trading](https://www.quantstart.com/advanced-algorithmic-trading-ebook/) | [GitHub](https://github.com/zslucky/algorithmic_trading_book)
 - [Derivatives Analytics with Python](https://www.amazon.co.uk/Derivatives-Analytics-Python-Simulation-Calibration/dp/1119037999/ref=asc_df_1119037999/?tag=googshopuk-21&linkCode=df0&hvadid=310762413837&hvpos=&hvnetw=g&hvrand=13472180059267899973&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9046665&hvtargid=pla-450555227683&psc=1&th=1&psc=1) | [GitHub](https://github.com/yhilpisch/dawp)

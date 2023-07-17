@@ -16,4 +16,5 @@
 - [Economics](https://www.khanacademy.org/economics-finance-domain)
 - [Macroeconomics](https://www.khanacademy.org/economics-finance-domain/macroeconomics)
 - [Unit: Options, swaps, futures, MBSs, CDOs, and other derivatives](https://www.khanacademy.org/economics-finance-domain/core-finance/derivative-securities)
+- [27 videos by MyTradingSkills](https://mytradingskills.com/courses)
 ***

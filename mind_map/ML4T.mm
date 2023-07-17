@@ -28,7 +28,7 @@
 </node>
 <node CREATED="1689582511155" ID="ID_214985943" LINK="https://www.investopedia.com/terms/f/financial-analysis.asp  " MODIFIED="1689582903011" TEXT="Approaches">
 <icon BUILTIN="xmag"/>
-<node CREATED="1689582534667" ID="ID_104811478" MODIFIED="1689582855032" TEXT="Fundamental Analysis (FA)">
+<node CREATED="1689582534667" FOLDED="true" ID="ID_104811478" MODIFIED="1689585809249" TEXT="Fundamental Analysis (FA)">
 <icon BUILTIN="xmag"/>
 <node CREATED="1689582858063" ID="ID_70167410" MODIFIED="1689582889222" TEXT="Bottom-up approach">
 <icon BUILTIN="button_ok"/>
@@ -36,9 +36,34 @@
 <node CREATED="1689582869054" ID="ID_682219689" MODIFIED="1689582889222" TEXT="Top-down approach">
 <icon BUILTIN="button_ok"/>
 </node>
-</node>
-<node CREATED="1689582559836" ID="ID_1352830652" MODIFIED="1689582889221" TEXT="Technical Analysis (TA)">
+<node CREATED="1689583149651" ID="ID_1189028271" MODIFIED="1689583159484" TEXT="Influencing factors">
+<icon BUILTIN="xmag"/>
+<node CREATED="1689583163025" ID="ID_309556269" MODIFIED="1689583235791" TEXT="Rate of interest">
 <icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1689583168427" ID="ID_1509313086" MODIFIED="1689583235792" TEXT="Inflation">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1689583170559" ID="ID_1978038969" MODIFIED="1689583235793" TEXT="GDP - Gross Domestic Product">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1689583182220" ID="ID_1447947739" MODIFIED="1689583235793" TEXT="CPI - Consumer Price Index">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1689583192681" ID="ID_1041354692" MODIFIED="1689583235794" TEXT="Rerail sales">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1689583198757" ID="ID_1098575039" MODIFIED="1689583235795" TEXT="Politics">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1689583204401" ID="ID_114316298" MODIFIED="1689583235795" TEXT="Natural catastrophes and seasonality">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+</node>
+<node CREATED="1689582559836" ID="ID_1352830652" MODIFIED="1689585820550" TEXT="Technical Analysis (TA)">
+<icon BUILTIN="xmag"/>
+<node CREATED="1689585825549" ID="ID_223407070" LINK="https://tradenation.com/en-gb/articles/chart-patterns/" MODIFIED="1689585842937" TEXT="Chart patterns"/>
 </node>
 <node CREATED="1689582573719" ID="ID_20945940" MODIFIED="1689582889220" TEXT="Quantitative/Systematic Analysis (QA)">
 <icon BUILTIN="button_ok"/>

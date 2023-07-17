@@ -12,7 +12,9 @@
   </body>
 </html></richcontent>
 <font BOLD="true" NAME="SansSerif" SIZE="13"/>
-<node CREATED="1661689913287" FOLDED="true" ID="ID_364931973" MODIFIED="1688593012614" POSITION="left" TEXT="Quantitative strategies history">
+<node CREATED="1689582468913" ID="ID_1062408624" MODIFIED="1689582478890" POSITION="left" TEXT="Market analysis">
+<icon BUILTIN="xmag"/>
+<node CREATED="1661689913287" ID="ID_364931973" MODIFIED="1689582505907" TEXT="Historical PoV">
 <icon BUILTIN="xmag"/>
 <node CREATED="1661689926919" ID="ID_1098598077" MODIFIED="1661689996879" TEXT="1. Academic reasearch - 1980s-1990s">
 <icon BUILTIN="button_ok"/>
@@ -22,6 +24,25 @@
 </node>
 <node CREATED="1661689977172" ID="ID_497689229" MODIFIED="1661689996879" TEXT="3. ML capabilities and aternatives">
 <icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1689582511155" ID="ID_214985943" LINK="https://www.investopedia.com/terms/f/financial-analysis.asp  " MODIFIED="1689582903011" TEXT="Approaches">
+<icon BUILTIN="xmag"/>
+<node CREATED="1689582534667" ID="ID_104811478" MODIFIED="1689582855032" TEXT="Fundamental Analysis (FA)">
+<icon BUILTIN="xmag"/>
+<node CREATED="1689582858063" ID="ID_70167410" MODIFIED="1689582889222" TEXT="Bottom-up approach">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1689582869054" ID="ID_682219689" MODIFIED="1689582889222" TEXT="Top-down approach">
+<icon BUILTIN="button_ok"/>
+</node>
+</node>
+<node CREATED="1689582559836" ID="ID_1352830652" MODIFIED="1689582889221" TEXT="Technical Analysis (TA)">
+<icon BUILTIN="button_ok"/>
+</node>
+<node CREATED="1689582573719" ID="ID_20945940" MODIFIED="1689582889220" TEXT="Quantitative/Systematic Analysis (QA)">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 </node>
 <node CREATED="1661794041283" FOLDED="true" ID="ID_1330534061" MODIFIED="1688839045313" POSITION="left" TEXT="Alpha">
@@ -61,10 +82,10 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1662208974670" FOLDED="true" ID="ID_213767358" MODIFIED="1688828625819" POSITION="left" TEXT="Fundamentals">
+<node CREATED="1662208974670" ID="ID_213767358" MODIFIED="1689582393707" POSITION="left" TEXT="Fundamentals">
 <icon BUILTIN="xmag"/>
 <node CREATED="1662208984832" ID="ID_1467987025" LINK="https://www.investopedia.com/terms/m/marketriskpremium.asp" MODIFIED="1662209000855" TEXT="Market Risk Premium "/>
-<node CREATED="1662295202247" FOLDED="true" ID="ID_992590304" LINK="https://www.quantstart.com/articles/Sharpe-Ratio-for-Algorithmic-Trading-Performance-Measurement/" MODIFIED="1688404640578" TEXT="Sharpe Ratio">
+<node CREATED="1662295202247" FOLDED="true" ID="ID_992590304" LINK="https://www.quantstart.com/articles/Sharpe-Ratio-for-Algorithmic-Trading-Performance-Measurement/" MODIFIED="1689582397155" TEXT="Sharpe Ratio">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663672866656" ID="ID_1017039411" MODIFIED="1663672896997" TEXT="Annualised Sharpe Ratio">
 <icon BUILTIN="button_ok"/>
@@ -108,7 +129,7 @@
 <icon BUILTIN="xmag"/>
 <node CREATED="1662919021548" ID="ID_100908768" MODIFIED="1662919075605" TEXT="Do not forget about risk management"/>
 </node>
-<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1688593305913" POSITION="left" TEXT="How to judge a potential new strategy">
+<node CREATED="1663094095500" FOLDED="true" ID="ID_1229392195" LINK="https://www.quantstart.com/articles/How-to-Identify-Algorithmic-Trading-Strategies/" MODIFIED="1689582413304" POSITION="left" TEXT="How to judge a potential new strategy">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663094114357" ID="ID_1967472534" MODIFIED="1663094445751" TEXT="Methodology">
 <icon BUILTIN="button_ok"/>
@@ -134,7 +155,7 @@
 <node CREATED="1663094425718" ID="ID_108275677" MODIFIED="1663827418445" TEXT="Capacity">
 <icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1663827418886" ID="ID_471618488" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1688404654553" TEXT="Liquidity">
+<node CREATED="1663827418886" FOLDED="true" ID="ID_471618488" LINK="https://www.investopedia.com/terms/l/liquidity.asp" MODIFIED="1689582411107" TEXT="Liquidity">
 <icon BUILTIN="button_ok"/>
 <node CREATED="1663827802016" ID="ID_1413323528" MODIFIED="1663828036647" TEXT="Types">
 <icon BUILTIN="xmag"/>
@@ -224,7 +245,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1688891693661" FOLDED="true" ID="ID_1601922959" LINK="https://www.qmr.ai/examples-of-algorithmic-trading-strategies-trading-bots/#Machine_Learning_Strategies" MODIFIED="1688898857401" POSITION="left" TEXT="Algorithm strategies">
+<node CREATED="1688891693661" FOLDED="true" ID="ID_1601922959" LINK="https://www.qmr.ai/examples-of-algorithmic-trading-strategies-trading-bots/#Machine_Learning_Strategies" MODIFIED="1689582423925" POSITION="left" TEXT="Algorithm strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1688891710010" ID="ID_402594560" MODIFIED="1688892388503" TEXT="Mean Reversion Strategies">
 <icon BUILTIN="button_ok"/>
@@ -232,7 +253,7 @@
 <node CREATED="1688892162727" ID="ID_638411094" MODIFIED="1688892388502" TEXT="Momentum Strategies">
 <icon BUILTIN="button_ok"/>
 </node>
-<node CREATED="1688892179895" ID="ID_833324908" MODIFIED="1688892184779" TEXT="Machine Learning Strategies">
+<node CREATED="1688892179895" FOLDED="true" ID="ID_833324908" MODIFIED="1689582418321" TEXT="Machine Learning Strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1688892250655" ID="ID_558114355" MODIFIED="1688892388504" TEXT="Sentiment analysis">
 <icon BUILTIN="button_ok"/>
@@ -241,7 +262,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1688892192700" ID="ID_96893626" MODIFIED="1688892366668" TEXT="Arbitrage Strategies">
+<node CREATED="1688892192700" FOLDED="true" ID="ID_96893626" MODIFIED="1689582419717" TEXT="Arbitrage Strategies">
 <icon BUILTIN="xmag"/>
 <node CREATED="1688892211973" ID="ID_1518820370" MODIFIED="1688892388505" TEXT="Pure Arbitrage Strategies (High-Frequency Trading)">
 <icon BUILTIN="button_ok"/>
@@ -732,7 +753,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663330294090" FOLDED="true" ID="ID_1037348962" LINK="https://www.quantstart.com/articles/What-are-the-Different-Types-of-Quantitative-Analysts/" MODIFIED="1688404633532" POSITION="right" TEXT="Quantitative roles/jobs">
+<node CREATED="1663330294090" FOLDED="true" ID="ID_1037348962" LINK="https://www.quantstart.com/articles/What-are-the-Different-Types-of-Quantitative-Analysts/" MODIFIED="1689582432977" POSITION="right" TEXT="Quantitative roles/jobs">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663330305400" ID="ID_993278232" MODIFIED="1663330362726" TEXT="Quantitative trader">
 <icon BUILTIN="button_ok"/>
@@ -747,7 +768,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663331299579" FOLDED="true" ID="ID_1728724627" MODIFIED="1670773234944" POSITION="right" TEXT="Mathematical Finance">
+<node CREATED="1663331299579" FOLDED="true" ID="ID_1728724627" MODIFIED="1689582439121" POSITION="right" TEXT="Mathematical Finance">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663331308918" ID="ID_269121609" MODIFIED="1663331414509" TEXT="Derivative Securities Pricing/Hedging">
 <icon BUILTIN="button_ok"/>
@@ -768,7 +789,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663331514936" FOLDED="true" ID="ID_972668874" LINK="https://www.quantstart.com/articles/My-Experiences-as-a-Quantitative-Developer-in-a-Hedge-Fund/" MODIFIED="1663491743057" POSITION="right" TEXT="Trading pipeline">
+<node CREATED="1663331514936" FOLDED="true" ID="ID_972668874" LINK="https://www.quantstart.com/articles/My-Experiences-as-a-Quantitative-Developer-in-a-Hedge-Fund/" MODIFIED="1689582451143" POSITION="right" TEXT="Trading pipeline">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663331534504" ID="ID_699058389" MODIFIED="1663331839564" TEXT="Pricing/Feeds">
 <icon BUILTIN="button_ok"/>
@@ -801,7 +822,7 @@
 <icon BUILTIN="button_ok"/>
 </node>
 </node>
-<node CREATED="1663354111553" FOLDED="true" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1688892169696" POSITION="right" TEXT="Quantitative trading">
+<node CREATED="1663354111553" FOLDED="true" ID="ID_257996358" LINK="https://www.quantstart.com/articles/Beginners-Guide-to-Quantitative-Trading/" MODIFIED="1689582457616" POSITION="right" TEXT="Quantitative trading">
 <icon BUILTIN="xmag"/>
 <node CREATED="1663354137319" ID="ID_357475166" MODIFIED="1663354187310" TEXT="Strategy Identification">
 <icon BUILTIN="button_ok"/>

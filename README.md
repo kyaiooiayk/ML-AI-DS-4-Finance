@@ -32,6 +32,7 @@
 - [Data source for finance](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/data_source.md)
 - [Talks](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/talks.md)
 - [Skills](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/skills.md)
+- [Competitions](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/resources/competitions)
 ***
 
 ## Notes

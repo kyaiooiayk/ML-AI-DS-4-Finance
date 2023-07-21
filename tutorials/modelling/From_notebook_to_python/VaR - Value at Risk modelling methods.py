@@ -105,7 +105,7 @@ stocks_returns
 # <div class="alert alert-info">
 # <font color=bla ck>
 # 
-# - VaR can be measured via three different approaches:
+# - VaR can be measured using three different approaches:
 #     - Variance-covariance VaR
 #     - Historical simulation VaR
 #     - Monte Carlo VaR

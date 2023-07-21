@@ -2,7 +2,7 @@
 # coding: utf-8
 
 # <h1>Table of Contents<span class="tocSkip"></span></h1>
-# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1">Introduction</a></span></li><li><span><a href="#Imports" data-toc-modified-id="Imports-2">Imports</a></span></li><li><span><a href="#HMM---Hidden-Markov-Model" data-toc-modified-id="HMM---Hidden-Markov-Model-3">HMM - Hidden Markov Model</a></span></li><li><span><a href="#Fame-French-model" data-toc-modified-id="Fame-French-model-4">Fame-French model</a></span></li><li><span><a href="#Get-the-data" data-toc-modified-id="Get-the-data-5">Get the data</a></span></li><li><span><a href="#Selecting-a-stock-return" data-toc-modified-id="Selecting-a-stock-return-6">Selecting a stock-return</a></span></li><li><span><a href="#Gaussian-HMM" data-toc-modified-id="Gaussian-HMM-7">Gaussian HMM</a></span></li><li><span><a href="#Optimal-number-of-hidden-states---elbow-analysis" data-toc-modified-id="Optimal-number-of-hidden-states---elbow-analysis-8">Optimal number of hidden states - elbow analysis</a></span></li><li><span><a href="#Visualisation-of-the-states" data-toc-modified-id="Visualisation-of-the-states-9">Visualisation of the states</a></span></li><li><span><a href="#Comparison" data-toc-modified-id="Comparison-10">Comparison</a></span><ul class="toc-item"><li><span><a href="#Fama-French-Model-vs.-HMM" data-toc-modified-id="Fama-French-Model-vs.-HMM-10.1">Fama-French Model vs. HMM</a></span></li><li><span><a href="#Fama-French-Model-with-OLS" data-toc-modified-id="Fama-French-Model-with-OLS-10.2">Fama-French Model with OLS</a></span></li><li><span><a href="#Backtesting" data-toc-modified-id="Backtesting-10.3">Backtesting</a></span></li><li><span><a href="#Synthetic-Data-Generation-and-Hidden-Markov" data-toc-modified-id="Synthetic-Data-Generation-and-Hidden-Markov-10.4">Synthetic Data Generation and Hidden Markov</a></span></li></ul></li><li><span><a href="#References" data-toc-modified-id="References-11">References</a></span></li></ul></div>
+# <div class="toc"><ul class="toc-item"><li><span><a href="#Introduction" data-toc-modified-id="Introduction-1">Introduction</a></span></li><li><span><a href="#Imports" data-toc-modified-id="Imports-2">Imports</a></span></li><li><span><a href="#HMM---Hidden-Markov-Model" data-toc-modified-id="HMM---Hidden-Markov-Model-3">HMM - Hidden Markov Model</a></span></li><li><span><a href="#Fame-French-model" data-toc-modified-id="Fame-French-model-4">Fame-French model</a></span></li><li><span><a href="#Get-the-data" data-toc-modified-id="Get-the-data-5">Get the data</a></span></li><li><span><a href="#Selecting-a-stock-return" data-toc-modified-id="Selecting-a-stock-return-6">Selecting a stock-return</a></span></li><li><span><a href="#Gaussian-HMM" data-toc-modified-id="Gaussian-HMM-7">Gaussian HMM</a></span></li><li><span><a href="#Optimal-number-of-hidden-states---elbow-analysis" data-toc-modified-id="Optimal-number-of-hidden-states---elbow-analysis-8">Optimal number of hidden states - elbow analysis</a></span></li><li><span><a href="#Visualisation-of-the-states" data-toc-modified-id="Visualisation-of-the-states-9">Visualisation of the states</a></span></li><li><span><a href="#Comparison" data-toc-modified-id="Comparison-10">Comparison</a></span><ul class="toc-item"><li><span><a href="#Fama-French-Model-vs.-HMM" data-toc-modified-id="Fama-French-Model-vs.-HMM-10.1">Fama-French Model vs. HMM</a></span></li><li><span><a href="#Fama-French-Model-with-OLS" data-toc-modified-id="Fama-French-Model-with-OLS-10.2">Fama-French Model with OLS</a></span></li><li><span><a href="#Backtesting" data-toc-modified-id="Backtesting-10.3">Backtesting</a></span></li><li><span><a href="#Synthetic-Data-Generation-and-Hidden-Markov" data-toc-modified-id="Synthetic-Data-Generation-and-Hidden-Markov-10.4">Synthetic Data Generation and Hidden Markov</a></span></li></ul></li><li><span><a href="#References" data-toc-modified-id="References-11">References</a></span></li><li><span><a href="#Requirements" data-toc-modified-id="Requirements-12">Requirements</a></span></li></ul></div>
 
 # # Introduction
 # <hr style = "border:2px solid black" ></hr>
@@ -84,7 +84,9 @@ warnings.filterwarnings('ignore')
 # In[3]:
 
 
-ff = pd.read_csv('./FF3.csv', skiprows=4)
+ff = pd.read_csv(
+    '../datasource/F-F_Research_Data_Factors_daily.csv', skiprows=4)
+
 ff = ff.rename(columns={'Unnamed: 0': 'Date'})
 ff = ff.iloc[:-1]
 ff.head()
@@ -422,7 +424,7 @@ print('Sharpe ratio with FF 3 factor model is {:.4f}'.format(sharpe))
 # </div>
 # 
 
-# In[32]:
+# In[31]:
 
 
 split = int(len(SP['return']) * 0.9)
@@ -430,7 +432,7 @@ train_ret_SP = SP['return'].iloc[split:].dropna()
 test_ret_SP = SP['return'].iloc[:split].dropna()
 
 
-# In[33]:
+# In[32]:
 
 
 hmm_model = hmm.GaussianHMM(n_components=3,
@@ -456,7 +458,7 @@ pd.DataFrame(hmm_predict_vol).value_counts()
 # </font>
 # </div>
 
-# In[34]:
+# In[33]:
 
 
 startprob = hmm_model.startprob_
@@ -465,13 +467,13 @@ means = hmm_model.means_
 covars = hmm_model.covars_
 
 
-# In[35]:
+# In[34]:
 
 
 syn_hmm = hmm.GaussianHMM(n_components=3, covariance_type="full")
 
 
-# In[36]:
+# In[35]:
 
 
 syn_hmm.startprob_ = startprob
@@ -480,13 +482,13 @@ syn_hmm.means_ = means
 syn_hmm.covars_ = covars
 
 
-# In[37]:
+# In[36]:
 
 
 syn_data, _ = syn_hmm.sample(n_samples=1000)
 
 
-# In[38]:
+# In[37]:
 
 
 plt.hist(syn_data)
@@ -494,7 +496,7 @@ plt.title('Histogram of Synthetic Data')
 plt.show()
 
 
-# In[39]:
+# In[38]:
 
 
 plt.plot(syn_data, "--")
@@ -510,13 +512,17 @@ plt.show()
 # 
 # - https://github.com/abdullahkarasan/mlfrm/blob/main/codes/chp_10.ipynb
 # - Machine Learning for Financial Risk Management with Python Abdullah Karasan
-# - [FF3 dataset](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
+# - [FF3 dataset: Fama/French 3 Factors [Daily]  TXT  CSV  Details](https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html)
 # 
 # </font>
 # </div>
 
-# In[ ]:
+# # Requirements
+# <hr style = "border:2px solid black" ></hr>
+
+# In[39]:
 
 
-
+get_ipython().run_line_magic('load_ext', 'watermark')
+get_ipython().run_line_magic('watermark', '-v -iv -m')
 

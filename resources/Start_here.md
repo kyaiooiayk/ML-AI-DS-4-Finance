@@ -1,6 +1,15 @@
 # Start here
 ***
 
+
+## Quant strategies
+1. Data
+2. Feature engineering
+3. Expected returns
+4. Trade or portfolio generation
+- If you are RL then step 3 and 4 can be merged.
+***
+
 ## Macro areas
 - Research
 - Back-testing

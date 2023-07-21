@@ -7,6 +7,7 @@
 - [2020 | Deep learning in finance and banking: A literature review and classification](https://fbr.springeropen.com/articles/10.1186/s11782-020-00082-6)
 - [2023 | BloombergGPT: A Large Language Model for Finance](https://arxiv.org/abs/2303.17564)
 - [2023 | Financial Machine Learning](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4501707&utm_source=substack&utm_medium=email)
+- [2023 | Stock market anomalies and machine learning across the globe](https://link.springer.com/article/10.1057/s41260-023-00318-z)
 ***
 
 ## Anything else

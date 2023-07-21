@@ -18,17 +18,19 @@
 # # Imports
 # <hr style = "border:2px solid black" ></hr>
 
-# In[1]:
+# In[7]:
 
 
-import pandas_datareader as pdr
+from pandas_datareader import data as pdr
 import datetime as dt
+import yfinance as yfin
+yfin.pdr_override()
 
 
 # # Select ticker
 # <hr style = "border:2px solid black" ></hr>
 
-# In[2]:
+# In[8]:
 
 
 start = dt.datetime(2010, 1, 1)
@@ -80,6 +82,7 @@ aapl
 # - https://www.learnpythonwithrune.org/start-python-with-pandas-for-financial-analysis/
 # - https://pythonprogramming.net/getting-stock-prices-python-programming-for-finance/
 # - https://www.quantstart.com/articles/understanding-equities-data/
+# - [typeerror: string indices must be integer pandas datareader](https://stackoverflow.com/questions/74912452/typeerror-string-indices-must-be-integer-pandas-datareader)
 #     
 # </font>
 # </div>

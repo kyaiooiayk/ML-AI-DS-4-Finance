@@ -33,7 +33,7 @@
 - [Talks](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/talks.md)
 - [Skills](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/skills.md)
 - [Competitions](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/competitions/competitions.md)
-- [Open source project from mantained by trading funds](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/competitions/trading_funds.md)
+- [Open source project from mantained by trading funds](https://github.com/kyaiooiayk/ML-AI-DS-4-Finance/blob/main/resources/trading_funds.md)
 ***
 
 ## Notes

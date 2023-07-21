@@ -31,6 +31,7 @@
 - [Quantstart blogs](https://www.quantstart.com/articles/)
 - [The Alpha Scientist](https://alphascientist.com/index.html)
 - [Quantitativity](https://quantivity.wordpress.com/)
+- [Analyzing Alpha's blog](https://analyzingalpha.com/blog)
 ***
 
 ## Jobs/careers

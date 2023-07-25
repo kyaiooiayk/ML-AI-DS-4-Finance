@@ -32,6 +32,7 @@
 - [The Alpha Scientist](https://alphascientist.com/index.html)
 - [Quantitativity](https://quantivity.wordpress.com/)
 - [Analyzing Alpha's blog](https://analyzingalpha.com/blog)
+- [relataly.com](https://www.relataly.com/)
 ***
 
 ## Jobs/careers

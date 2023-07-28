@@ -33,6 +33,7 @@
 - [Quantitativity](https://quantivity.wordpress.com/)
 - [Analyzing Alpha's blog](https://analyzingalpha.com/blog)
 - [relataly.com](https://www.relataly.com/)
+- [Ran Aroussi's blog](https://aroussi.com/)
 ***
 
 ## Jobs/careers

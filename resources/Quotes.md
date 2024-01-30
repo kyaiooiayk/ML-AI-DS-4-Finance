@@ -23,4 +23,5 @@
 - “It’s not whether you’re right or wrong, but how much money you make when you’re right and how much you lose when you’re wrong.”, *by George Soros*
 - “There are a million ways to make money in the markets. The irony is that they are all very difficult to find.”, *by Jack D. Schwager*
 - “Many investment managers believe that the secret to riches is to implement an extremely complex ML algorithm. They are setting themselves up for disappointment. If it was as easy as coding a state-of-the-art classifier, most people in Silicon Valley would be billionaires.”, *by Marcos Lopez de Prado*
+- *The market can stay irrational longer than you can solvent*, *by John Maynard Keynes*
 ***
